@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', {
+        'title': 'Main Page'
+    })
+<body>
+<div class="wrapper">
+    <header class="header">
+        @@include('components/header.html', {})
+    </header>
+    <main class="page">
+        @@include('main-page/main.html', {})
+    </main>
+    <footer class="footer">
+        @@include('components/footer.html', {})
+    </footer>
+</div>
+<script src="/js/app.min.js"></script>
+</body>
+</html>
