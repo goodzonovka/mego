@@ -152,7 +152,7 @@ function displayNestedSubcategories(subcategoryElement, subcategories) {
                 <button class="sub-catalog-menu__more" onclick="showMoreSubcategories(this)">
                     <span>${moreLang}</span>
                      <svg width="18" height="18">
-                        <use href="/images/icons/icons.svg#chevron-down-small"></use>
+                        <use href="./images/icons/icons.svg#chevron-down-small"></use>
                     </svg>
                 </button>
             </li>

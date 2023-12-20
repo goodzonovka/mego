@@ -88,14 +88,14 @@ window.addEventListener('load', function () {
 
                             <div class="rating">
                                 <svg width="18" height="19">
-                                    <use href="/images/icons/icons.svg#star-fill"></use>
+                                    <use href="./images/icons/icons.svg#star-fill"></use>
                                 </svg>
                                 <span class="count">5.0</span>
                             </div>
 
                             <div class="reviews">
                                 <svg width="18" height="19">
-                                    <use href="/images/icons/icons.svg#message-circle"></use>
+                                    <use href="./images/icons/icons.svg#message-circle"></use>
                                 </svg>
                                 <span class="count">345</span>
                             </div>
@@ -113,19 +113,19 @@ window.addEventListener('load', function () {
                         <div class="buttons">
                             <button class="compare compare-js" aria-label="Добавить в сравнение">
                                 <svg width="18" height="19">
-                                    <use href="/images/icons/icons.svg#compare"></use>
+                                    <use href="./images/icons/icons.svg#compare"></use>
                                 </svg>
                             </button>
 
                             <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
                                 <svg width="18" height="19">
-                                    <use href="/images/icons/icons.svg#heart"></use>
+                                    <use href="./images/icons/icons.svg#heart"></use>
                                 </svg>
                             </button>
 
                             <button class="buy buy-js" aria-label="Купить">
                                 <svg width="18" height="19">
-                                    <use href="/images/icons/icons.svg#shopping-cart"></use>
+                                    <use href="./images/icons/icons.svg#shopping-cart"></use>
                                 </svg>
                             </button>
                         </div>
