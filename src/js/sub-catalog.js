@@ -27,7 +27,7 @@ function openSubCatalog(e) {
     let categoryId = $(this).data('id');
 
     $.ajax({
-        url: "/data/categories.json",
+        url: "./data/categories.json",
         type: "GET",
         dataType: "json",
         success: function (data) {

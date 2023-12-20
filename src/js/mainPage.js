@@ -59,7 +59,7 @@ window.addEventListener('load', function () {
 
     // Выполнение AJAX-запроса при загрузке страницы
     $.ajax({
-        url: "/data/products.json",
+        url: "./data/products.json",
         type: "GET",
         dataType: "json",
         success: function (data) {
