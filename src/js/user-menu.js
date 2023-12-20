@@ -28,7 +28,7 @@ userMenu.on('touchmove', function (e) {
     let distance = currentX - startX;
 
     if (distance > 100) {
-        userMenu.removeClass('active');
+        $(this).removeClass('active');
         $('body').removeClass('overflow-hidden');
     }
 });

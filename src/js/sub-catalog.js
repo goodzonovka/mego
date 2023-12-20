@@ -10,18 +10,32 @@ let btnBackSubCatalog = $('#sub-catalog-menu-back');
 let subCatalogContent = $('#sub-catalog-content');
 let subCatalogTitle = $('#sub-catalog-menu-title');
 let userMenu = $('#user-menu');
+let startX;
 
-$(document).ready(function () {
 
-    // открытие
-    btnOpenSubCatalog.click(openSubCatalog);
+// открытие
+btnOpenSubCatalog.click(openSubCatalog);
 
-    // закрытие
-    btnCloseSubCatalog.click(closeSubCatalog)
+// закрытие
+btnCloseSubCatalog.click(closeSubCatalog)
 
-    // вернуться назад
-    btnBackSubCatalog.click(backSubCatalog);
+// вернуться назад
+btnBackSubCatalog.click(backSubCatalog);
+
+// закрытие по touch событию вправо
+subCatalogMenu.on('touchstart', function (e) {
+    startX = e.originalEvent.touches[0].pageX;
 });
+
+subCatalogMenu.on('touchmove', function (e) {
+    let currentX = e.originalEvent.touches[0].pageX;
+    let distance = currentX - startX;
+
+    if (distance > 100 && !$(e.target).closest('.sub-catalog-menu-brands-js').length) {
+        $(this).removeClass('active');
+    }
+});
+// end закрытие по touch событию вправо
 
 function openSubCatalog(e) {
     let categoryId = $(this).data('id');
