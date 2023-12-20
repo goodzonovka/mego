@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="header__top" id="header-top">
+        <a href="/" class="header__logo">
+            <img src="/images/components/logo.png" width="102" height="24" alt="Mego">
+        </a>
+
+        <div class="header__buttons">
+
+            <button class="header__button open-user-menu-js is-no-authorized">
+                <svg width="18" height="18">
+                    <use href="/images/icons/icons.svg#user"></use>
+                </svg>
+                <span>Войти</span>
+            </button>
+
+            <button class="header__button header__button-user open-user-menu-js is-authorized">
+                <img src="/images/components/avatar.png" width="38" height="38" alt="Avatar">
+                <span class="counter">1</span>
+            </button>
+
+        </div>
+    </div>
+
+    <div class="search">
+        <button class="search__button" id="open-search-popup">
+            <svg width="18" height="18">
+                <use href="/images/icons/icons.svg#search"></use>
+            </svg>
+            <span>Искать товары</span>
+        </button>
+    </div>
+
+    <div class="header__bottom" id="header-bottom">
+        <button class="language-city open-popup-js" data-target="#popup-choice-language-and-city">
+            <svg width="18" height="18">
+                <use href="/images/icons/icons.svg#globe"></use>
+            </svg>
+            <span class="language-city__value">
+                <span id="current-language">RU</span>
+                <span class="dot">•</span>
+                <span class="current-city" id="current-city">Кишинёв</span>
+            </span>
+
+            <span class="language-city__question">Это ваш город?</span>
+        </button>
+
+        <div class="header-categories header-categories-js">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">Билеты, отели, туры</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">Одежда и обувь</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">Электроника</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">Дом и сад</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">Детские товары</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">Акции</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">Premium</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">Бренды</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

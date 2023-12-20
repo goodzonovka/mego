@@ -1,0 +1,81 @@
+.search {
+    width: 100%;
+    &__button {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 38px;
+        padding: 0 8px;
+        @extend .text-medium;
+        color: $dark-400;
+        background-color: $white;
+        border: 2px solid $cyan-500;
+        box-shadow: 0px 1px 2px 0px #1018280D;
+        border-radius: 8px;
+        span {
+            margin-left: 14px;
+            font-weight: 400;
+        }
+    }
+    &-popup {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 32px;
+            overflow: visible;
+        }
+        &__inner {
+            flex-grow: 1;
+        }
+        .search-input {
+            width: 100%;
+            height: 44px;
+            padding: 0 56px;
+            @extend .text-medium;
+            border: 1px solid $dark-300;
+            border-radius: 8px;
+        }
+        &__open-category-filter {
+            @extend .d-flex;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 44px;
+            height: 44px;
+            color: $dark-400;
+            &:hover {
+                color: $cyan-500;
+            }
+        }
+        &__popular-categories {
+            &-wrap {
+                margin-top: 32px;
+                padding-top: 32px;
+                border-top: 1px solid $dark-300;
+                .title {
+                    margin-bottom: 16px;
+                    @extend .text-medium;
+                    font-weight: 700;
+                }
+            }
+            .swiper-slide {
+                width: 133px;
+            }
+            .category-img {
+                display: block;
+                height: 133px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+            }
+            .category-title {
+                display: block;
+                margin-top: 16px;
+                @extend .text-medium;
+            }
+        }
+    }
+}

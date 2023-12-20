@@ -26,11 +26,18 @@
 * Общие параметры, шаблоны(заготовки) и вспомогательные классы
 */
 @import 'config/base';
+@import 'config/common';
+@import 'config/button';
 
 /**
 * Заголовки и прочие классы касательно текста
 */
 @import 'config/typography';
+
+/**
+* Подключение стилей повторяющихся блоков
+*/
+@import "components";
 
 
 /**

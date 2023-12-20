@@ -1,0 +1,100 @@
+<div class="user-menu" id="user-menu">
+    <div class="user-menu__bg" id="user-menu-bg"></div>
+
+    <div class="user-menu__inner">
+        <div class="user-menu__header is-authorized">
+           <div class="avatar">
+               <img src="/images/components/avatar.png" width="44" height="44" alt="Avatar">
+           </div>
+            <div class="info">
+                <div class="name">Константин Константинопольский</div>
+                <div class="phone">+373 22 222 222</div>
+            </div>
+        </div>
+
+        <div class="user-menu__header is-no-authorized">
+            <div class="title">
+                <a href="#">Войдите в свой аккаунт</a>
+            </div>
+            <div class="text">Вы сможете оставлять отзывы о<br> товарах и сохранять их в<br> избранном</div>
+        </div>
+
+        <div class="user-menu__content">
+            <ul class="user-menu__list">
+                <li>
+                    <a href="#" class="open-catalog-js">
+                        <svg width="18" height="18">
+                            <use href="/images/icons/icons.svg#catalog"></use>
+                        </svg>
+                        Каталог
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg width="18" height="18">
+                            <use href="/images/icons/icons.svg#shopping-cart"></use>
+                        </svg>
+                        Корзина
+                        <span class="counter counter-basket-js"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg width="18" height="18">
+                            <use href="/images/icons/icons.svg#heart"></use>
+                        </svg>
+                        <span class="counter counter-wishlist-js"></span>
+                        Избранное
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg width="18" height="18">
+                            <use href="/images/icons/icons.svg#compare"></use>
+                        </svg>
+                        Сравнение
+                        <span class="counter counter-comparison-js"></span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="user-menu__list is-authorized">
+                <li>
+                    <a href="#">
+                        <svg width="18" height="18">
+                            <use href="/images/icons/icons.svg#user"></use>
+                        </svg>
+                        Аккаунт
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg width="18" height="18">
+                            <use href="/images/icons/icons.svg#package"></use>
+                        </svg>
+                        Мои заказы
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active"> <!-- если есть класс active, добавляется зеленый кружочек -->
+                        <svg width="18" height="18">
+                            <use href="/images/icons/icons.svg#tag"></use>
+                        </svg>
+                        Скидки и спецпредложения
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="user-menu__list is-authorized">
+                <li>
+                    <a href="#">
+                        <svg width="18" height="18">
+                            <use href="/images/icons/icons.svg#log-out"></use>
+                        </svg>
+                        Выход
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

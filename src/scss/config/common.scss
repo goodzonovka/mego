@@ -1,0 +1,16 @@
+/* ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ */
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animate-img {
+    &:hover img {
+        opacity: .75;
+    }
+    img {
+        transition: opacity 0.35s ease-out;
+    }
+}

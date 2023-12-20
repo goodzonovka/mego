@@ -1,0 +1,25 @@
+.language-city {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 16px;
+    @extend .text-small;
+    &__value {
+        display: flex;
+        align-items: center;
+        margin-left: 4px;
+    }
+    &__question {
+        margin-left: auto;
+    }
+    .dot {
+        margin: 0 3px;
+    }
+    .current-city {
+        max-width: 140px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}

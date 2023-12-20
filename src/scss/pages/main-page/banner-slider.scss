@@ -1,0 +1,20 @@
+.banner-slider {
+    .tooltip {
+        top: 8px;
+        right: 8px;
+        &-dropdown {
+            top: -55px;
+            &:before {
+                top: auto;
+                bottom: 11px;
+            }
+        }
+    }
+    @media (min-width: 375px) {
+        .tooltip {
+            &-dropdown {
+                top: -72px;
+            }
+        }
+    }
+}

@@ -9,12 +9,31 @@ $dm: 1700px;
 $dl: 1900px;
 
 
-$font-family: Arial, sans-serif;
-$font-size: 16px;
-$line-height: 1.4;
+$font-family: 'Open Sans', sans-serif;
+$font-size: 14px;
+$line-height: 20px;
 $font-weight: 400;
 
-$font-color-primary: #111;
-$font-color-secondary: #ccc;
+$violet-500: #844086;
+
+$cyan-300: #8DF3C7;
+$cyan-500: #41D7B4;
+
+$dark-100: #F2F4F7;
+$dark-300: #D0D5DD;
+$dark-400: #98A2B3;
+$dark-600: #475467;
+$dark-700: #344054;
+$dark-800: #1D2939;
+$dark-900: #030C1C;
+
+$blue-700: #175CD3;
+
+$error-500: #F04438;
+$error-600: #D92D20;
+$error-700: #B42318;
+
+$black: #000;
+$white: #fff;
 
 $transition: .3s ease-in-out;

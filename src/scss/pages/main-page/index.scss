@@ -1,0 +1,14 @@
+@import "main-banner";
+@import "liquidation-of-goods-banner";
+@import "banner-slider";
+@import "banner-between-products";
+@import "description";
+
+.page .container > * {
+    margin-top: 24px;
+}
+
+.btn-show-more-wrap {
+    margin-top: 16px;
+    text-align: center;
+}

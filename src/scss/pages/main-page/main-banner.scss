@@ -1,0 +1,41 @@
+.main-banner {
+    position: relative;
+    .item {
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+
+    .link {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        top: auto;
+        bottom: 4px;
+        z-index: 1;
+        &-bullet {
+            width: 44px;
+            height: 4px;
+            margin: 0 4px;
+            background: rgba(255,255,255,.5);
+            border: 1px solid rgba(1, 4, 9, 0.15);
+            border-radius: 4px;
+            opacity: 1;
+            &-active {
+                background: $cyan-500;
+            }
+        }
+    }
+}
