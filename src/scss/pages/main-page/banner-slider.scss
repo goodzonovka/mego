@@ -2,15 +2,29 @@
     .tooltip {
         top: 8px;
         right: 8px;
-        &-dropdown {
-            top: -55px;
-            &:before {
-                top: auto;
-                bottom: 11px;
+    }
+    @media (max-width: 374px) {
+        .tooltip {
+            &-dropdown {
+                top: -55px;
+                &:before {
+                    top: auto;
+                    bottom: 11px;
+                }
             }
         }
     }
-    @media (min-width: 375px) {
+    @media (max-width: 767px) {
+        .tooltip {
+            &-dropdown {
+                &:before {
+                    top: auto;
+                    bottom: 11px;
+                }
+            }
+        }
+    }
+    @media (min-width: 375px) and (max-width: 767px) {
         .tooltip {
             &-dropdown {
                 top: -72px;

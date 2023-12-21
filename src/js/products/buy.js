@@ -8,16 +8,21 @@ let counterBasket = 0;
 let counterBasketItem = $('.counter-basket-js');
 
 let buttonToTop = $('#button-to-top');
+let ww = $(window).width();
 
 $(document).on('click', '.buy-js', function () {
-    buttonToTop.addClass('notification-is-active');
+    if (ww < 768) {
+        buttonToTop.addClass('notification-is-active');
+    }
     notification.fadeIn(300);
 
     if (timerNotification !== null) clearTimeout(timerNotification);
 
     timerNotification = setTimeout(function () {
         notification.fadeOut(300);
-        buttonToTop.removeClass('notification-is-active');
+        if (ww < 768) {
+            buttonToTop.removeClass('notification-is-active');
+        }
     }, 3000);
 
     counterBasket++;

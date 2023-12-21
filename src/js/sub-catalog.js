@@ -31,10 +31,11 @@ subCatalogMenu.on('touchmove', function (e) {
     let currentX = e.originalEvent.touches[0].pageX;
     let distance = currentX - startX;
 
-    if (distance > 100 && !$(e.target).closest('.sub-catalog-menu-brands-js').length) {
+    if (distance > 100 && !$(e.target).closest('.sub-catalog-menu-brands-js:not(.disabled)').length) {
         $(this).removeClass('active');
     }
 });
+
 // end закрытие по touch событию вправо
 
 function openSubCatalog(e) {
@@ -201,6 +202,18 @@ function subCategoryBrandsSwiper() {
     new Swiper('.sub-catalog-menu-brands-js', {
         slidesPerView: "auto",
         spaceBetween: 16,
+        on: {
+            init: function () {
+                let totalWidth = 0;
+                $(this.slides).each(function () {
+                    totalWidth += $(this).outerWidth(true);
+                });
+
+                if (totalWidth <= $(this.el).width()) {
+                    $(this.el).addClass('disabled');
+                }
+            }
+        }
     });
 }
 

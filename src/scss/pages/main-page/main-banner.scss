@@ -38,4 +38,9 @@
             }
         }
     }
+    @media (min-width: $tv) {
+        .item img {
+            border-radius: 16px;
+        }
+    }
 }

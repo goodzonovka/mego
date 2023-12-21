@@ -2,18 +2,28 @@
 @import 'keyframes';
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
 }
 
 .page {
-  position: relative;
-  flex: 1 1 auto;
+    position: relative;
+    flex: 1 1 auto;
 }
 
 .container {
-  padding: 0 16px;
+    width: 540px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    @media (min-width: $tv) {
+        width: 720px;
+        padding: 0;
+    }
+    @media (min-width: $th) {
+        width: 912px;
+    }
 }
 

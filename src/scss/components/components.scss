@@ -45,7 +45,7 @@
         box-shadow: 0 24px 48px -12px rgba(16, 24, 40, .1803921569);
         visibility: hidden;
         opacity: 0;
-        transition: opacity .3s;
+        transition: all .3s;
 
         &:before {
             content: "";
@@ -72,11 +72,32 @@
         }
     }
     @media (min-width: 375px) {
+        top: 8px;
+        right: 26px;
         &-dropdown {
             width: 224px;
             padding: 8px 12px;
             font-size: 10px;
             line-height: 16px;
+        }
+    }
+    @media (min-width: $tv) {
+        &-dropdown {
+            right: -18px;
+            top: 100%;
+            margin-top: 15px;
+            margin-right: 0;
+            width: 278px;
+            padding: 16px 24px;
+            font-size: 14px;
+            line-height: 20px;
+            &:before {
+                top: -5px;
+                right: 23px;
+            }
+            &__text {
+                margin-bottom: 8px;
+            }
         }
     }
 }
@@ -111,6 +132,9 @@
         &:hover {
             color: $cyan-500;
         }
+    }
+    @media (min-width: $tv) {
+        width: auto;
     }
 }
 

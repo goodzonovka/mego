@@ -62,3 +62,9 @@ h1 {
         }
     }
 }
+
+@media (min-width: $tv) {
+    .description {
+        height: 168px;
+    }
+}

@@ -11,29 +11,30 @@
             object-fit: cover;
             border-radius: 16px;
         }
-        .tooltip-dropdown {
-            width: 130px;
-            right: -4px;
-            margin-right: 0;
-            margin-top: 10px;
-            top: 100%;
-            &:before {
-                top: -5px;
-                right: 54px;
-            }
-        }
     }
     .tooltip {
         top: 8px;
         right: 8px;
     }
-    @media (min-width: 375px) {
+    @media (max-width: 767px) {
+        .item {
+            .tooltip-dropdown {
+                width: 130px;
+                right: -4px;
+                margin-right: 0;
+                margin-top: 10px;
+                top: 100%;
+                &:before {
+                    top: -5px;
+                    right: 54px;
+                }
+            }
+        }
+    }
+    @media (min-width: 375px) and (max-width: 767px) {
         .item {
             .tooltip-dropdown {
                 width: 167px;
-                &:before {
-                    right: 50px;
-                }
             }
         }
     }

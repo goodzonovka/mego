@@ -12,6 +12,8 @@ let btnSearchFilterCategoryBack = $('#search-filter-category-back');
 
 let linkSearchFilterCategory = $('.search-filter-category-link-js');
 
+let startX;
+
 
 // открытие
 btnOpenSearchPopup.click(openSearchPopup);
@@ -19,11 +21,23 @@ btnOpenSearchPopup.click(openSearchPopup);
 // закрытие
 btnCloseSearchPopup.click(closeSearchPopup);
 
+// закрытие по touch событию вправо
+searchPopup.on('touchstart', getStartX);
+
+searchPopup.on('touchmove', closingBySwipe);
+// end закрытие по touch событию вправо
+
 // открытие фильтра по категории
 btnOpenSearchCategoriesFilter.click(openSearchCategoryFilter);
 
 // закрытие фильтра
 btnCloseSearchFilterCategory.click(closeSearchCategoryFilter);
+
+// закрытие фильтра по touch событию вправо
+searchFilterCategory.on('touchstart', getStartX);
+
+searchFilterCategory.on('touchmove', closingBySwipe);
+// end закрытие фильтра по touch событию вправо
 
 // вернуться назад
 btnSearchFilterCategoryBack.click(searchFilterCategoryBack)
@@ -44,10 +58,39 @@ function closeSearchPopup() {
     $('body').removeClass('overflow-hidden');
 }
 
+function getStartX(e) {
+    startX = e.originalEvent.touches[0].pageX;
+}
+
+function closingBySwipe(e) {
+    let currentX = e.originalEvent.touches[0].pageX;
+    let distance = currentX - startX;
+
+    if (distance > 100 && !$(e.target).closest('.search-popup-popular-categories-js:not(.disabled)').length) {
+        $(this).removeClass('active');
+
+        if ($(this).closest('#search-popup').length) {
+            $('body').removeClass('overflow-hidden');
+        }
+    }
+}
+
 function searchPopularCategoriesSlider() {
     new Swiper('.search-popup-popular-categories-js', {
         slidesPerView: "auto",
         spaceBetween: 16,
+        on: {
+            init: function () {
+                let totalWidth = 0;
+                $(this.slides).each(function () {
+                    totalWidth += $(this).outerWidth(true);
+                });
+
+                if (totalWidth <= $(this.el).width()) {
+                    $(this.el).addClass('disabled');
+                }
+            }
+        }
     });
 }
 

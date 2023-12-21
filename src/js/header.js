@@ -1,13 +1,14 @@
 import $ from "jquery";
 import Swiper from "swiper";
 
-/* категории в шапке сайта */
-new Swiper('.header-categories-js', {
-    slidesPerView: "auto",
-    spaceBetween: 16
+$(function() {
+    /* категории в шапке сайта */
+    new Swiper('.header-categories-js', {
+        slidesPerView: "auto",
+        spaceBetween: 16
+    });
+    /* end категории в шапке сайта */
 });
-/* end категории в шапке сайта */
-
 /* header: fixed menu */
 $(window).scroll(function () {
     let scrollTop = $(this).scrollTop();

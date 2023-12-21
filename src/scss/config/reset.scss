@@ -46,6 +46,11 @@ body {
   text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  opacity: 0;
+  transition: opacity .3s;
+  &.load {
+    opacity: 1;
+  }
   &.overflow-hidden {
     overflow: hidden;
   }

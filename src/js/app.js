@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 import "./header.js";
 import "./footer.js";
 import "./user-menu.js";
@@ -24,3 +26,7 @@ BaseHelpers.addLoadedClass();
 
 BaseHelpers.headerFixed();
 /* end проверка на поддержку webp формата */
+
+window.onload = function () {
+    $('body').addClass('load');
+}

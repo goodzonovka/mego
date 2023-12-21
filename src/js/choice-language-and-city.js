@@ -6,7 +6,8 @@ import $ from "jquery";
 $('.open-popup-js').click(function () {
     let target = $(this).data('target');
 
-    $(target).addClass('active')
+    $(target).addClass('active');
+    $('body').addClass('overflow-hidden');
 });
 
 // Выбор языка, вставка кода языка в шапке сайта
@@ -47,6 +48,8 @@ inputChoiceCity.on('input', function () {
 // закрытие popup по крестику или темному фону
 $('.popup-bg-js, .close-popup-js').click(function () {
     $('.popup').removeClass('active');
+    $('body').removeClass('overflow-hidden');
+
 });
 
 /* end popup выбор языка сайта и города */
