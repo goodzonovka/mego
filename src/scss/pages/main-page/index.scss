@@ -2,13 +2,21 @@
 @import "liquidation-of-goods-banner";
 @import "banner-slider";
 @import "banner-between-products";
-@import "description";
 
-.page .container > * {
+.best-deals, .recommend-for-you, .recommended {
     margin-top: 24px;
 }
 
 .btn-show-more-wrap {
     margin-top: 16px;
     text-align: center;
+}
+
+@media (min-width: $ds) {
+    .best-deals, .recommend-for-you, .recommended, .liquidation-of-goods-banner-2 {
+        margin-top: 48px;
+    }
+    .btn-show-more-wrap {
+        margin-top: 17px;
+    }
 }

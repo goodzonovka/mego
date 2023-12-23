@@ -15,9 +15,6 @@
         opacity: 1;
         visibility: visible;
     }
-}
-
-.popup-choice-language-and-city {
     .popup-bg {
         position: absolute;
         width: 100%;
@@ -27,7 +24,7 @@
     .inner {
         position: relative;
         width: calc(100% - 20px);
-        max-width: 560px;
+        max-width: 380px;
         max-height: calc(100vh - 20px);
         padding: 24px;
         background-color: $white;
@@ -42,6 +39,20 @@
         font-size: 20px;
         line-height: 24px;
     }
+    .close-popup {
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        margin-left: 8px;
+    }
+    @media (min-width: $ds) {
+        .inner {
+            padding: 2rem;
+        }
+    }
+}
+
+.popup-choice-language-and-city {
     .choice-language {
         .list {
             display: flex;
@@ -75,11 +86,5 @@
 
     .choice-city {
         margin-top: 32px;
-    }
-
-    .close-popup {
-        position: absolute;
-        top: 22px;
-        right: 22px;
     }
 }

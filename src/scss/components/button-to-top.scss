@@ -22,4 +22,14 @@
     &:hover {
         background-color: $cyan-300;
     }
+    @media (min-width: $ds) {
+        width: 48px;
+        height: 48px;
+        right: 16px;
+        bottom: 30px;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
 }

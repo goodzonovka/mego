@@ -6,6 +6,10 @@ import $ from "jquery";
 $('.open-popup-js').click(function () {
     let target = $(this).data('target');
 
+    // скрыть уведомление на десктопе о выборе города,
+    // если нажали по "Укажите адрес доставки"
+    if ($(this).hasClass('notification-enter-delivery__link')) $('.notification-enter-delivery').hide();
+
     $(target).addClass('active');
     $('body').addClass('overflow-hidden');
 });

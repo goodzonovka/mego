@@ -1,4 +1,5 @@
 import $ from "jquery";
+import {isMobile} from "../functions.js";
 
 /* Добавление товара в корзину, уведомление + отображение счетчиков */
 let notification = $('#notification');
@@ -8,10 +9,9 @@ let counterBasket = 0;
 let counterBasketItem = $('.counter-basket-js');
 
 let buttonToTop = $('#button-to-top');
-let ww = $(window).width();
 
 $(document).on('click', '.buy-js', function () {
-    if (ww < 768) {
+    if (isMobile) {
         buttonToTop.addClass('notification-is-active');
     }
     notification.fadeIn(300);
@@ -20,7 +20,7 @@ $(document).on('click', '.buy-js', function () {
 
     timerNotification = setTimeout(function () {
         notification.fadeOut(300);
-        if (ww < 768) {
+        if (isMobile) {
             buttonToTop.removeClass('notification-is-active');
         }
     }, 3000);

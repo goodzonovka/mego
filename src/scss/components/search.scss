@@ -1,6 +1,5 @@
 .search {
-    width: 100%;
-    &__button {
+    &__mobile-button {
         display: flex;
         align-items: center;
         width: 100%;
@@ -12,6 +11,9 @@
         border: 2px solid $cyan-500;
         box-shadow: 0px 1px 2px 0px #1018280D;
         border-radius: 8px;
+        &-wrap {
+            width: 100%;
+        }
         span {
             margin-left: 14px;
             font-weight: 400;
@@ -22,7 +24,7 @@
             display: flex;
             flex-direction: column;
             padding-bottom: 32px;
-            overflow: visible;
+            overflow: hidden !important ;
         }
         &__inner {
             flex-grow: 1;
@@ -75,6 +77,123 @@
                 display: block;
                 margin-top: 16px;
                 @extend .text-medium;
+            }
+        }
+    }
+    &-form {
+        &__select-category {
+            display: none;
+        }
+    }
+    @media (min-width: $ds) {
+        &__mobile-button-wrap {
+            display: none;
+        }
+        &-popup, &-filter-category {
+            display: none;
+        }
+        &-form {
+            flex-grow: 1;
+            margin-left: 16px;
+            margin-right: 32px;
+            margin-bottom: 0 !important;
+            &__select-category {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 92px;
+                height: 44px;
+                padding: 0 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                line-height: 24px;
+                color: $dark-900;
+                cursor: pointer;
+                transition: all .3s;
+                &:hover {
+                    color: $cyan-500;
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    height: 32px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border-left: 1px solid $dark-300;
+                }
+                svg {
+                    margin-left: 4px;
+                }
+            }
+            &__current-category {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            &__input {
+                padding-left: 104px;
+                padding-right: 70px;
+                color: $dark-900;
+                background-color: $white;
+                border-color: $cyan-500;
+                &:focus {
+                    border-color: $cyan-300;
+                }
+            }
+            &__submit.search-submit {
+                left: auto;
+                right: 0;
+                width: 58px;
+                background-color: $cyan-500;
+                border-radius: 0 8px 8px 0;
+                &:hover {
+                    background-color: $cyan-300;
+                }
+                svg {
+                    color: $dark-900;
+                }
+            }
+            .search-popup__open-category-filter {
+                display: none;
+            }
+        }
+        &-filter-category-popup {
+            .inner {
+                max-width: 500px;
+            }
+            .title {
+                margin-bottom: 1.5rem;
+            }
+            .catalog-menu-list__link {
+                font-size: 14px;
+                line-height: 20px;
+            }
+            ul {
+                column-count: 2;
+                column-gap: 1rem;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                padding: 10px 12px;
+                font-weight: 500;
+                border-radius: 8px;
+                &:hover, &.active {
+                    color: $blue-700;
+                    svg {
+                        color: $blue-700;
+                    }
+                }
+                &.active {
+                    background-color: $dark-100;
+                }
+                svg {
+                    flex-shrink: 0;
+                    margin-right: 16px;
+                }
             }
         }
     }

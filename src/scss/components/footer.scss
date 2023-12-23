@@ -1,17 +1,16 @@
 .footer {
     margin-top: 24px;
-    padding-bottom: 24px;
+    padding: 24px 0;
     color: $white;
     background-color: $dark-900;
-    .container > * {
-        margin-top: 24px;
-    }
     &__top {
         padding: 24px;
         background-color: $dark-800;
         border-radius: 16px;
-        > *:not(:first-child) {
-            margin-top: 24px;
+        @media (max-width: 1199px) {
+            > *:not(:first-child) {
+                margin-top: 24px;
+            }
         }
     }
     &__logo {
@@ -89,12 +88,21 @@
         }
     }
 
+    &__qr-code, &__qr-code-text {
+        display: none;
+    }
+
     &__download-app {
         display: flex;
         justify-content: center;
+        margin-top: 24px;
         & > *:not(:last-child) {
             margin-right: 24px;
         }
+    }
+
+    &__wrap-menu-copyright {
+        margin-top: 24px;
     }
 
     &__menu {
@@ -137,12 +145,105 @@
             }
         }
     }
+
+    &__copyright {
+        margin-top: 24px;
+    }
     @media (min-width: 375px) {
         &__top-menu {
             margin: 0 -12px -8px;
             a {
                 margin: 0 12px 8px;
             }
+        }
+    }
+    @media (min-width: $ds) {
+        margin-top: 64px;
+        padding: 64px 0 60px;
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 48px 17px 24px;
+            &-menu {
+                margin: 1px 0 0 -12px;
+                a {
+                    margin: 0 48px 0 0;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        &__logo {
+            padding-bottom: 1px;
+        }
+        &__bottom {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 24px;
+        }
+        &__qr-code {
+            width: 164px;
+            height: 164px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $white;
+            border-radius: 21.87px;
+            &-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 344px;
+                padding: 23px;
+                border: 1px solid #1D2939;
+                border-radius: 16px;
+            }
+            &-text {
+                display: block;
+                text-align: center;
+                margin-top: 24px;
+            }
+        }
+        &__download-app {
+            margin-top: 16px;
+            & >:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+        &__wrap-menu-copyright {
+            margin-top: 0;
+            margin-left: 54px;
+            flex-grow: 1;
+        }
+        &__menu {
+            display: flex;
+            margin: 0 -12px;
+            &-list {
+                display: block;
+                padding: 0;
+            }
+            &-item {
+                width: calc(25% - 24px);
+                margin: 0 12px;
+                border-bottom: none;
+                &:first-child {
+                    border-top: none;
+                }
+            }
+            &-header {
+                margin-bottom: 32px;
+                padding: 0;
+                svg {
+                    display: none;
+                }
+            }
+        }
+        &__copyright {
+            width: calc(25% - 18px);
+            margin-top: 58px;
+            margin-left: auto;
         }
     }
 }

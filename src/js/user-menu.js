@@ -1,4 +1,5 @@
 import $ from "jquery";
+import {isDesktop, isMobile} from "./functions.js";
 
 /* User menu */
 let userMenuBtn = $('.open-user-menu-js');
@@ -6,17 +7,36 @@ let userMenu = $('#user-menu');
 let userMenuBg = $('#user-menu-bg');
 let startX;
 
+if (isDesktop()) {
+    $('#header-top').append(userMenu);
+}
+
 // открытие
 userMenuBtn.click(function () {
-    userMenu.addClass('active');
-    $('body').addClass('overflow-hidden');
+    userMenu.toggleClass('active');
+    if (isMobile()) {
+        $('body').addClass('overflow-hidden');
+    }
 });
 
 // закрытие
 userMenuBg.click(function () {
     userMenu.removeClass('active');
-    $('body').removeClass('overflow-hidden');
+    if (isMobile()) {
+        $('body').removeClass('overflow-hidden');
+    }
 });
+
+// закрытие вне области меню и кнопки(десктоп)
+if (isDesktop()) {
+    $(document).mouseup(function (e) {
+        if (!userMenu.is(e.target) && userMenu.has(e.target).length === 0 &&
+            !userMenuBtn.is(e.target) && userMenuBtn.has(e.target).length === 0
+        ) {
+            userMenu.removeClass('active');
+        }
+    });
+}
 
 // закрытие по touch событию вправо
 userMenu.on('touchstart', function (e) {

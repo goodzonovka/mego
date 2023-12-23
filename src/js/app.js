@@ -5,11 +5,12 @@ import "./footer.js";
 import "./user-menu.js";
 import "./choice-language-and-city.js";
 import "./common.js";
-import "./search.js";
 
 import "./mainPage.js";
 import "./catalog.js";
 import "./sub-catalog.js";
+
+import "./search.js";
 
 import "./products/buy.js";
 import "./products/wishlist.js";
@@ -17,6 +18,7 @@ import "./products/comparison.js";
 
 /* проверка на поддержку webp формата */
 import BaseHelpers from './helpers/BaseHelpers.js';
+import {isDesktop, isDevice} from "./functions.js";
 
 BaseHelpers.checkWebpSupport();
 
@@ -26,6 +28,17 @@ BaseHelpers.addLoadedClass();
 
 BaseHelpers.headerFixed();
 /* end проверка на поддержку webp формата */
+
+let isDesktopResult = isDesktop();
+
+// перезагрузить страницу, если юзер ресайзит
+// экран с десктопа на девайс и наоборот
+$(window).resize(function () {
+    if (isDesktopResult && $(window).width() < 1200 || !isDesktopResult && $(window).width() > 1199) {
+        $('body').hide();
+        location.reload();
+    }
+})
 
 window.onload = function () {
     $('body').addClass('load');

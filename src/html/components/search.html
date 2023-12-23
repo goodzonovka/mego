@@ -11,18 +11,36 @@
 
     <div class="catalog-menu__content search-popup__content">
         <div class="search-popup__inner">
-            <div class="form-group">
-                <input type="text" class="form-input">
-                <svg width="18" height="18" class="icon-search">
-                    <use href="./images/icons/icons.svg#search"></use>
-                </svg>
+            <form class="search-form search-form-js">
+                <div class="form-group">
 
-                <button class="search-popup__open-category-filter" id="search-open-category-filter">
-                    <svg width="18" height="18">
-                        <use href="./images/icons/icons.svg#settings"></use>
-                    </svg>
-                </button>
-            </div>
+                    <button
+                            type="button"
+                            class="search-form__select-category open-popup-js"
+                            data-target="#search-filter-category-popup"
+                            aria-label="Открыть фильтр по категориям">
+                        <span class="search-form__current-category" id="search-form-current-category">Везде</span>
+                        <svg width="18" height="18">
+                            <use href="./images/icons/icons.svg#chevron-down-small"></use>
+                        </svg>
+                    </button>
+
+                    <input type="text" class="form-input search-form__input search-form-input-js"
+                           placeholder="Искать товары">
+
+                    <button class="search-submit search-form__submit">
+                        <svg width="18" height="18">
+                            <use href="./images/icons/icons.svg#search"></use>
+                        </svg>
+                    </button>
+
+                    <button type="button" class="search-popup__open-category-filter" id="search-open-category-filter">
+                        <svg width="18" height="18">
+                            <use href="./images/icons/icons.svg#settings"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
         </div>
 
         <div class="search-popup__popular-categories-wrap">

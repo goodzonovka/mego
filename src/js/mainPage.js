@@ -1,17 +1,18 @@
 import $ from "jquery";
 import Swiper from "swiper";
-import {Pagination, EffectFade, Autoplay} from "swiper/modules";
+import {Navigation, Pagination, EffectFade, Autoplay} from "swiper/modules";
+import {isDevice, isDesktop} from "./functions.js";
 
 window.addEventListener('load', function () {
     /* main banner */
     new Swiper('.main-banner-js', {
-        modules: [EffectFade, Pagination, Autoplay],
+        modules: [Navigation, EffectFade, Pagination, Autoplay],
         loop: true,
         speed: 1000,
-        // autoplay: {
-        //     delay: 6000,
-        //     disableOnInteraction: false, // Отключить автопрокрутку при взаимодействии пользователя
-        // },
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false, // Отключить автопрокрутку при взаимодействии пользователя
+        },
         effect: "fade",
         fadeEffect: {
             crossFade: true
@@ -19,36 +20,43 @@ window.addEventListener('load', function () {
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
+        },
+        navigation: {
+            prevEl: '.swiper-arrow__prev',
+            nextEl: '.swiper-arrow__next',
         },
     });
     /* end main banner */
 
     /* products list slider */
-    new Swiper('.products-list-slider-js', {
-        slidesPerView: "auto",
-        spaceBetween: 16,
-    });
-    /* end products list slider */
+    if (isDevice()) {
+        new Swiper('.products-list-slider-js', {
+            slidesPerView: "auto",
+            spaceBetween: 16,
+        });
 
-    /* banner slider */
-    new Swiper('.banner-slider-js', {
-        modules: [EffectFade, Pagination, Autoplay],
-        loop: true,
-        speed: 1000,
-        // autoplay: {
-        //     delay: 6000,
-        //     disableOnInteraction: false, // Отключить автопрокрутку при взаимодействии пользователя
-        // },
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-    });
-    /* end banner slider */
+        /* end products list slider */
+
+        /* banner slider */
+        new Swiper('.banner-slider-js', {
+            modules: [EffectFade, Pagination, Autoplay],
+            loop: true,
+            speed: 1000,
+            // autoplay: {
+            //     delay: 6000,
+            //     disableOnInteraction: false, // Отключить автопрокрутку при взаимодействии пользователя
+            // },
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        /* end banner slider */
+    }
 
     /* подгрузка товаров */
     let recommendedProducts = $('#recommended-products'); // блок с товарами
@@ -106,28 +114,30 @@ window.addEventListener('load', function () {
                             <a href="#">${product.name}</a>
                         </h3>
 
-                        <div class="price-block">
-                            <div class="price">${product.price}</div>
-                        </div>
-
-                        <div class="buttons">
-                            <button class="compare compare-js" aria-label="Добавить в сравнение">
-                                <svg width="18" height="19">
-                                    <use href="./images/icons/icons.svg#compare"></use>
-                                </svg>
-                            </button>
-
-                            <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-                                <svg width="18" height="19">
-                                    <use href="./images/icons/icons.svg#heart"></use>
-                                </svg>
-                            </button>
-
-                            <button class="buy buy-js" aria-label="Купить">
-                                <svg width="18" height="19">
-                                    <use href="./images/icons/icons.svg#shopping-cart"></use>
-                                </svg>
-                            </button>
+                        <div class="bottom">
+                            <div class="price-block">
+                                <div class="price">${product.price}</div>
+                            </div>
+    
+                            <div class="buttons">
+                                <button class="compare compare-js" aria-label="Добавить в сравнение">
+                                    <svg width="18" height="19">
+                                        <use href="./images/icons/icons.svg#compare"></use>
+                                    </svg>
+                                </button>
+    
+                                <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+                                    <svg width="18" height="19">
+                                        <use href="./images/icons/icons.svg#heart"></use>
+                                    </svg>
+                                </button>
+    
+                                <button class="buy buy-js" aria-label="Купить">
+                                    <svg width="18" height="19">
+                                        <use href="./images/icons/icons.svg#shopping-cart"></use>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 `);

@@ -1,6 +1,5 @@
 import $ from "jquery";
-import Swiper from "swiper";
-
+import {isDesktop, isDevice} from "./functions.js";
 
 let catalogMenu = $('#catalog-menu');
 let subCatalogMenu = $('#sub-catalog-menu');
@@ -12,9 +11,17 @@ let subCatalogTitle = $('#sub-catalog-menu-title');
 let userMenu = $('#user-menu');
 let startX;
 
+if (isDesktop()) {
+    catalogMenu.find('.catalog-menu__content').append(subCatalogMenu);
+}
+
 
 // открытие
-btnOpenSubCatalog.click(openSubCatalog);
+if (isDesktop()) {
+    btnOpenSubCatalog.mouseenter(openSubCatalog);
+} else {
+    btnOpenSubCatalog.click(openSubCatalog);
+}
 
 // закрытие
 btnCloseSubCatalog.click(closeSubCatalog)
@@ -23,23 +30,19 @@ btnCloseSubCatalog.click(closeSubCatalog)
 btnBackSubCatalog.click(backSubCatalog);
 
 // закрытие по touch событию вправо
-subCatalogMenu.on('touchstart', function (e) {
-    startX = e.originalEvent.touches[0].pageX;
-});
+subCatalogMenu.on('touchstart', getStartX);
 
-subCatalogMenu.on('touchmove', function (e) {
-    let currentX = e.originalEvent.touches[0].pageX;
-    let distance = currentX - startX;
-
-    if (distance > 100 && !$(e.target).closest('.sub-catalog-menu-brands-js:not(.disabled)').length) {
-        $(this).removeClass('active');
-    }
-});
+subCatalogMenu.on('touchmove', closingBySwipe);
 
 // end закрытие по touch событию вправо
 
+// раскрытие подкатегорий
+$(document).on('click', '.sub-catalog-menu-list-arrow-js', disclosureSubcategories)
+
 function openSubCatalog(e) {
     let categoryId = $(this).data('id');
+
+    if ($(this).hasClass('active')) return;
 
     $.ajax({
         url: "./data/categories.json",
@@ -56,14 +59,17 @@ function openSubCatalog(e) {
                 displayCategoryTitle(category);
             }
 
-            if (brands.length) {
-                displayBrands(brands);
-
-                subCategoryBrandsSwiper();
+            if (subcategories) {
+                if (isDevice()) {
+                    displaySubcategoriesMobile(subcategories);
+                }
+                if (isDesktop()) {
+                    displaySubcategoriesDesktop(subcategories);
+                }
             }
 
-            if (subcategories) {
-                displaySubcategories(subcategories);
+            if (brands.length) {
+                displayBrands(brands);
             }
         },
         error: function (xhr, status, error) {
@@ -72,6 +78,8 @@ function openSubCatalog(e) {
     });
 
     e.preventDefault();
+    btnOpenSubCatalog.removeClass('active')
+    $(this).addClass('active');
     subCatalogMenu.addClass('active');
 }
 
@@ -79,15 +87,45 @@ function openSubCatalog(e) {
 function closeSubCatalog() {
     catalogMenu.removeClass('active');
     subCatalogMenu.removeClass('active');
+    btnOpenSubCatalog.removeClass('active');
 
     if (!userMenu.hasClass('active')) {
         $('body').removeClass('overflow-hidden');
     }
 }
 
+function getStartX(e) {
+    startX = e.originalEvent.touches[0].pageX;
+}
+
+function closingBySwipe(e) {
+    let currentX = e.originalEvent.touches[0].pageX;
+    let distance = currentX - startX;
+
+    if (distance > 100) {
+        $(this).removeClass('active');
+        btnOpenSubCatalog.removeClass('active');
+    }
+}
+
 // вернуться назад
 function backSubCatalog() {
     subCatalogMenu.removeClass('active');
+    btnOpenSubCatalog.removeClass('active');
+}
+
+// раскрытие подкатегорий
+function disclosureSubcategories(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    let itemLi = $(this).closest('.sub-catalog-menu-list__item');
+    let subcategoriesUl = itemLi.find('ul');
+
+    itemLi.siblings('li').removeClass('active').find('ul').slideUp(300);
+
+    itemLi.toggleClass('active');
+    subcategoriesUl.slideToggle(300);
 }
 
 // получить категорию по Id
@@ -127,14 +165,21 @@ function displayCategoryTitle(category) {
 }
 
 
-// отобразить категории 2го уровня
-function displaySubcategories(subcategories) {
-    let subcategoriesList = $('<ul class="sub-catalog-menu__list">');
+// отобразить категории 2го уровня для мобильной версии
+function displaySubcategoriesMobile(subcategories) {
+    let subcategoriesList = $('<ul class="sub-catalog-menu-list">');
     subcategories.forEach(function (subcategory) {
-        let subcategoryElement = $('<li class="sub-catalog-menu__item">');
+        let subcategoryElement = $('<li class="sub-catalog-menu-list__item">');
 
         subcategoryElement.append(`
-            <a href="#" class="sub-catalog-menu__link">${subcategory.name}</a>
+            <a href="#" class="catalog-menu-list__link sub-catalog-menu-list__link">
+                <span class="sub-catalog-menu-list__title">${subcategory.name}</span>
+                <button class="sub-catalog-menu-list__arrow sub-catalog-menu-list-arrow-js" aria-label="Раскрыть подменю">
+                    <svg width="18" height="18">
+                        <use href="./images/icons/icons.svg#chevron-right-small"></use>
+                    </svg>
+                </button>
+            </a>
         `);
 
         // если у подкатегории есть подкатегории
@@ -143,6 +188,46 @@ function displaySubcategories(subcategories) {
         }
         subcategoriesList.append(subcategoryElement)
     });
+    subCatalogContent.append(subcategoriesList);
+}
+
+// отобразить категории 2го уровня для десктопной версии
+function displaySubcategoriesDesktop(subcategories) {
+    let subcategoriesList = $('<div class="sub-catalog-menu-list__columns">');
+
+    let column_1 = $('<div class="sub-catalog-menu-list__column">');
+    let column_2 = $('<div class="sub-catalog-menu-list__column">');
+    let column_3 = $('<div class="sub-catalog-menu-list__column">');
+
+    let columnNumber = 1;
+    subcategories.forEach(function (subcategory, index) {
+
+        let subcategoryElement = $('<div class="sub-catalog-menu-list__item">');
+
+        subcategoryElement.append(`
+            <a href="#" class="sub-catalog-menu-list__link">
+                <span class="sub-catalog-menu-list__title">${subcategory.name}</span>
+            </a>
+        `);
+
+        // если у подкатегории есть подкатегории
+        if (subcategory.subcategories) {
+            displayNestedSubcategories(subcategoryElement, subcategory.subcategories);
+        }
+
+        if (columnNumber === 1) {
+            column_1.append(subcategoryElement);
+        }
+        if (columnNumber === 2) {
+            column_2.append(subcategoryElement);
+        }
+        if (columnNumber === 3) {
+            column_3.append(subcategoryElement);
+        }
+        columnNumber++;
+        if (columnNumber === 4) columnNumber = 1;
+    });
+    subcategoriesList.append(column_1, column_2, column_3);
     subCatalogContent.append(subcategoriesList);
 }
 
@@ -155,7 +240,7 @@ function displayNestedSubcategories(subcategoryElement, subcategories) {
         let nestedSubcategoryElement = $('<li>');
         nestedSubcategoryElement.append(`
                     <a href="#">${subcategory.name}</a>
-                `)
+                `);
         nestedSubcategoriesList.append(nestedSubcategoryElement);
     });
 
@@ -163,8 +248,8 @@ function displayNestedSubcategories(subcategoryElement, subcategories) {
     if (subcategories.length > 6) {
         nestedSubcategoriesList.addClass('subcategories-hidden')
         nestedSubcategoriesList.append(`
-            <li class="sub-catalog-menu__more-wrap">
-                <button class="sub-catalog-menu__more" onclick="showMoreSubcategories(this)">
+            <li class="sub-catalog-menu-list__more-wrap">
+                <button class="sub-catalog-menu-list__more" onclick="showMoreSubcategories(this)">
                     <span>${moreLang}</span>
                      <svg width="18" height="18">
                         <use href="./images/icons/icons.svg#chevron-down-small"></use>
@@ -178,15 +263,11 @@ function displayNestedSubcategories(subcategoryElement, subcategories) {
 }
 
 function displayBrands(brands) {
-    let brandsWrapper = $(`
-        <div class="sub-catalog-menu__brands sub-catalog-menu-brands-js">
-            <div class="swiper-wrapper"></div>
-        </div>
-    `)
+    let brandsWrapper = $('<div class="sub-catalog-menu-brands">');
 
     brands.forEach(function (brand) {
-        brandsWrapper.find('.swiper-wrapper').append(`
-            <div class="swiper-slide">
+        brandsWrapper.append(`
+            <div class="sub-catalog-menu-brands__item">
                 <a href="#">
                     <img src=${brand} alt="">
                 </a>
@@ -195,26 +276,6 @@ function displayBrands(brands) {
     })
 
     subCatalogContent.append(brandsWrapper);
-}
-
-// подключения swiper для брендов в подкатегории
-function subCategoryBrandsSwiper() {
-    new Swiper('.sub-catalog-menu-brands-js', {
-        slidesPerView: "auto",
-        spaceBetween: 16,
-        on: {
-            init: function () {
-                let totalWidth = 0;
-                $(this.slides).each(function () {
-                    totalWidth += $(this).outerWidth(true);
-                });
-
-                if (totalWidth <= $(this.el).width()) {
-                    $(this.el).addClass('disabled');
-                }
-            }
-        }
-    });
 }
 
 // показать больше подкатегорий по клику на кнопку "Ещё"

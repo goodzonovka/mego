@@ -25,5 +25,11 @@
     @media (min-width: $th) {
         width: 912px;
     }
+    @media (min-width: $ds) {
+        width: 1170px;
+    }
+    @media (min-width: 1366px) {
+        width: 1296px;
+    }
 }
 

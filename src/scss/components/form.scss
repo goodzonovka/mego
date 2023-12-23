@@ -12,30 +12,47 @@
     @extend .text-medium;
     border: 1px solid rgba(208, 213, 221, 1);
     border-radius: 8px;
-    &:has(~ .search-popup__open-category-filter) {
-        padding-right: 44px;
-    }
     &::placeholder {
         color: $dark-400;
     }
     &:focus {
         border-color: $dark-900;
-        & + .icon-search {
+
+        & + .search-submit {
             color: $dark-900;
         }
     }
-    & + .icon-search {
+    & + .search-submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 44px;
+        width: 44px;
         position: absolute;
-        top: 13px;
-        left: 13px;
+        top: 0;
+        left: 0;
         color: $dark-400;
-        transition: all .3s;
     }
+    @media (max-width: 1199px) {
+        &:has(~ .search-popup__open-category-filter) {
+            padding-right: 44px;
+        }
+    }
+}
+
+.radio-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .form-group__radio {
     display: flex;
     align-items: center;
+    cursor: pointer;
+    &:hover .radio-icon {
+        border-color: $cyan-500;
+    }
 }
 
 .form-input-radio {
@@ -57,9 +74,6 @@
     border: 2px solid $dark-300;
     border-radius: 50%;
     transition: all .3s;
-    &:hover {
-        border-color: $cyan-500;
-    }
     &:before {
         content: '';
         position: absolute;

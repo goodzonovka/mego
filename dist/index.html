@@ -7,9 +7,9 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&_v=20231221122555" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap&_v=20231221122555" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.min.css?_v=20231221122555">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&_v=20231223160405" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap&_v=20231223160405" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css?_v=20231223160405">
     <title>Главная страница</title>
 </head>
 
@@ -28,7 +28,7 @@
 
         <div class="header__buttons">
 
-            <button class="header__button open-user-menu-js is-no-authorized">
+            <button class="header__button header__button-user open-user-menu-js is-no-authorized">
                 <svg width="18" height="18">
                     <use href="./images/icons/icons.svg#user"></use>
                 </svg>
@@ -43,8 +43,8 @@
         </div>
     </div>
 
-    <div class="search">
-        <button class="search__button" id="open-search-popup">
+    <div class="search__mobile-button-wrap">
+        <button class="search__mobile-button" id="open-search-popup">
             <svg width="18" height="18">
                 <use href="./images/icons/icons.svg#search"></use>
             </svg>
@@ -53,7 +53,15 @@
     </div>
 
     <div class="header__bottom" id="header-bottom">
-        <button class="language-city open-popup-js" data-target="#popup-choice-language-and-city">
+
+        <div class="open-popup-js notification-enter-delivery">
+            <div class="notification-enter-delivery__title">Это ваш город?</div>
+            <button class="open-popup-js notification-enter-delivery__link" data-target="#popup-choice-language-and-city">
+                Укажите адрес доставки
+            </button>
+        </div>
+
+        <button class="open-popup-js language-city" data-target="#popup-choice-language-and-city">
             <svg width="18" height="18">
                 <use href="./images/icons/icons.svg#globe"></use>
             </svg>
@@ -94,6 +102,10 @@
                 </div>
             </div>
         </div>
+
+        <div class="header__pickup-points-wrap">
+            <a href="#" class="header__pickup-points">Пункты выдачи</a>
+        </div>
     </div>
 </div>
         </header>
@@ -102,7 +114,7 @@
             <div class="container">
 
                 
-                <div class="main-banner main-banner-js">
+                <div class="main-banner main-banner-js main-banner-mobile">
     <div class="swiper-wrapper">
         <div class="swiper-slide item">
             <a href="#" class="link"></a>
@@ -202,6 +214,117 @@
 </div>
 
                 
+                <div class="main-banner main-banner-js main-banner-desktop">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide item">
+            <a href="#" class="link"></a>
+            <picture><source srcset="./images/main-page/main-banner/slider-desktop-1.webp" type="image/webp"><img src="./images/main-page/main-banner/slider-desktop-1.jpg" width="1296" height="400" alt=""></picture>
+
+            <span class="tooltip">
+                <span class="tooltip-btn-js tooltip__btn">
+                    <svg width="12" height="12">
+                        <use href="./images/icons/icons.svg#info"></use>
+                    </svg>
+                    <span class="tooltip__text">Реклама</span>
+                </span>
+
+                <span class="tooltip-dropdown tooltip-dropdown-js">
+                    <span class="tooltip-dropdown__text">
+                        Мы помогаем нашем продавцам об их товарах на Mego.
+                        Для этого у нас предусмотрены разные способы продвижения.
+                    </span>
+                    <a href="#" class="tooltip-dropdown__link">
+                        Узнать больше о способах продвижения
+                    </a>
+                </span>
+            </span>
+        </div>
+
+        <div class="swiper-slide item">
+            <picture><source srcset="./images/main-page/main-banner/slider-desktop-1.webp" type="image/webp"><img src="./images/main-page/main-banner/slider-desktop-1.jpg" width="1296" height="400" alt=""></picture>
+
+            <span class="tooltip">
+                <span class="tooltip-btn-js tooltip__btn">
+                    <svg width="12" height="12">
+                        <use href="./images/icons/icons.svg#info"></use>
+                    </svg>
+                    <span class="tooltip__text">Реклама</span>
+                </span>
+
+                <span class="tooltip-dropdown tooltip-dropdown-js">
+                    <span class="tooltip-dropdown__text">
+                        Мы помогаем нашем продавцам об их товарах на Mego.
+                        Для этого у нас предусмотрены разные способы продвижения.
+                    </span>
+                    <a href="#" class="tooltip-dropdown__link">
+                        Узнать больше о способах продвижения
+                    </a>
+                </span>
+            </span>
+        </div>
+
+        <div class="swiper-slide item">
+            <picture><source srcset="./images/main-page/main-banner/slider-desktop-1.webp" type="image/webp"><img src="./images/main-page/main-banner/slider-desktop-1.jpg" width="1296" height="400" alt=""></picture>
+
+            <span class="tooltip">
+                <span class="tooltip-btn-js tooltip__btn">
+                    <svg width="12" height="12">
+                        <use href="./images/icons/icons.svg#info"></use>
+                    </svg>
+                    <span class="tooltip__text">Реклама</span>
+                </span>
+
+                <span class="tooltip-dropdown tooltip-dropdown-js">
+                    <span class="tooltip-dropdown__text">
+                        Мы помогаем нашем продавцам об их товарах на Mego.
+                        Для этого у нас предусмотрены разные способы продвижения.
+                    </span>
+                    <a href="#" class="tooltip-dropdown__link">
+                        Узнать больше о способах продвижения
+                    </a>
+                </span>
+            </span>
+        </div>
+
+        <div class="swiper-slide item">
+            <picture><source srcset="./images/main-page/main-banner/slider-desktop-1.webp" type="image/webp"><img src="./images/main-page/main-banner/slider-desktop-1.jpg" width="1296" height="400" alt=""></picture>
+
+            <span class="tooltip">
+                <span class="tooltip-btn-js tooltip__btn">
+                    <svg width="12" height="12">
+                        <use href="./images/icons/icons.svg#info"></use>
+                    </svg>
+                    <span class="tooltip__text">Реклама</span>
+                </span>
+
+                <span class="tooltip-dropdown tooltip-dropdown-js">
+                    <span class="tooltip-dropdown__text">
+                        Мы помогаем нашем продавцам об их товарах на Mego.
+                        Для этого у нас предусмотрены разные способы продвижения.
+                    </span>
+                    <a href="#" class="tooltip-dropdown__link">
+                        Узнать больше о способах продвижения
+                    </a>
+                </span>
+            </span>
+        </div>
+    </div>
+
+    <button class="swiper-arrow swiper-arrow__prev" aria-label="Slider prev">
+        <svg width="18" height="18">
+            <use href="./images/icons/icons.svg#chevron-left"></use>
+        </svg>
+    </button>
+    <button class="swiper-arrow swiper-arrow__next" aria-label="Slider next">
+        <svg width="18" height="18">
+            <use href="./images/icons/icons.svg#chevron-right"></use>
+        </svg>
+    </button>
+
+    <div class="swiper-pagination"></div>
+</div>
+
+                
                 <a href="#" class="liquidation-of-goods-banner">
     <picture><source srcset="./images/main-page/liquidation-of-goods-banner.webp" type="image/webp"><img src="./images/main-page/liquidation-of-goods-banner.png" alt=""></picture>
 </a>
@@ -240,28 +363,30 @@
                     <a href="#">Кровать HASLEV 140x200 см темно-серый</a>
                 </h3>
 
-                <div class="price-block">
-                    <div class="price">7 999 леев</div>
-                </div>
+                <div class="bottom">
+                    <div class="price-block">
+                        <div class="price">7 999 леев</div>
+                    </div>
 
-                <div class="buttons">
-                    <button class="compare compare-js" aria-label="Добавить в сравнение">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#compare"></use>
-                        </svg>
-                    </button>
+                    <div class="buttons">
+                        <button class="compare compare-js" aria-label="Добавить в сравнение">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#compare"></use>
+                            </svg>
+                        </button>
 
-                    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#heart"></use>
-                        </svg>
-                    </button>
+                        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#heart"></use>
+                            </svg>
+                        </button>
 
-                    <button class="buy buy-js" aria-label="Купить">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#shopping-cart"></use>
-                        </svg>
-                    </button>
+                        <button class="buy buy-js" aria-label="Купить">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#shopping-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -292,36 +417,38 @@
                     <a href="#">Шкаф LIMFJORDEN 180x200см комби натуральный дуб</a>
                 </h3>
 
-                <div class="price-block">
-                    <div class="price cheaper-price">7 999 леев</div>
-                    <div class="became-cheaper">
-                        <div class="icon">
-                            <svg width="14" height="15">
-                                <use href="./images/icons/icons.svg#arrow-down"></use>
-                            </svg>
+                <div class="bottom">
+                    <div class="price-block">
+                        <div class="price cheaper-price">7 999 леев</div>
+                        <div class="became-cheaper">
+                            <div class="icon">
+                                <svg width="14" height="15">
+                                    <use href="./images/icons/icons.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                            <span>Стало дешевле</span>
                         </div>
-                        <span>Стало дешевле</span>
                     </div>
-                </div>
 
-                <div class="buttons">
-                    <button class="compare compare-js" aria-label="Добавить в сравнение">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#compare"></use>
-                        </svg>
-                    </button>
+                    <div class="buttons">
+                        <button class="compare compare-js" aria-label="Добавить в сравнение">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#compare"></use>
+                            </svg>
+                        </button>
 
-                    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#heart"></use>
-                        </svg>
-                    </button>
+                        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#heart"></use>
+                            </svg>
+                        </button>
 
-                    <button class="buy buy-js" aria-label="Купить">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#shopping-cart"></use>
-                        </svg>
-                    </button>
+                        <button class="buy buy-js" aria-label="Купить">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#shopping-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -331,13 +458,13 @@
 
                     <span class="icons-list">
                         <span class="icon icon-package">
-                             <svg width="18" height="19">
+                             <svg width="18" height="18">
                                 <use href="./images/icons/icons.svg#package"></use>
                             </svg>
                         </span>
 
                          <span class="icon icon-tag">
-                             <svg width="18" height="19">
+                             <svg width="18" height="18">
                                 <use href="./images/icons/icons.svg#tag"></use>
                             </svg>
                         </span>
@@ -366,29 +493,31 @@
                     <a href="#">Куртка стеганая с капюшоном, принт в клетку</a>
                 </h3>
 
-                <div class="price-block">
-                    <div class="old-price">1 500 леев</div>
-                    <div class="price new-price">1 399 леев</div>
-                </div>
+                <div class="bottom">
+                    <div class="price-block">
+                        <div class="old-price">1 500 леев</div>
+                        <div class="price new-price">1 399 леев</div>
+                    </div>
 
-                <div class="buttons">
-                    <button class="compare compare-js" aria-label="Добавить в сравнение">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#compare"></use>
-                        </svg>
-                    </button>
+                    <div class="buttons">
+                        <button class="compare compare-js" aria-label="Добавить в сравнение">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#compare"></use>
+                            </svg>
+                        </button>
 
-                    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#heart"></use>
-                        </svg>
-                    </button>
+                        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#heart"></use>
+                            </svg>
+                        </button>
 
-                    <button class="buy buy-js" aria-label="Купить">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#shopping-cart"></use>
-                        </svg>
-                    </button>
+                        <button class="buy buy-js" aria-label="Купить">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#shopping-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -419,29 +548,31 @@
                     <a href="#">Кеды разноцветные на шнуровке</a>
                 </h3>
 
-                <div class="price-block">
-                    <div class="old-price">3 000 леев</div>
-                    <div class="price new-price">2 850 леев</div>
-                </div>
+                <div class="bottom">
+                    <div class="price-block">
+                        <div class="old-price">3 000 леев</div>
+                        <div class="price new-price">2 850 леев</div>
+                    </div>
 
-                <div class="buttons">
-                    <button class="compare compare-js" aria-label="Добавить в сравнение">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#compare"></use>
-                        </svg>
-                    </button>
+                    <div class="buttons">
+                        <button class="compare compare-js" aria-label="Добавить в сравнение">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#compare"></use>
+                            </svg>
+                        </button>
 
-                    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#heart"></use>
-                        </svg>
-                    </button>
+                        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#heart"></use>
+                            </svg>
+                        </button>
 
-                    <button class="buy buy-js" aria-label="Купить">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#shopping-cart"></use>
-                        </svg>
-                    </button>
+                        <button class="buy buy-js" aria-label="Купить">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#shopping-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -472,29 +603,31 @@
                     <a href="#">Платье-пуловер с завязками</a>
                 </h3>
 
-                <div class="price-block">
-                    <div class="old-price">2 000 леев</div>
-                    <div class="price new-price">1 750 леев</div>
-                </div>
+                <div class="bottom">
+                    <div class="price-block">
+                        <div class="old-price">2 000 леев</div>
+                        <div class="price new-price">1 750 леев</div>
+                    </div>
 
-                <div class="buttons">
-                    <button class="compare compare-js" aria-label="Добавить в сравнение">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#compare"></use>
-                        </svg>
-                    </button>
+                    <div class="buttons">
+                        <button class="compare compare-js" aria-label="Добавить в сравнение">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#compare"></use>
+                            </svg>
+                        </button>
 
-                    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#heart"></use>
-                        </svg>
-                    </button>
+                        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#heart"></use>
+                            </svg>
+                        </button>
 
-                    <button class="buy buy-js" aria-label="Купить">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#shopping-cart"></use>
-                        </svg>
-                    </button>
+                        <button class="buy buy-js" aria-label="Купить">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#shopping-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -525,29 +658,31 @@
                     <a href="#">Apple iPhone 15 Pro 128GB Natural Titanium</a>
                 </h3>
 
-                <div class="price-block">
-                    <div class="old-price">32 000 леев</div>
-                    <div class="price new-price">29 000 леев</div>
-                </div>
+                <div class="bottom">
+                    <div class="price-block">
+                        <div class="old-price">32 000 леев</div>
+                        <div class="price new-price">29 000 леев</div>
+                    </div>
 
-                <div class="buttons">
-                    <button class="compare compare-js" aria-label="Добавить в сравнение">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#compare"></use>
-                        </svg>
-                    </button>
+                    <div class="buttons">
+                        <button class="compare compare-js" aria-label="Добавить в сравнение">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#compare"></use>
+                            </svg>
+                        </button>
 
-                    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#heart"></use>
-                        </svg>
-                    </button>
+                        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#heart"></use>
+                            </svg>
+                        </button>
 
-                    <button class="buy buy-js" aria-label="Купить">
-                        <svg width="18" height="19">
-                            <use href="./images/icons/icons.svg#shopping-cart"></use>
-                        </svg>
-                    </button>
+                        <button class="buy buy-js" aria-label="Купить">
+                            <svg width="18" height="19">
+                                <use href="./images/icons/icons.svg#shopping-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -556,7 +691,7 @@
 </section>
 
                 
-                <a href="#" class="liquidation-of-goods-banner">
+                <a href="#" class="liquidation-of-goods-banner liquidation-of-goods-banner-2">
     <picture><source srcset="./images/main-page/liquidation-of-goods-banner.webp" type="image/webp"><img src="./images/main-page/liquidation-of-goods-banner.png" alt=""></picture>
 </a>
 
@@ -593,28 +728,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -645,28 +783,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -697,28 +838,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -749,28 +893,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -801,28 +948,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -853,28 +1003,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -905,28 +1058,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -957,28 +1113,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1009,28 +1168,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1061,28 +1223,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1113,28 +1278,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1165,28 +1333,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1198,52 +1369,6 @@
     <div class="swiper-wrapper">
         <div class="swiper-slide item">
             <a href="#" class="link"></a>
-            <picture><source srcset="./images/main-page/banner-slider/image-1.webp" type="image/webp"><img src="./images/main-page/banner-slider/image-1.jpg" width="343" height="100" alt=""></picture>
-
-            <span class="tooltip">
-                <span class="tooltip-btn-js tooltip__btn">
-                    <svg width="12" height="12">
-                        <use href="./images/icons/icons.svg#info"></use>
-                    </svg>
-                    <span class="tooltip__text">Реклама</span>
-                </span>
-
-                <span class="tooltip-dropdown tooltip-dropdown-js">
-                    <span class="tooltip-dropdown__text">
-                        Мы помогаем нашем продавцам об их товарах на Mego.
-                        Для этого у нас предусмотрены разные способы продвижения.
-                    </span>
-                    <a href="#" class="tooltip-dropdown__link">
-                        Узнать больше о способах продвижения
-                    </a>
-                </span>
-            </span>
-        </div>
-
-        <div class="swiper-slide item">
-            <picture><source srcset="./images/main-page/banner-slider/image-2.webp" type="image/webp"><img src="./images/main-page/banner-slider/image-2.jpg" width="343" height="100" alt=""></picture>
-
-            <span class="tooltip">
-                <span class="tooltip-btn-js tooltip__btn">
-                    <svg width="12" height="12">
-                        <use href="./images/icons/icons.svg#info"></use>
-                    </svg>
-                    <span class="tooltip__text">Реклама</span>
-                </span>
-
-                <span class="tooltip-dropdown tooltip-dropdown-js">
-                    <span class="tooltip-dropdown__text">
-                        Мы помогаем нашем продавцам об их товарах на Mego.
-                        Для этого у нас предусмотрены разные способы продвижения.
-                    </span>
-                    <a href="#" class="tooltip-dropdown__link">
-                        Узнать больше о способах продвижения
-                    </a>
-                </span>
-            </span>
-        </div>
-
-        <div class="swiper-slide item">
             <picture><source srcset="./images/main-page/banner-slider/image-1.webp" type="image/webp"><img src="./images/main-page/banner-slider/image-1.jpg" width="343" height="100" alt=""></picture>
 
             <span class="tooltip">
@@ -1326,28 +1451,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1378,28 +1506,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1430,28 +1561,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1482,28 +1616,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1534,28 +1671,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1586,28 +1726,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1638,28 +1781,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1690,28 +1836,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1742,28 +1891,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1794,28 +1946,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1846,28 +2001,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -1898,28 +2056,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2046,28 +2207,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2098,28 +2262,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2150,28 +2317,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2202,28 +2372,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2254,28 +2427,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2306,28 +2482,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2358,28 +2537,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2410,28 +2592,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2462,28 +2647,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2514,28 +2702,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2566,28 +2757,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2618,28 +2812,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2671,28 +2868,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2723,28 +2923,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2775,28 +2978,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2827,28 +3033,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2879,28 +3088,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -2931,28 +3143,31 @@
     <a href="#">Наручные часы Casio Collection DW-291HX-5A, коричневый, зеленый</a>
 </h3>
 
-<div class="price-block">
-    <div class="price">1 446 леев</div>
-</div>
+<div class="bottom">
 
-<div class="buttons">
-    <button class="compare compare-js" aria-label="Добавить в сравнение">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#compare"></use>
-        </svg>
-    </button>
+    <div class="price-block">
+        <div class="price">1 446 леев</div>
+    </div>
 
-    <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#heart"></use>
-        </svg>
-    </button>
+    <div class="buttons">
+        <button class="compare compare-js" aria-label="Добавить в сравнение">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#compare"></use>
+            </svg>
+        </button>
 
-    <button class="buy buy-js" aria-label="Купить">
-        <svg width="18" height="19">
-            <use href="./images/icons/icons.svg#shopping-cart"></use>
-        </svg>
-    </button>
+        <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#heart"></use>
+            </svg>
+        </button>
+
+        <button class="buy buy-js" aria-label="Купить">
+            <svg width="18" height="19">
+                <use href="./images/icons/icons.svg#shopping-cart"></use>
+            </svg>
+        </button>
+    </div>
 </div>
         </div>
 
@@ -3038,128 +3253,140 @@
         </div>
     </div>
 
-    <div class="footer__download-app">
-        <a href="#" target="_blank" rel="nofollow">
-            <picture><source srcset="./images/components/footer/app-store.webp" type="image/webp"><img src="./images/components/footer/app-store.png" width="131.63" height="44" alt="App Store"></picture>
-        </a>
-        <a href="#" target="_blank" rel="nofollow">
-            <picture><source srcset="./images/components/footer/google-play.webp" type="image/webp"><img src="./images/components/footer/google-play.png" width="148.5" height="44" alt="Google Play"></picture>
-        </a>
+    <div class="footer__bottom">
+        <div class="footer__qr-code-wrap">
+            <div class="footer__qr-code">
+                <picture><source srcset="./images/components/footer/qr-code.webp" type="image/webp"><img src="./images/components/footer/qr-code.png" width="131.2" height="131.2" alt=""></picture>
+            </div>
+
+            <div class="footer__qr-code-text">Заказывайте в нашем мобильном приложении и получайте бонусы</div>
+
+            <div class="footer__download-app">
+                <a href="#" target="_blank" rel="nofollow">
+                    <picture><source srcset="./images/components/footer/app-store.webp" type="image/webp"><img src="./images/components/footer/app-store.png" width="131.63" height="44" alt="App Store"></picture>
+                </a>
+                <a href="#" target="_blank" rel="nofollow">
+                    <picture><source srcset="./images/components/footer/google-play.webp" type="image/webp"><img src="./images/components/footer/google-play.png" width="148.5" height="44" alt="Google Play"></picture>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__wrap-menu-copyright">
+            <div class="footer__menu">
+                <div class="footer__menu-item">
+                    <h3 class="active footer-menu-header-js footer__menu-header">
+                        Компания
+                        <svg width="18" height="18">
+                            <use href="./images/icons/icons.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">О нас</a>
+                            </li>
+                            <li>
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li>
+                                <a href="#">Стать курьером</a>
+                            </li>
+                            <li>
+                                <a href="#">Реквизиты</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="#">Мобильное приложение</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__menu-item">
+                    <h3 class="footer-menu-header-js footer__menu-header">
+                        Продавцам
+                        <svg width="18" height="18">
+                            <use href="./images/icons/icons.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">Стать продавцом</a>
+                            </li>
+                            <li>
+                                <a href="#">Стать поставщиком</a>
+                            </li>
+                            <li>
+                                <a href="#">Документация для партнёров</a>
+                            </li>
+                            <li>
+                                <a href="#">Партнёрская программа</a>
+                            </li>
+                            <li>
+                                <a href="#">Производителям</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__menu-item">
+                    <h3 class="footer-menu-header-js footer__menu-header">
+                        Компаниям
+                        <svg width="18" height="18">
+                            <use href="./images/icons/icons.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">Добавить компанию</a>
+                            </li>
+                            <li>
+                                <a href="#">Мои компании</a>
+                            </li>
+                            <li>
+                                <a href="#">Подарочные сертификаты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__menu-item">
+                    <h3 class="footer-menu-header-js footer__menu-header">
+                        Помощь
+                        <svg width="18" height="18">
+                            <use href="./images/icons/icons.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">Как выбрать товар</a>
+                            </li>
+                            <li>
+                                <a href="#">Оплата и доставка</a>
+                            </li>
+                            <li>
+                                <a href="#">Обратная связь</a>
+                            </li>
+                            <li>
+                                <a href="#">Возвраты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="footer__copyright">&copy; 2023 «mego»</div>
+        </div>
     </div>
-
-    <div class="footer__menu">
-        <div class="footer__menu-item">
-            <h3 class="active footer-menu-header-js footer__menu-header">
-                Компания
-                <svg width="18" height="18">
-                    <use href="./images/icons/icons.svg#chevron-down-small"></use>
-                </svg>
-            </h3>
-
-            <nav class="footer-menu-list-js footer__menu-list">
-                <ul>
-                    <li>
-                        <a href="#">О нас</a>
-                    </li>
-                    <li>
-                        <a href="#">Вакансии</a>
-                    </li>
-                    <li>
-                        <a href="#">Стать курьером</a>
-                    </li>
-                    <li>
-                        <a href="#">Реквизиты</a>
-                    </li>
-                    <li>
-                        <a href="#">Контакты</a>
-                    </li>
-                    <li>
-                        <a href="#">Мобильное приложение</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="footer__menu-item">
-            <h3 class="footer-menu-header-js footer__menu-header">
-                Продавцам
-                <svg width="18" height="18">
-                    <use href="./images/icons/icons.svg#chevron-down-small"></use>
-                </svg>
-            </h3>
-
-            <nav class="footer-menu-list-js footer__menu-list">
-                <ul>
-                    <li>
-                        <a href="#">Стать продавцом</a>
-                    </li>
-                    <li>
-                        <a href="#">Стать поставщиком</a>
-                    </li>
-                    <li>
-                        <a href="#">Документация для партнёров</a>
-                    </li>
-                    <li>
-                        <a href="#">Партнёрская программа</a>
-                    </li>
-                    <li>
-                        <a href="#">Производителям</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="footer__menu-item">
-            <h3 class="footer-menu-header-js footer__menu-header">
-                Компаниям
-                <svg width="18" height="18">
-                    <use href="./images/icons/icons.svg#chevron-down-small"></use>
-                </svg>
-            </h3>
-
-            <nav class="footer-menu-list-js footer__menu-list">
-                <ul>
-                    <li>
-                        <a href="#">Добавить компанию</a>
-                    </li>
-                    <li>
-                        <a href="#">Мои компании</a>
-                    </li>
-                    <li>
-                        <a href="#">Подарочные сертификаты</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="footer__menu-item">
-            <h3 class="footer-menu-header-js footer__menu-header">
-                Помощь
-                <svg width="18" height="18">
-                    <use href="./images/icons/icons.svg#chevron-down-small"></use>
-                </svg>
-            </h3>
-
-            <nav class="footer-menu-list-js footer__menu-list">
-                <ul>
-                    <li>
-                        <a href="#">Как выбрать товар</a>
-                    </li>
-                    <li>
-                        <a href="#">Оплата и доставка</a>
-                    </li>
-                    <li>
-                        <a href="#">Обратная связь</a>
-                    </li>
-                    <li>
-                        <a href="#">Возвраты</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-
-    <div class="footer__copyright">&copy; 2023 «mego»</div>
 </div>
         </footer>
 
@@ -3189,7 +3416,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="open-catalog-js">
+                <a href="#" class="open-catalog-js catalog-button catalog-button-js">
                     <svg width="24" height="24">
                         <use href="./images/icons/icons.svg#catalog"></use>
                     </svg>
@@ -3197,7 +3424,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" class="comparison-button-js">
                     <svg width="24" height="24">
                         <use href="./images/icons/icons.svg#compare-big"></use>
                     </svg>
@@ -3206,7 +3433,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" class="wishlist-button-js">
                     <svg width="24" height="24">
                         <use href="./images/icons/icons.svg#heart-big"></use>
                     </svg>
@@ -3215,7 +3442,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="cart">
+                <a href="#" class="cart cart-button-js">
                     <svg width="24" height="24">
                         <use href="./images/icons/icons.svg#shopping-cart-big"></use>
                     </svg>
@@ -3245,37 +3472,42 @@
             </ul>
         </div>
 
-        <div class="choice-city" id="choice-city">
+        <form class="choice-city" id="choice-city">
             <label for="choice-city-input" class="title">Выберите город</label>
 
             <div class="form-group">
                 <input type="text" id="choice-city-input" class="form-input" placeholder="Ваш город">
-                <svg width="18" height="18" class="icon-search">
-                    <use href="./images/icons/icons.svg#search"></use>
-                </svg>
+
+                <button class="search-submit">
+                    <svg width="18" height="18" class="icon-search">
+                        <use href="./images/icons/icons.svg#search"></use>
+                    </svg>
+                </button>
             </div>
 
-            <label class="form-group form-group__radio">
-                <input type="radio" name="choice-city" class="form-input-radio" value="Кишинёв">
-                <span class="radio-icon"></span>
-                Кишинёв
-            </label>
-            <label class="form-group form-group__radio">
-                <input type="radio" name="choice-city" class="form-input-radio" value="Бельцы">
-                <span class="radio-icon"></span>
-                Бельцы
-            </label>
-            <label class="form-group form-group__radio">
-                <input type="radio" name="choice-city" class="form-input-radio" value="Verncester">
-                <span class="radio-icon"></span>
-                Verncester
-            </label>
-            <label class="form-group form-group__radio">
-                <input type="radio" name="choice-city" class="form-input-radio" value="West Eveline">
-                <span class="radio-icon"></span>
-                West Eveline
-            </label>
-        </div>
+            <div class="radio-wrap">
+                <label class="form-group form-group__radio">
+                    <input type="radio" name="choice-city" class="form-input-radio" value="Кишинёв">
+                    <span class="radio-icon"></span>
+                    Кишинёв
+                </label>
+                <label class="form-group form-group__radio">
+                    <input type="radio" name="choice-city" class="form-input-radio" value="Бельцы">
+                    <span class="radio-icon"></span>
+                    Бельцы
+                </label>
+                <label class="form-group form-group__radio">
+                    <input type="radio" name="choice-city" class="form-input-radio" value="Verncester">
+                    <span class="radio-icon"></span>
+                    Verncester
+                </label>
+                <label class="form-group form-group__radio">
+                    <input type="radio" name="choice-city" class="form-input-radio" value="West Eveline">
+                    <span class="radio-icon"></span>
+                    West Eveline
+                </label>
+            </div>
+        </form>
 
         <button class="close-popup close-popup-js" aria-label="Закрыть">
             <svg width="18" height="18">
@@ -3292,7 +3524,7 @@
     <div class="user-menu__inner">
         <div class="is-authorized user-menu__header">
            <div class="avatar">
-               <picture><source srcset="./images/components/avatar.webp" type="image/webp"><img src="./images/components/avatar.png" width="44" height="44" alt="Avatar"></picture>
+               <picture><source srcset="./images/components/avatar-2.webp" type="image/webp"><img src="./images/components/avatar-2.png" width="44" height="44" alt="Avatar"></picture>
            </div>
             <div class="info">
                 <div class="name">Константин Константинопольский</div>
@@ -3308,7 +3540,7 @@
         </div>
 
         <div class="user-menu__content">
-            <ul class="user-menu__list">
+            <ul class="user-menu__list user-menu__list-mobile">
                 <li>
                     <a href="#" class="open-catalog-js">
                         <svg width="18" height="18">
@@ -3389,7 +3621,7 @@
 
         
         <div class="catalog-menu" id="catalog-menu">
-    <div class="catalog-menu__header">
+    <div class="catalog-menu__header" id="catalog-menu__header">
         <div class="title">Каталог</div>
 
         <button class="close-popup close-catalog-js" aria-label="Закрыть каталог">
@@ -3399,7 +3631,7 @@
         </button>
     </div>
 
-    <div class="catalog-menu__content">
+    <div class="catalog-menu__content" id="catalog-menu__content">
         <ul class="catalog-menu-list">
 
             <li class="catalog-menu-list__item">
@@ -3653,18 +3885,31 @@
 
     <div class="catalog-menu__content search-popup__content">
         <div class="search-popup__inner">
-            <div class="form-group">
-                <input type="text" class="form-input">
-                <svg width="18" height="18" class="icon-search">
-                    <use href="./images/icons/icons.svg#search"></use>
-                </svg>
+            <form class="search-form search-form-js">
+                <div class="form-group">
 
-                <button class="search-popup__open-category-filter" id="search-open-category-filter">
-                    <svg width="18" height="18">
-                        <use href="./images/icons/icons.svg#settings"></use>
-                    </svg>
-                </button>
-            </div>
+                    <button type="button" class="open-popup-js search-form__select-category" data-target="#search-filter-category-popup" aria-label="Открыть фильтр по категориям">
+                        <span class="search-form__current-category" id="search-form-current-category">Везде</span>
+                        <svg width="18" height="18">
+                            <use href="./images/icons/icons.svg#chevron-down-small"></use>
+                        </svg>
+                    </button>
+
+                    <input type="text" class="form-input search-form-input-js search-form__input" placeholder="Искать товары">
+
+                    <button class="search-submit search-form__submit">
+                        <svg width="18" height="18">
+                            <use href="./images/icons/icons.svg#search"></use>
+                        </svg>
+                    </button>
+
+                    <button type="button" class="search-popup__open-category-filter" id="search-open-category-filter">
+                        <svg width="18" height="18">
+                            <use href="./images/icons/icons.svg#settings"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
         </div>
 
         <div class="search-popup__popular-categories-wrap">
@@ -3740,7 +3985,7 @@
     </div>
 
     <div class="catalog-menu__content">
-        <ul class="catalog-menu-list">
+        <ul id="search-filter-category-list" class="catalog-menu-list">
 
             <li class="catalog-menu-list__item">
                 <a href="#" class="catalog-menu-list__link search-filter-category-link-js" data-id="1">
@@ -3873,6 +4118,21 @@
 </div>
 
         
+        <div class="popup search-filter-category-popup" id="search-filter-category-popup">
+    <div class="popup-bg popup-bg-js"></div>
+    <div class="inner">
+        <div class="title">Найти в категории</div>
+
+
+        <button class="close-popup close-popup-js" aria-label="Закрыть">
+            <svg width="18" height="18">
+                <use href="./images/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
+        
         <button class="button-to-top" id="button-to-top" aria-label="Кнопка вверх">
     <svg width="18" height="18">
         <use href="./images/icons/icons.svg#arrow-up"></use>
@@ -3880,7 +4140,7 @@
 </button>
     </div>
 
-    <script src="./js/app.min.js?_v=20231221122555"></script>
+    <script src="./js/app.min.js?_v=20231223160405"></script>
 
 </body>
 </html>

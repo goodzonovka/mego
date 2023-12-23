@@ -260,11 +260,11 @@
         "id": 2,
         "name": "Одежда",
         "brands": [
-            "./images/components/brands/image-1.png",
-            "./images/components/brands/image-2.png",
+            "./images/components/brands/image-5.png",
             "./images/components/brands/image-3.png",
             "./images/components/brands/image-4.png",
-            "./images/components/brands/image-5.png"
+            "./images/components/brands/image-1.png",
+            "./images/components/brands/image-2.png"
         ],
         "subcategories": [
             {
@@ -527,10 +527,10 @@
         "id": 3,
         "name": "Обувь",
         "brands": [
-            "./images/components/brands/image-1.png",
-            "./images/components/brands/image-2.png",
             "./images/components/brands/image-3.png",
             "./images/components/brands/image-4.png",
+            "./images/components/brands/image-1.png",
+            "./images/components/brands/image-2.png",
             "./images/components/brands/image-5.png"
         ],
         "subcategories": [

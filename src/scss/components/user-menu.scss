@@ -1,41 +1,45 @@
 .user-menu {
-    visibility: hidden;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 11;
-    &.active {
-        visibility: visible;
-        .user-menu__bg {
-            opacity: .5;
-        }
-        .user-menu__inner {
-            transform: translateX(0);
-        }
-    }
-    &__bg {
-        position: absolute;
+    @media (max-width: $device) {
+        visibility: hidden;
+        position: fixed;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: $dark-900;
-        opacity: 0;
-        transition: opacity .8s;
-    }
-    &__inner {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 100%;
-        width: 300px;
-        padding-bottom: 8px;
-        background-color: $white;
-        overflow: auto;
-        transform: translateX(100%);
-        transition: all .4s;
+        z-index: 11;
+        &.active {
+            visibility: visible;
+
+            .user-menu__bg {
+                opacity: .5;
+            }
+
+            .user-menu__inner {
+                transform: translateX(0);
+            }
+        }
+        &__bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $dark-900;
+            opacity: 0;
+            transition: opacity .8s;
+        }
+        &__inner {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 300px;
+            padding-bottom: 8px;
+            background-color: $white;
+            overflow: auto;
+            transform: translateX(100%);
+            transition: all .4s;
+        }
     }
     &__header {
         margin: 0 24px;
@@ -77,14 +81,14 @@
         }
     }
     &__list {
-        &:not(:first-child) {
+        &:not(:last-child) {
             position: relative;
-            margin-top: 8px;
-            padding-top: 8px;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
             &:before {
                 content: '';
                 position: absolute;
-                bottom: 100%;
+                top: 100%;
                 left: 24px;
                 width: calc(100% - 48px);
                 border-top: 1px solid $dark-300;
@@ -119,11 +123,56 @@
             svg {
                 margin-right: 16px;
                 color: $dark-400;
+                transition: all .3s;
             }
             .counter {
                 top: 50%;
                 transform: translateY(-50%);
                 right: 24px;
+            }
+        }
+    }
+    @media (min-width: $ds) {
+        width: 320px;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        top: 100%;
+        margin-top: -8px;
+        padding: 8px 0;
+        color: $dark-900;
+        background-color: $white;
+        border-radius: 8px;
+        box-shadow: 0px 32px 64px -12px #10182824;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s;
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        &__bg {
+            display: none;
+        }
+        &__header {
+            padding: 12px 0;
+            &.is-no-authorized {
+                padding: 12px 0;
+                margin-bottom: 0;
+                border: none;
+                .title {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .text {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+        &__list {
+            &-mobile {
+                display: none;
             }
         }
     }

@@ -31,4 +31,15 @@
             }
         }
     }
+    @media (min-width: $ds) {
+        margin-top: 48px;
+        .swiper-wrapper {
+            width: auto;
+            margin: 0 -12px;
+        }
+        .swiper-slide {
+            width: calc(50% - 24px);
+            margin: 0 12px;
+        }
+    }
 }

@@ -1,5 +1,6 @@
 import $ from "jquery";
 import Swiper from "swiper";
+import {isDesktop} from "./functions.js";
 
 let searchPopup = $('#search-popup');
 let btnOpenSearchPopup = $('#open-search-popup');
@@ -13,6 +14,10 @@ let btnSearchFilterCategoryBack = $('#search-filter-category-back');
 let linkSearchFilterCategory = $('.search-filter-category-link-js');
 
 let startX;
+
+if (isDesktop()) {
+    $('#search-filter-category-popup .inner').append($('#search-filter-category-list'));
+}
 
 
 // открытие
@@ -112,4 +117,5 @@ function setSearchFilterCategory(e) {
     e.preventDefault();
     linkSearchFilterCategory.removeClass('active');
     $(this).addClass('active');
+    $('#search-form-current-category').text($(this).find('.catalog-menu-list__title').text());
 }

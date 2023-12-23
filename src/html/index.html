@@ -20,8 +20,11 @@
         <main class="page">
             <div class="container">
 
-                <!-- Главный баннер -->
-                @@include('main-page/banners/main-banner.html', {})
+                <!-- Главный баннер mobile -->
+                @@include('main-page/banners/main-banner-mobile.html', {})
+
+                <!-- Главный баннер desktop -->
+                @@include('main-page/banners/main-banner-desktop.html', {})
 
                 <!-- Баннер: "Ликвидация товаров" -->
                 @@include('main-page/banners/liquidation-of-goods-banner.html', {})
@@ -30,7 +33,7 @@
                 @@include('main-page/products/best-deals-products.html', {})
 
                 <!-- Баннер: "Ликвидация товаров" -->
-                @@include('main-page/banners/liquidation-of-goods-banner.html', {})
+                @@include('main-page/banners/liquidation-of-goods-banner-2.html', {})
 
                 <!-- Товары(список): Рекомендуем для вас -->
                 @@include('main-page/products/recommend-for-you-products.html', {})
@@ -58,7 +61,7 @@
         @@include('components/fixed-bottom-menu.html', {})
 
         <!-- Выбор языка и города -->
-        @@include('components/choice-language-and-city.html', {})
+        @@include('components/popup-choice-language-and-city.html', {})
 
         <!-- Меню юзера -->
         @@include('components/user-menu.html', {})
@@ -72,8 +75,14 @@
         <!-- Поиск -->
         @@include('components/search.html', {})
 
-        <!-- Поиск: фильтр по категории -->
-        @@include('components/search-filter-category.html', {})
+        <!-- Поиск: фильтр по категории на мобильной версии -->
+        @@include('components/search-filter-category/search-filter-category-mobile.html', {})
+
+        <!--
+            Поиск: фильтр по категории на десктоп версии, содержимое перенесется
+            с мобильной версии
+         -->
+        @@include('components/search-filter-category/search-filter-category-desktop.html', {})
 
         <!-- Кнопка "вверх" -->
         @@include('components/button-to-top.html', {})

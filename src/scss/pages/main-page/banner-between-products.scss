@@ -38,4 +38,11 @@
             }
         }
     }
+    @media (min-width: $ds) {
+        margin: 48px -12px;
+        .item {
+            width: calc(25% - 24px);
+            margin: 0 12px;
+        }
+    }
 }

@@ -1,5 +1,9 @@
 .main-banner {
+    margin-top: 24px;
     position: relative;
+    &-desktop {
+        display: none;
+    }
     .item {
         position: relative;
         img {
@@ -39,8 +43,46 @@
         }
     }
     @media (min-width: $tv) {
+        .swiper-pagination {
+            bottom: 12px;
+        }
         .item img {
             border-radius: 16px;
+        }
+    }
+    @media (min-width: $ds) {
+        &-mobile {
+            display: none;
+        }
+        &-desktop {
+            display: block;
+        }
+        .swiper-pagination {
+            bottom: 16px;
+        }
+        .swiper-arrow {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            color: $white;
+            background: rgba(1, 4, 9, 0.15);
+            box-shadow: 0px 1px 2px 0px #1018280D;
+            border-radius: 8px;
+            &:hover {
+                background: rgba(1, 4, 9, 1);
+            }
+            &__prev {
+                left: 16px;
+            }
+            &__next {
+                right: 16px;
+            }
         }
     }
 }
