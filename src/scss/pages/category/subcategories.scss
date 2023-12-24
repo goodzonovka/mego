@@ -1,0 +1,40 @@
+.category-subcategories {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px -16px;
+    .item {
+        width: calc(50% - 16px);
+        margin: 0 8px 16px;
+    }
+    .img {
+        border-radius: 8px;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    .title {
+        margin-top: 1rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    @media (min-width: $tv) {
+        .item {
+            width: calc(33.33% - 16px);
+        }
+    }
+    @media (min-width: $th) {
+        .item {
+            width: calc(20% - 16px);
+        }
+    }
+    @media (min-width: $ds) {
+        margin: 0 -16px -32px;
+        .item {
+            width: calc(20% - 32px);
+            margin: 0 16px 32px;
+        }
+    }
+}

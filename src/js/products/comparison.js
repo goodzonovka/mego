@@ -9,10 +9,10 @@ $(document).on('click', '.compare-js', function () {
     $(this).toggleClass('active');
 
     if ($(this).hasClass('active')) {
-        svgComparisonUse.attr('href', './images/icons/icons.svg#compare-fill');
+        svgComparisonUse.attr('href', '/images/icons/icons.svg#compare-fill');
         counterComparison++;
     } else {
-        svgComparisonUse.attr('href', './images/icons/icons.svg#compare');
+        svgComparisonUse.attr('href', '/images/icons/icons.svg#compare');
         counterComparison--;
     }
 

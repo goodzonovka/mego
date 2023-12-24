@@ -38,7 +38,7 @@ if (isDesktop()) {
             !catalogBtnJs.is(e.target) && catalogBtnJs.has(e.target).length === 0 &&
             $('#catalog-menu').hasClass('active')
         ) {
-            btnOpenCatalog.removeClass('active').find('svg use').attr('href', './images/icons/icons.svg#catalog');
+            btnOpenCatalog.removeClass('active').find('svg use').attr('href', '/images/icons/icons.svg#catalog');
             catalogMenu.removeClass('active');
             $('body').removeClass('overflow-hidden');
         }
@@ -54,9 +54,9 @@ function toggleCatalog(e) {
         $(this).toggleClass('active');
 
         if ($(this).hasClass('active')) {
-            $(this).find('svg use').attr('href', './images/icons/icons.svg#close')
+            $(this).find('svg use').attr('href', '/images/icons/icons.svg#close')
         } else {
-            $(this).find('svg use').attr('href', './images/icons/icons.svg#catalog')
+            $(this).find('svg use').attr('href', '/images/icons/icons.svg#catalog')
         }
     }
     catalogMenu.toggleClass('active');
@@ -73,7 +73,7 @@ function closeCatalog() {
 
 function closeCatalogByEsc(e) {
     if (e.key === 'Escape') {
-        btnOpenCatalog.removeClass('active').find('svg use').attr('href', './images/icons/icons.svg#catalog');
+        btnOpenCatalog.removeClass('active').find('svg use').attr('href', '/images/icons/icons.svg#catalog');
         catalogMenu.removeClass('active');
         $('body').removeClass('overflow-hidden');
     }

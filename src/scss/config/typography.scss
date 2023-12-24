@@ -7,6 +7,14 @@ h1 {
     font-weight: 700;
 }
 
+.page-title {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
 :is(h2, .section-title) {
     margin-bottom: 16px;
     font-size: 20px;
@@ -70,7 +78,7 @@ h1 {
 }
 
 @media (min-width: $ds) {
-    h1 {
+    h1, .page-title {
         margin-bottom: 1.5rem;
         font-size: 2rem;
         line-height: 38px;

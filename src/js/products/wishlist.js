@@ -9,10 +9,10 @@ $(document).on('click', '.wishlist-js', function () {
     $(this).toggleClass('active');
 
     if ($(this).hasClass('active')) {
-        svgHeartUse.attr('href', './images/icons/icons.svg#heart-fill');
+        svgHeartUse.attr('href', '/images/icons/icons.svg#heart-fill');
         counterWishlist++;
     } else {
-        svgHeartUse.attr('href', './images/icons/icons.svg#heart');
+        svgHeartUse.attr('href', '/images/icons/icons.svg#heart');
         counterWishlist--;
     }
 

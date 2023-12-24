@@ -33,8 +33,6 @@ html {
 }
 
 body {
-    padding-top: 152px;
-    padding-bottom: 60px;
     overscroll-behavior: none;
     font-family: $font-family;
     font-size: $font-size;
@@ -74,11 +72,6 @@ body {
                 display: none;
             }
         }
-    }
-
-    @media (min-width: $ds) {
-        padding-top: 110px;
-        padding-bottom: 0;
     }
 }
 
