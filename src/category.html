@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('../components/head.html', {
-        'title': 'Категория'
-    })
+@@include('html/components/head.html', {
+'title': 'Категория'
+})
 <body class="user-is-authorized"> <!-- user-is-authorized/user-is-no-authorized -->
 <!--
     для отображения аватара в шапке и меню для авторизованного пользователя,
@@ -14,60 +14,60 @@
 
     <!-- Шапка сайта -->
     <header class="header" id="header">
-        @@include('../components/header.html', {})
+        @@include('html/components/header.html', {})
     </header>
 
     <main class="page">
         <div class="container">
             <h1 class="page-title">Одежда</h1>
 
-            @@include('subcategories.html', {})
+            @@include('html/category/subcategories.html', {})
 
             <!-- SEO-текст -->
-            @@include('description.html', {})
+            @@include('html/category/description.html', {})
         </div>
     </main>
 
     <!-- Футер сайта -->
     <footer class="footer">
-        @@include('../components/footer.html', {})
+        @@include('html/components/footer.html', {})
     </footer>
 
     <!-- Уведомление о добавлении товара в корзину -->
-    @@include('../components/notification.html', {})
+    @@include('html/components/notification.html', {})
 
     <!-- Фиксированное нижнее меню -->
-    @@include('../components/fixed-bottom-menu.html', {})
+    @@include('html/components/fixed-bottom-menu.html', {})
 
     <!-- Выбор языка и города -->
-    @@include('../components/popup-choice-language-and-city.html', {})
+    @@include('html/components/popup-choice-language-and-city.html', {})
 
     <!-- Меню юзера -->
-    @@include('../components/user-menu.html', {})
+    @@include('html/components/user-menu.html', {})
 
     <!-- Каталог -->
-    @@include('../components/catalog.html', {})
+    @@include('html/components/catalog.html', {})
 
     <!-- Подкаталог -->
-    @@include('../components/sub-catalog.html', {})
+    @@include('html/components/sub-catalog.html', {})
 
     <!-- Поиск -->
-    @@include('../components/search.html', {})
+    @@include('html/components/search.html', {})
 
     <!-- Поиск: фильтр по категории на мобильной версии -->
-    @@include('../components/search-filter-category/search-filter-category-mobile.html', {})
+    @@include('html/components/search-filter-category/search-filter-category-mobile.html', {})
 
     <!--
         Поиск: фильтр по категории на десктоп версии, категории перенесутся
         с мобильной версии
      -->
-    @@include('../components/search-filter-category/search-filter-category-desktop.html', {})
+    @@include('html/components/search-filter-category/search-filter-category-desktop.html', {})
 
     <!-- Кнопка "вверх" -->
-    @@include('../components/button-to-top.html', {})
+    @@include('html/components/button-to-top.html', {})
 </div>
 
-<script src="/js/app.min.js"></script>
+<script src="js/app.min.js"></script>
 
 </body>
 </html>

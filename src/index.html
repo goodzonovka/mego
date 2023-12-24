@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/head.html', {
+'title': 'Главная страница'
+})
+<body class="user-is-authorized"> <!-- user-is-authorized/user-is-no-authorized -->
+<!--
+    для отображения аватара в шапке и меню для авторизованного пользователя,
+    нужно задать класс body "user-is-authorized"
+    или "user-is-no-authorized", что отобразить дефолтную верстку для не авторизованного юзера
+-->
+
+<div class="wrapper">
+
+    <!-- Шапка сайта -->
+    <header class="header" id="header">
+        @@include('html/components/header.html', {})
+    </header>
+
+    <main class="page">
+        <div class="container">
+
+            <!-- Главный баннер mobile -->
+            @@include('html/main-page/banners/main-banner-mobile.html', {})
+
+            <!-- Главный баннер desktop -->
+            @@include('html/main-page/banners/main-banner-desktop.html', {})
+
+            <!-- Баннер: "Ликвидация товаров" -->
+            @@include('html/main-page/banners/liquidation-of-goods-banner.html', {})
+
+            <!-- Товары(слайдер): Лучшие предложения! -->
+            @@include('html/main-page/products/best-deals-products.html', {})
+
+            <!-- Баннер: "Ликвидация товаров" -->
+            @@include('html/main-page/banners/liquidation-of-goods-banner-2.html', {})
+
+            <!-- Товары(список): Рекомендуем для вас -->
+            @@include('html/main-page/products/recommend-for-you-products.html', {})
+
+            <!-- Баннер слайдер -->
+            @@include('html/main-page/banners/banner-slider.html', {})
+
+            <!-- Товары(список): Рекомендованные (внутри 4х баннера между товарами) -->
+            @@include('html/main-page/products/recommended-products.html', {})
+
+            <!-- SEO-текст -->
+            @@include('html/main-page/description.html', {})
+        </div>
+    </main>
+
+    <!-- Футер сайта -->
+    <footer class="footer">
+        @@include('html/components/footer.html', {})
+    </footer>
+
+    <!-- Уведомление о добавлении товара в корзину -->
+    @@include('html/components/notification.html', {})
+
+    <!-- Фиксированное нижнее меню -->
+    @@include('html/components/fixed-bottom-menu.html', {})
+
+    <!-- Выбор языка и города -->
+    @@include('html/components/popup-choice-language-and-city.html', {})
+
+    <!-- Меню юзера -->
+    @@include('html/components/user-menu.html', {})
+
+    <!-- Каталог -->
+    @@include('html/components/catalog.html', {})
+
+    <!-- Подкаталог -->
+    @@include('html/components/sub-catalog.html', {})
+
+    <!-- Поиск -->
+    @@include('html/components/search.html', {})
+
+    <!-- Поиск: фильтр по категории на мобильной версии -->
+    @@include('html/components/search-filter-category/search-filter-category-mobile.html', {})
+
+    <!--
+        Поиск: фильтр по категории на десктоп версии, содержимое перенесется
+        с мобильной версии
+     -->
+    @@include('html/components/search-filter-category/search-filter-category-desktop.html', {})
+
+    <!-- Кнопка "вверх" -->
+    @@include('html/components/button-to-top.html', {})
+</div>
+
+<script src="js/app.min.js"></script>
+
+</body>
+</html>

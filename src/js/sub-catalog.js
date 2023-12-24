@@ -160,7 +160,7 @@ function displayCategoryTitle(category) {
     let categoryTitle = category.name;
 
     subCatalogTitle.empty().append(`
-        <a href="/subcategory">${categoryTitle}</a>
+        <a href="subcategory.html">${categoryTitle}</a>
     `);
 }
 
@@ -176,7 +176,7 @@ function displaySubcategoriesMobile(subcategories) {
                 <span class="sub-catalog-menu-list__title">${subcategory.name}</span>
                 <button class="sub-catalog-menu-list__arrow sub-catalog-menu-list-arrow-js" aria-label="Раскрыть подменю">
                     <svg width="18" height="18">
-                        <use href="/images/icons/icons.svg#chevron-right-small"></use>
+                        <use href="images/icons/icons.svg#chevron-right-small"></use>
                     </svg>
                 </button>
             </a>
@@ -252,7 +252,7 @@ function displayNestedSubcategories(subcategoryElement, subcategories) {
                 <button class="sub-catalog-menu-list__more" onclick="showMoreSubcategories(this)">
                     <span>${moreLang}</span>
                      <svg width="18" height="18">
-                        <use href="/images/icons/icons.svg#chevron-down-small"></use>
+                        <use href="images/icons/icons.svg#chevron-down-small"></use>
                     </svg>
                 </button>
             </li>
