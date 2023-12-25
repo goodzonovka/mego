@@ -13,7 +13,7 @@ import { scss } from './gulp/tasks/scss.js';
 import { javaScript } from './gulp/tasks/javaScript.js';
 import { images } from './gulp/tasks/images.js';
 import { otfToTtf, ttfToWoff, fontStyle } from './gulp/tasks/fonts.js';
-import { svgSprive } from './gulp/tasks/createSvgSprite.js';
+import { svgSprive   } from './gulp/tasks/createSvgSprite.js';
 import { zip } from './gulp/tasks/zip.js';
 import { ftpDeploy } from './gulp/tasks/ftpDeploy.js';
 

@@ -67,7 +67,7 @@ window.addEventListener('load', function () {
 
     // Выполнение AJAX-запроса при загрузке страницы
     $.ajax({
-        url: "data/products.json",
+        url: "https://goodzonovka.github.io/mego-production/data/products.json",
         type: "GET",
         dataType: "json",
         success: function (data) {

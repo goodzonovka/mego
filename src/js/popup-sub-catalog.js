@@ -45,7 +45,7 @@ function openSubCatalog(e) {
     if ($(this).hasClass('active')) return;
 
     $.ajax({
-        url: "/data/categories.json",
+        url: "https://goodzonovka.github.io/mego-production/data/categories.json",
         type: "GET",
         dataType: "json",
         success: function (data) {
