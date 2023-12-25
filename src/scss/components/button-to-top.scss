@@ -16,11 +16,13 @@
         visibility: visible;
         opacity: 1;
     }
-    &.notification-is-active {
-        bottom: 136px;
-    }
     &:hover {
         background-color: $cyan-300;
+    }
+    @media (max-width: $device) {
+        &.notification-is-active {
+            bottom: 136px;
+        }
     }
     @media (min-width: $ds) {
         width: 48px;

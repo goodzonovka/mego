@@ -1,0 +1,29 @@
+.subcategory-main-banner {
+    .item {
+        border-radius: 16px;
+        overflow: hidden;
+        &-video {
+            display: flex;
+            background-color: $white;
+
+            video {
+                width: 37.03%;
+                height: auto;
+                object-fit: cover;
+            }
+            picture {
+                flex-grow: 1;
+            }
+        }
+    }
+    img {
+        border-radius: none;
+    }
+    @media (min-width: $ds) {
+        .item-video {
+            video {
+                width: 54.862%;
+            }
+        }
+    }
+}

@@ -11,6 +11,13 @@
             object-fit: cover;
             border-radius: 16px;
         }
+        .link {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
     .tooltip {
         top: 8px;

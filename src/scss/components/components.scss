@@ -1,3 +1,48 @@
+.back {
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    color: $dark-600;
+    &:hover {
+        color: $cyan-500;
+    }
+    svg {
+        margin-right: 4px;
+    }
+    & + .page-title {
+        margin-top: 0;
+    }
+    @media (min-width: $ds) {
+        display: none;
+    }
+}
+
+.breadcrumbs {
+    display: none;
+    @media (min-width: $ds) {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 24px;
+        font-weight: 500;
+        color: $dark-600;
+        li:not(:last-child) {
+            margin-right: .5rem;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            color: $dark-600;
+            &:hover {
+                color: $dark-900;
+            }
+        }
+        svg {
+            margin-left: 5px;
+        }
+    }
+}
+
 /* tooltip */
 .tooltip {
     position: absolute;
@@ -155,6 +200,13 @@
     }
     @media (min-width: $tv) {
         width: auto;
+    }
+    @media (min-width: $ds) {
+        left: auto;
+        bottom: auto;
+        right: 16px;
+        top: 150px;
+        transform: translateY(-50%);
     }
 }
 

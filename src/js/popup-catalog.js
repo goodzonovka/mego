@@ -1,7 +1,7 @@
 import $ from "jquery";
 import {isDesktop} from "./functions.js";
 
-/* Каталог */
+/* Popup Каталог */
 
 let catalogMenu = $('#catalog-menu');
 let btnOpenCatalog = $('.open-catalog-js');

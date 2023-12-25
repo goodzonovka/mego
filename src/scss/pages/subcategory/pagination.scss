@@ -1,0 +1,116 @@
+.pagination {
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+    }
+    &__prev, &__next, &__button {
+        background-color: $white;
+        border: 1px solid $dark-300;
+        border-radius: 8px;
+    }
+    &__prev, &__next {
+        width: 52px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            color: $dark-900;
+            border-color: $dark-900;
+        }
+        &:active {
+            border-color: $dark-300;
+        }
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        padding: 4px 11px;
+        cursor: pointer;
+        svg {
+            margin-left: 8px;
+        }
+    }
+    &__page {
+        margin-bottom: -4px;
+        font-size: 10px;
+        line-height: 14px;
+        font-weight: 700;
+        color: $dark-400;
+    }
+    &__dropdown {
+        display: none;
+        max-height: 276px;
+        overflow: auto;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        margin-top: 8px;
+        background-color: $white;
+        border-radius: 8px;
+        box-shadow: 0px 8px 8px -4px #10182808, 0px 20px 24px -4px #10182814;
+    }
+    @media (max-width: $device) {
+        &__dots, &__last {
+            display: none;
+        }
+        &__link {
+            display: block;
+            padding: 10px 42px 10px 14px;
+            transition: background-color .3s;
+            &.active {
+                background: url("../images/icons/icons.svg#check-violet") no-repeat right 14px center;
+                background-size: 20px;
+            }
+            &:not(.pagination__dots):hover {
+                color: $dark-900;
+                background-color: $dark-100;
+            }
+        }
+    }
+    @media (min-width: $ds) {
+        display: flex;
+        &__button {
+            display: none;
+        }
+        &__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            font-weight: 500;
+            background-color: $white;
+            border-radius: 8px;
+            border: 1px solid $white;
+            box-shadow: 0px 1px 2px 0px #1018280D;
+            user-select: none;
+            &:not(:last-child) {
+                margin-right: .5rem;
+            }
+            &.active, &:not(.pagination__dots):hover {
+                color: $dark-900;
+                border-color:  $cyan-500;
+            }
+        }
+        &__dots {
+            width: 47px;
+        }
+        &__last {
+            width: 53px;
+            margin-right: 0 !important;
+        }
+        &__prev, &__next {
+            border: 1px solid $white;
+            &:hover {
+                border-color:  $cyan-500;
+            }
+        }
+    }
+}

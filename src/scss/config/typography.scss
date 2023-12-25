@@ -58,7 +58,7 @@ h1 {
         background: linear-gradient(180deg, rgba(242, 244, 248, 0) 0%, #F2F4F8 100%);
     }
     &.active {
-        height: auto;
+        height: auto !important;
         &:before {
             display: none;
         }

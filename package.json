@@ -71,8 +71,12 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@rwap/jquery-ui-touch-punch": "^1.0.11",
     "aos": "^2.3.4",
     "jquery": "^3.7.1",
+    "jquery-ui-dist": "^1.13.2",
+    "jquery-ui-touch-punch": "^0.2.3",
+    "matchheight": "^1.1.0",
     "swiper": "^11.0.5"
   }
 }

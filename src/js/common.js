@@ -1,7 +1,14 @@
 import $ from "jquery";
+import MatchHeight from 'matchheight';
+import {isDevice} from "./functions.js";
+
+new MatchHeight('.product-item .price-block');
 
 /* tooltip */
-$('.tooltip-btn-js').click(function () {
+$('.tooltip-btn-js').click(function (e) {
+    if (isDevice()) {
+        e.preventDefault();
+    }
     $('.tooltip-btn-js').not(this).removeClass('active');
     $(this).toggleClass('active');
 })

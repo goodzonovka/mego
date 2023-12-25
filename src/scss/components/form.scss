@@ -46,43 +46,110 @@
     align-items: flex-start;
 }
 
-.form-group__radio {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    &:hover .radio-icon {
-        border-color: $cyan-500;
-    }
-}
-
-.form-input-radio {
+.input-radio {
     display: none;
-    &:checked + .radio-icon {
+    &:checked + .input-radio__icon {
         background-color: $cyan-500;
         border-color: $cyan-500;
         &:before {
             background-color: $dark-900;
         }
     }
+    &__label {
+        display: flex;
+        align-items: flex-start;
+        cursor: pointer;
+        &:hover .input-radio__icon {
+            border-color: $cyan-500;
+        }
+    }
+    &__icon {
+        flex-shrink: 0;
+        position: relative;
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        border: 2px solid $dark-300;
+        border-radius: 50%;
+        transition: all .3s;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: transparent;
+        }
+    }
+    &__value {
+        flex-grow: 1;
+        line-height: 24px;
+    }
 }
 
-.radio-icon {
-    position: relative;
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-    border: 2px solid $dark-300;
-    border-radius: 50%;
-    transition: all .3s;
-    &:before {
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: transparent;
+.input-checkbox {
+    display: none;
+    &:checked + .input-checkbox__icon {
+        background: $cyan-500 url("../images/icons/icons.svg#check") no-repeat center;
+        background-size: 18px;
+        border-color: $cyan-500;
+    }
+    &__label {
+        display: flex;
+        align-items: flex-start;
+        cursor: pointer;
+        &:hover .input-checkbox__icon {
+            border-color: $cyan-500;
+        }
+    }
+    &__icon {
+        flex-shrink: 0;
+        position: relative;
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        border: 1px solid $dark-300;
+        border-radius: 4px;
+        transition: background-color .3s, border-color .3s;
+    }
+    &__value {
+        flex-grow: 1;
+        line-height: 24px;
+    }
+}
+
+.switch {
+    margin-left: 1rem;
+    cursor: pointer;
+    input {
+        display: none;
+        &:checked + .switch__icon {
+            background-color: $cyan-500;
+            &:before {
+                left: calc(100% - 22px)
+            }
+        }
+    }
+    &__icon {
+        display: block;
+        width: 44px;
+        height: 24px;
+        position: relative;
+        background-color: $dark-300;
+        border-radius: 24px;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            width: 20px;
+            height: 20px;
+            background-color: $white;
+            border-radius: 50%;
+            transition: all .3s;
+        }
     }
 }

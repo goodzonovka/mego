@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/head.html', {
+'title': 'Женщинам'
+})
+<body class="user-is-authorized"> <!-- user-is-authorized/user-is-no-authorized -->
+<!--
+    для отображения аватара в шапке и меню для авторизованного пользователя,
+    нужно задать класс body "user-is-authorized"
+    или "user-is-no-authorized", что отобразить дефолтную верстку для не авторизованного юзера
+-->
+
+<div class="wrapper">
+
+    <!-- Шапка сайта -->
+    <header class="header" id="header">
+        @@include('html/components/header.html', {})
+    </header>
+
+    <main class="page">
+        <div class="container">
+            @@include('html/subcategory/main.html', {})
+        </div>
+    </main>
+
+    <!-- Футер сайта -->
+    <footer class="footer">
+        @@include('html/components/footer.html', {})
+    </footer>
+
+    <!-- Фильтр -->
+    @@include('html/subcategory/filter.html', {})
+
+    <!-- Уведомление о добавлении товара в корзину -->
+    @@include('html/components/notification.html', {})
+
+    <!-- Фиксированное нижнее меню -->
+    @@include('html/components/fixed-bottom-menu.html', {})
+
+    <!-- Выбор языка и города -->
+    @@include('html/components/popup-choice-language-and-city.html', {})
+
+    <!-- Меню юзера -->
+    @@include('html/components/user-menu.html', {})
+
+    <!-- Каталог -->
+    @@include('html/components/catalog.html', {})
+
+    <!-- Подкаталог -->
+    @@include('html/components/sub-catalog.html', {})
+
+    <!-- Поиск -->
+    @@include('html/components/search.html', {})
+
+    <!-- Поиск: фильтр по категории на мобильной версии -->
+    @@include('html/components/search-filter-category/search-filter-category-mobile.html', {})
+
+    <!--
+        Поиск: фильтр по категории на десктоп версии, категории перенесутся
+        с мобильной версии
+     -->
+    @@include('html/components/search-filter-category/search-filter-category-desktop.html', {})
+
+    <!-- Кнопка "вверх" -->
+    @@include('html/components/button-to-top.html', {})
+</div>
+
+<script src="js/app.min.js"></script>
+
+</body>
+</html>

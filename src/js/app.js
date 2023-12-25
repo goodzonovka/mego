@@ -7,10 +7,15 @@ import "./choice-language-and-city.js";
 import "./common.js";
 
 import "./mainPage.js";
-import "./catalog.js";
-import "./sub-catalog.js";
+import "./popup-catalog.js";
+import "./popup-sub-catalog.js";
 
 import "./search.js";
+
+import "./subcategory.js";
+import "./products-sort.js";
+import "./products-pagination.js";
+import "./filter/filter.js";
 
 import "./products/buy.js";
 import "./products/wishlist.js";
@@ -18,7 +23,7 @@ import "./products/comparison.js";
 
 /* проверка на поддержку webp формата */
 import BaseHelpers from './helpers/BaseHelpers.js';
-import {isDesktop, isDevice} from "./functions.js";
+import {isDesktop} from "./functions.js";
 
 BaseHelpers.checkWebpSupport();
 
