@@ -12,6 +12,8 @@ let btnCloseSearchFilterCategory = $('.close-search-filter-category-js');
 let btnSearchFilterCategoryBack = $('#search-filter-category-back');
 
 let linkSearchFilterCategory = $('.search-filter-category-link-js');
+let btnCancelSearchCategory = $('#search-form-select-category-cancel');
+
 
 let startX;
 
@@ -52,6 +54,9 @@ linkSearchFilterCategory.click(setSearchFilterCategory);
 
 // подключение слайдера для популярных категорий
 searchPopularCategoriesSlider();
+
+// сбросить поиск по категориям
+btnCancelSearchCategory.click(cancelSearchCategory);
 
 function openSearchPopup() {
     searchPopup.addClass('active');
@@ -114,8 +119,32 @@ function searchFilterCategoryBack() {
 }
 
 function setSearchFilterCategory(e) {
+    let currentCategory = $('#search-form-current-category');
+
     e.preventDefault();
     linkSearchFilterCategory.removeClass('active');
     $(this).addClass('active');
-    $('#search-form-current-category').text($(this).find('.catalog-menu-list__title').text());
+    currentCategory.text($(this).find('.catalog-menu-list__title').text());
+    if (isDesktop()) {
+        $('#search-filter-category-popup').removeClass('active');
+    } else {
+        searchFilterCategory.removeClass('active');
+    }
+
+    if (!$(this).hasClass('default')) {
+        btnCancelSearchCategory.addClass('active');
+        btnCancelSearchCategory.find('use').attr('href', 'images/icons/icons.svg#close');
+    } else {
+        btnCancelSearchCategory.removeClass('active');
+        btnCancelSearchCategory.find('use').attr('href', 'images/icons/icons.svg#chevron-down-small');
+    }
+
+}
+
+function cancelSearchCategory(e) {
+    if ($(this).hasClass('active')) {
+        e.stopPropagation();
+    }
+    $('.search-filter-category-link-js.default').trigger('click');
+    $(this).removeClass('active').find('use').attr('href', 'images/icons/icons.svg#chevron-down-small');
 }

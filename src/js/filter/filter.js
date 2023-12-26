@@ -10,14 +10,20 @@ let brandsList = $('#filter-brands-list');
 let filterBrandsItems = brandsList.find('.input-checkbox__label');
 let filterTitleToggle = $('.filter-title-toggle-js');
 let btnFilterReset = $('#filter-reset');
-let applyBlock = $('#filter-apply-block-js')
-let filterContent = $('#filter-content')
+let applyBlock = $('#filter-apply-block-js');
+let filterContent = $('#filter-content');
+let startX;
 
 // открытие формы
 btnOpenFilter.click(openFilter);
 
 // закрытие формы
 btnCloseFilter.click(closeFilter);
+
+// закрытие по touch событию вправо
+filter.on('touchstart', getStartX);
+
+filter.on('touchmove', closingBySwipe);
 
 // раскрыть/скрыть бренды
 btnBrandsViewAll.click(brandsViewAll);
@@ -42,6 +48,20 @@ function openFilter() {
 function closeFilter() {
     filter.removeClass('active');
     $('body').removeClass('overflow-hidden');
+}
+
+function getStartX(e){
+    startX = e.originalEvent.touches[0].pageX;
+}
+
+function closingBySwipe(e) {
+    let currentX = e.originalEvent.touches[0].pageX;
+    let distance = currentX - startX;
+
+    if (distance > 100) {
+        filter.removeClass('active');
+        $('body').removeClass('overflow-hidden');
+    }
 }
 
 function brandsViewAll() {

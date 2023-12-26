@@ -1,4 +1,7 @@
 .sub-catalog-menu {
+    a:hover {
+        color: $blue-700;
+    }
     @media (max-width: $device) {
         &__header {
             padding-left: 8px;
@@ -65,10 +68,6 @@
 
                     a {
                         color: $dark-600;
-
-                        &:hover {
-                            color: $cyan-500;
-                        }
                     }
                 }
             }
@@ -153,9 +152,6 @@
                     }
                     a {
                         color: $dark-600;
-                        &:hover {
-                            color: $cyan-500;
-                        }
                     }
                 }
             }
@@ -169,7 +165,7 @@
                 align-items: center;
                 font-weight: 500;
                 &:hover {
-                    color: $cyan-500;
+                    color: $blue-700;
                 }
                 &.active svg {
                     transform: rotate(180deg);
