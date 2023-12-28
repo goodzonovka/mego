@@ -45,7 +45,7 @@ function openSubCatalog(e) {
     if ($(this).hasClass('active')) return;
 
     $.ajax({
-        url: "https://goodzonovka.github.io/mego-production/data/categories.json",
+        url: "data/categories.json",
         type: "GET",
         dataType: "json",
         success: function (data) {
@@ -160,7 +160,7 @@ function displayCategoryTitle(category) {
     let categoryTitle = category.name;
 
     subCatalogTitle.empty().append(`
-        <a href="https://goodzonovka.github.io/mego-production/category.html">${categoryTitle}</a>
+        <a href="category.html">${categoryTitle}</a>
     `);
 }
 
@@ -172,7 +172,7 @@ function displaySubcategoriesMobile(subcategories) {
         let subcategoryElement = $('<li class="sub-catalog-menu-list__item">');
 
         subcategoryElement.append(`
-            <a href="https://goodzonovka.github.io/mego-production/subcategory.html" class="catalog-menu-list__link sub-catalog-menu-list__link">
+            <a href="subcategory.html" class="catalog-menu-list__link sub-catalog-menu-list__link">
                 <span class="sub-catalog-menu-list__title">${subcategory.name}</span>
                 <button class="sub-catalog-menu-list__arrow sub-catalog-menu-list-arrow-js" aria-label="Раскрыть подменю">
                     <svg width="18" height="18">
@@ -205,7 +205,7 @@ function displaySubcategoriesDesktop(subcategories) {
         let subcategoryElement = $('<div class="sub-catalog-menu-list__item">');
 
         subcategoryElement.append(`
-            <a href="https://goodzonovka.github.io/mego-production/subcategory.html" class="sub-catalog-menu-list__link">
+            <a href="subcategory.html" class="sub-catalog-menu-list__link">
                 <span class="sub-catalog-menu-list__title">${subcategory.name}</span>
             </a>
         `);
@@ -239,7 +239,7 @@ function displayNestedSubcategories(subcategoryElement, subcategories) {
     subcategories.forEach(function (subcategory) {
         let nestedSubcategoryElement = $('<li>');
         nestedSubcategoryElement.append(`
-                    <a href="https://goodzonovka.github.io/mego-production/subcategory.html">${subcategory.name}</a>
+                    <a href="subcategory.html">${subcategory.name}</a>
                 `);
         nestedSubcategoriesList.append(nestedSubcategoryElement);
     });

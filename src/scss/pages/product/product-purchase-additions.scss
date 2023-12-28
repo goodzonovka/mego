@@ -1,0 +1,50 @@
+.product-purchase-additions {
+    margin-top: 1.5rem;
+    li:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 16px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 500;
+        svg {
+            margin-left: .5rem;
+        }
+    }
+    .inner {
+        padding: 0 1rem 1rem;
+    }
+    .input-radio, .input-checkbox {
+        &__label:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+        &__value {
+            display: flex;
+            line-height: 20px;
+            color: $dark-600;
+            .text {
+                flex-grow: 1;
+            }
+            .price {
+                flex-shrink: 0;
+                margin-left: 1rem;
+                color: $dark-900;
+            }
+        }
+        &__icon {
+            width: 18px;
+            height: 18px;
+        }
+    }
+    .input-radio__icon:before {
+        width: 6px;
+        height: 6px;
+    }
+    .input-checkbox:checked + .input-checkbox__icon {
+       background-size: 14px;
+    }
+}

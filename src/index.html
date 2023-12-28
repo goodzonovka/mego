@@ -54,38 +54,7 @@
         @@include('html/components/footer.html', {})
     </footer>
 
-    <!-- Уведомление о добавлении товара в корзину -->
-    @@include('html/components/notification.html', {})
-
-    <!-- Фиксированное нижнее меню -->
-    @@include('html/components/fixed-bottom-menu.html', {})
-
-    <!-- Выбор языка и города -->
-    @@include('html/components/popup-choice-language-and-city.html', {})
-
-    <!-- Меню юзера -->
-    @@include('html/components/user-menu.html', {})
-
-    <!-- Каталог -->
-    @@include('html/components/catalog.html', {})
-
-    <!-- Подкаталог -->
-    @@include('html/components/sub-catalog.html', {})
-
-    <!-- Поиск -->
-    @@include('html/components/search.html', {})
-
-    <!-- Поиск: фильтр по категории на мобильной версии -->
-    @@include('html/components/search-filter-category/search-filter-category-mobile.html', {})
-
-    <!--
-        Поиск: фильтр по категории на десктоп версии, содержимое перенесется
-        с мобильной версии
-     -->
-    @@include('html/components/search-filter-category/search-filter-category-desktop.html', {})
-
-    <!-- Кнопка "вверх" -->
-    @@include('html/components/button-to-top.html', {})
+    @@include('html/components/popups.html', {})
 </div>
 
 <script src="js/app.min.js"></script>

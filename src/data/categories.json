@@ -3,11 +3,11 @@
         "id": 1,
         "name": "Электроника",
         "brands": [
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-1.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-2.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-3.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-4.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-5.png"
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png",
+            "images/components/brands/image-3.png",
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-5.png"
         ],
         "subcategories": [
             {
@@ -260,11 +260,11 @@
         "id": 2,
         "name": "Одежда",
         "brands": [
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-5.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-3.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-4.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-1.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-2.png"
+            "images/components/brands/image-5.png",
+            "images/components/brands/image-3.png",
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png"
         ],
         "subcategories": [
             {
@@ -527,11 +527,11 @@
         "id": 3,
         "name": "Обувь",
         "brands": [
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-3.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-4.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-1.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-2.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-5.png"
+            "images/components/brands/image-3.png",
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png",
+            "images/components/brands/image-5.png"
         ],
         "subcategories": [
             {
@@ -744,11 +744,11 @@
         "id": 4,
         "name": "Дом и сад",
         "brands": [
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-1.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-2.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-3.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-4.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-5.png"
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png",
+            "images/components/brands/image-3.png",
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-5.png"
         ],
         "subcategories": [
             {
@@ -1001,11 +1001,11 @@
         "id": 5,
         "name": "Детские товары",
         "brands": [
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-5.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-3.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-4.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-1.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-2.png"
+            "images/components/brands/image-5.png",
+            "images/components/brands/image-3.png",
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png"
         ],
         "subcategories": [
             {
@@ -1268,11 +1268,11 @@
         "id": 6,
         "name": "Красота и здоровье",
         "brands": [
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-3.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-4.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-1.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-2.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-5.png"
+            "images/components/brands/image-3.png",
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png",
+            "images/components/brands/image-5.png"
         ],
         "subcategories": [
             {
@@ -1485,11 +1485,11 @@
         "id": 7,
         "name": "Бытовая техника",
         "brands": [
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-1.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-2.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-3.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-4.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-5.png"
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png",
+            "images/components/brands/image-3.png",
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-5.png"
         ],
         "subcategories": [
             {
@@ -1742,11 +1742,11 @@
         "id": 8,
         "name": "Спорт и отдых",
         "brands": [
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-5.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-3.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-4.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-1.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-2.png"
+            "images/components/brands/image-5.png",
+            "images/components/brands/image-3.png",
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png"
         ],
         "subcategories": [
             {
@@ -2009,11 +2009,11 @@
         "id": 9,
         "name": "Строительство и ремонт",
         "brands": [
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-3.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-4.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-1.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-2.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-5.png"
+            "images/components/brands/image-3.png",
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png",
+            "images/components/brands/image-5.png"
         ],
         "subcategories": [
             {
@@ -2226,11 +2226,11 @@
         "id": 10,
         "name": "Продукты питания",
         "brands": [
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-1.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-2.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-3.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-4.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-5.png"
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png",
+            "images/components/brands/image-3.png",
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-5.png"
         ],
         "subcategories": [
             {
@@ -2483,11 +2483,11 @@
         "id": 11,
         "name": "Аптека",
         "brands": [
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-5.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-3.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-4.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-1.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-2.png"
+            "images/components/brands/image-5.png",
+            "images/components/brands/image-3.png",
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png"
         ],
         "subcategories": [
             {
@@ -2750,11 +2750,11 @@
         "id": 12,
         "name": "Товары для животных",
         "brands": [
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-3.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-4.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-1.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-2.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-5.png"
+            "images/components/brands/image-3.png",
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png",
+            "images/components/brands/image-5.png"
         ],
         "subcategories": [
             {
@@ -2967,11 +2967,11 @@
         "id": 13,
         "name": "Книги",
         "brands": [
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-1.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-2.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-3.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-4.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-5.png"
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png",
+            "images/components/brands/image-3.png",
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-5.png"
         ],
         "subcategories": [
             {
@@ -3224,11 +3224,11 @@
         "id": 14,
         "name": "Туризм, рыбалка, охота",
         "brands": [
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-5.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-3.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-4.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-1.png",
-            "https://goodzonovka.github.io/mego-production/images/components/brands/image-2.png"
+            "images/components/brands/image-5.png",
+            "images/components/brands/image-3.png",
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png"
         ],
         "subcategories": [
             {

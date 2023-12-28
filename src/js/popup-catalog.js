@@ -74,7 +74,7 @@ function closeCatalog() {
 
 function closeCatalogByEsc(e) {
     if (e.key === 'Escape') {
-        btnOpenCatalog.removeClass('active').find('svg use').attr('href', 'https://goodzonovka.github.io/mego-production/images/icons/icons.svg#catalog');
+        btnOpenCatalog.removeClass('active').find('svg use').attr('href', 'images/icons/icons.svg#catalog');
         catalogMenu.removeClass('active');
         $('body').removeClass('overflow-hidden');
     }

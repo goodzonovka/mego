@@ -97,7 +97,6 @@
             margin-bottom: 1.5rem;
         }
         &-toggle {
-            display: none;
             margin: -6px -6px 0;
             padding: 6px 6px 0;
         }
@@ -112,18 +111,9 @@
         &-toggle {
             display: flex;
             align-items: center;
-            cursor: pointer;
             transition: all .3s;
             &:hover {
                 color: $cyan-500;
-            }
-            &.active {
-                svg {
-                    transform: rotate(180deg);
-                }
-                & + .filter__block-toggle {
-                    display: block;
-                }
             }
             &:not(.active) {
                 margin-bottom: 0 !important;
@@ -131,7 +121,6 @@
         }
         svg {
             margin-right: 8px;
-            transition: transform .3s;
         }
     }
 

@@ -27,16 +27,17 @@ $(document).mouseup(function (e) {
 /* end tooltip */
 
 /* описание на странице - скрыть/показать */
-let description = $('#description');
-let descriptionInner = description.find('.user-content');
-let btnReadMore = $('#btn-read-more');
+let description = $('.description-js');
+let btnReadMore = description.next('.btn-read-more-js');
 
-if (description.height() > descriptionInner.height()) {
-    btnReadMore.hide();
-    description.addClass('active');
-}
+description.each(function () {
+    if ($(this).height() > description.find('.user-content').height()) {
+        $(this).next('.btn-read-more-js').addClass('active');
+    }
+});
 
 btnReadMore.click(function () {
+    let btnReadMore = $(this);
     let dataShowText = btnReadMore.data('text-show');
     let dataHideText = btnReadMore.data('text-hide');
 
@@ -46,7 +47,7 @@ btnReadMore.click(function () {
         btnReadMore.text(dataShowText)
     }
     btnReadMore.toggleClass('active');
-    description.toggleClass('active');
+    btnReadMore.prev('.description-js').toggleClass('active');
 });
 /* end описание на странице - скрыть/показать */
 

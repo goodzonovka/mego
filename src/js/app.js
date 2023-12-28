@@ -21,6 +21,8 @@ import "./products/buy.js";
 import "./products/wishlist.js";
 import "./products/comparison.js";
 
+import './productPage.js';
+
 /* проверка на поддержку webp формата */
 import BaseHelpers from './helpers/BaseHelpers.js';
 import {isDesktop} from "./functions.js";

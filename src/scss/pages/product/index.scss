@@ -1,0 +1,46 @@
+@import "product-header";
+@import "product-slider";
+@import "product-seller-info";
+@import "product-purchase";
+@import "product-promotion";
+@import "product-variants";
+@import "product-purchase-additions";
+@import "product-tabs";
+@import "product-series-from-brand";
+@import "offers-others-seller";
+@import "buy-together";
+@import "description";
+@import "characteristics";
+@import "reviews";
+@import "rating";
+@import "sticky-buy-block";
+
+.product {
+    &-page-wrap {
+        bottom: 129px;
+
+        .button-to-top, .notification {
+            bottom: 129px;
+        }
+        .button-to-top.notification-is-active {
+            bottom: 186px;
+        }
+    }
+    &-page {
+        .section-title {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+    &__inner {
+        margin-top: 24px;
+    }
+    &__right {
+        margin-top: 24px;
+    }
+}
+
+.block-white {
+    background-color: $white;
+    border-radius: 1rem;
+}

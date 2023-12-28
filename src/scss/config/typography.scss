@@ -39,8 +39,28 @@ h1 {
     & > *:last-child {
         margin-bottom: 0 !important;
     }
-    p:not(:last-child) {
-        margin-bottom: 14px;
+    p:not(:last-child), img, ul, ol {
+        margin-bottom: 1rem;
+    }
+    img {
+        border-radius: .5rem;
+    }
+    ul, ul li {
+        list-style: initial;
+    }
+    ul, ol {
+        li:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+    ol, ol li {
+        list-style: decimal;
+    }
+    ol {
+        padding-left: 16px;
+    }
+    ul {
+        padding-left: 20px;
     }
 }
 

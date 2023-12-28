@@ -148,6 +148,12 @@
 
     &__copyright {
         margin-top: 24px;
+        a {
+            color: $white;
+            &:hover {
+                color: $cyan-500;
+            }
+        }
     }
     @media (min-width: 375px) {
         &__top-menu {

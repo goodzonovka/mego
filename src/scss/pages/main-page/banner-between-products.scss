@@ -19,13 +19,13 @@
             height: 100%;
         }
     }
-    .tooltip {
+    .tooltip-slider {
         top: 8px;
         right: 8px;
     }
     @media (max-width: 767px) {
         .item {
-            .tooltip-dropdown {
+            .tooltip-slider__dropdown {
                 width: 130px;
                 right: -4px;
                 margin-right: 0;
@@ -40,7 +40,7 @@
     }
     @media (min-width: 375px) and (max-width: 767px) {
         .item {
-            .tooltip-dropdown {
+            .tooltip-slider__dropdown {
                 width: 167px;
             }
         }

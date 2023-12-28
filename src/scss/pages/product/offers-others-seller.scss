@@ -1,0 +1,108 @@
+.offers-others-seller {
+    margin-top: 2rem;
+    &:not(.active) .item {
+        display: none;
+        &:nth-child(-n+3) {
+            display: flex;
+        }
+    }
+    .list {
+        margin-bottom: -.5rem;
+    }
+    .item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .5rem;
+        padding: 1rem;
+        &__left, &__center, &__right {
+            display: flex;
+            align-items: center;
+        }
+        .img {
+            flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            margin-right: 1rem;
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .title {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            .tooltip {
+                margin-left: 13px;
+                &__btn {
+                    color: $dark-400;
+                }
+            }
+        }
+        .rating-reviews-wrap {
+            display: flex;
+            align-items: center;
+            margin-top: 4px;
+            .rating, .reviews {
+                display: flex;
+                align-items: center;
+                .count {
+                    margin-left: 4px;
+                }
+            }
+            .rating {
+                margin-right: 1rem;
+            }
+        }
+        &__center {
+            justify-content: space-between;
+            margin-top: .5rem;
+            & > * {
+                width: calc(50% - 12px);
+            }
+        }
+        .price-block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .old-price {
+                margin-bottom: 4px;
+                line-height: 17.5px;
+            }
+            .price {
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+        }
+        .delivery {
+            &__title {
+                color: $dark-600;
+            }
+            &__price {
+                margin-top: 4px;
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+        }
+        &__right {
+            margin-top: .5rem;
+        }
+        .btn-credit {
+            flex-grow: 1;
+        }
+        .btn-buy {
+            width: 44px;
+            margin-left: 1rem;
+            padding: 0;
+            .text {
+                display: none;
+            }
+        }
+    }
+    .btn-more-offers {
+        margin-top: 1rem;
+    }
+}

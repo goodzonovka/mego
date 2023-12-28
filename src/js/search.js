@@ -119,14 +119,17 @@ function searchFilterCategoryBack() {
 }
 
 function setSearchFilterCategory(e) {
+    e.preventDefault();
+
     let currentCategory = $('#search-form-current-category');
 
-    e.preventDefault();
     linkSearchFilterCategory.removeClass('active');
     $(this).addClass('active');
     currentCategory.text($(this).find('.catalog-menu-list__title').text());
+
     if (isDesktop()) {
         $('#search-filter-category-popup').removeClass('active');
+        $('body').removeClass('overflow-hidden');
     } else {
         searchFilterCategory.removeClass('active');
     }

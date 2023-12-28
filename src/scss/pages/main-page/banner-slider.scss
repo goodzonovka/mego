@@ -1,34 +1,28 @@
 .banner-slider {
-    .tooltip {
+    .tooltip-slider {
         top: 8px;
         right: 8px;
     }
     @media (max-width: 374px) {
-        .tooltip {
-            &-dropdown {
-                top: -55px;
-                &:before {
-                    top: auto;
-                    bottom: 11px;
-                }
+        .tooltip-slider__dropdown {
+            top: -55px;
+            &:before {
+                top: auto;
+                bottom: 11px;
             }
         }
     }
     @media (max-width: 767px) {
-        .tooltip {
-            &-dropdown {
-                &:before {
-                    top: auto;
-                    bottom: 11px;
-                }
+        .tooltip-slider__dropdown {
+            &:before {
+                top: auto;
+                bottom: 11px;
             }
         }
     }
     @media (min-width: 375px) and (max-width: 767px) {
-        .tooltip {
-            &-dropdown {
-                top: -72px;
-            }
+        .tooltip-slider__dropdown {
+            top: -72px;
         }
     }
     @media (min-width: $ds) {

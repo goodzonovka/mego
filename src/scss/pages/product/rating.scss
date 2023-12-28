@@ -1,0 +1,70 @@
+.product-rating {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 25px 16px 0;
+    &__left {
+        width: 136px;
+        .value {
+            font-size: 44px;
+            line-height: 46px;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+        .stars {
+            display: flex;
+            margin-top: .5rem;
+            svg {
+                &:not(:last-child) {
+                    margin-right: 4px;
+                }
+                &.disabled {
+                    color: $dark-300;
+                }
+            }
+        }
+        .count-reviews {
+            margin-top: 4px;
+            word-spacing: 4px;
+        }
+    }
+    &__list {
+        width: calc(100% - 152px);
+        li {
+            display: flex;
+            align-items: center;
+            &:not(:last-child) {
+                margin-bottom: 4px;
+            }
+            .rating-value {
+                width: 20px;
+                color: $dark-600;
+            }
+            .rating-line {
+                flex-grow: 1;
+                position: relative;
+                height: .5rem;
+                margin: 0 1rem;
+                background-color: $dark-300;
+                border-radius: 8px;
+                overflow: hidden;
+                &-fill {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    background-color: $warning-500;
+                    border-radius: 8px;
+                }
+            }
+            .rating-count {
+                width: 28px;
+            }
+        }
+    }
+    &__text {
+        width: 100%;
+        margin-top: 1.5rem;
+        color: $dark-600;
+    }
+}

@@ -23,22 +23,15 @@
     }
 
     .swiper-pagination {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        position: absolute;
         top: auto;
         bottom: 4px;
         z-index: 1;
         &-bullet {
-            width: 44px;
-            height: 4px;
-            margin: 0 4px;
             background: rgba(255,255,255,.5);
             border: 1px solid rgba(1, 4, 9, 0.15);
-            border-radius: 4px;
-            opacity: 1;
             &-active {
-                background: $cyan-500;
+                border-color: $cyan-500;
             }
         }
     }
@@ -59,30 +52,6 @@
         }
         .swiper-pagination {
             bottom: 16px;
-        }
-        .swiper-arrow {
-            position: absolute;
-            z-index: 1;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 44px;
-            height: 44px;
-            color: $white;
-            background: rgba(1, 4, 9, 0.15);
-            box-shadow: 0px 1px 2px 0px #1018280D;
-            border-radius: 8px;
-            &:hover {
-                background: rgba(1, 4, 9, 1);
-            }
-            &__prev {
-                left: 16px;
-            }
-            &__next {
-                right: 16px;
-            }
         }
     }
 }

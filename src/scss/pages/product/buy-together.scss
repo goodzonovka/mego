@@ -1,0 +1,21 @@
+.product-buy-together {
+    margin-top: 2rem;
+    .swiper-slide {
+        width: 155px;
+    }
+    .img {
+        display: block;
+        height: 155px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .title {
+        display: block;
+        margin-top: 1rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}

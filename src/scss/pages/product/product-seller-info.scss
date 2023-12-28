@@ -1,0 +1,33 @@
+.product-seller-info {
+    margin-top: 1.5rem;
+    padding: .5rem 1rem;
+    &__img, &__rating-product {
+        display: none;
+    }
+    &__name {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: bold;
+        .tooltip {
+            margin-left: .5rem;
+            svg {
+                color: $dark-400;
+            }
+        }
+    }
+    &__rating {
+        &-title {
+            margin-right: .25rem;
+            color: $dark-600;
+        }
+        &-count {
+            margin-left: .25rem;
+        }
+        &-seller {
+            display: flex;
+            align-items: center;
+        }
+    }
+}

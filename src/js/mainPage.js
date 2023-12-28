@@ -31,8 +31,15 @@ window.addEventListener('load', function () {
     /* products list slider */
     if (isDevice()) {
         new Swiper('.products-list-slider-js', {
+            modules: [Pagination],
+            loop: true,
             slidesPerView: "auto",
+            slidesPerGroup: 2,
             spaceBetween: 16,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
         });
 
         /* end products list slider */
@@ -67,7 +74,7 @@ window.addEventListener('load', function () {
 
     // Выполнение AJAX-запроса при загрузке страницы
     $.ajax({
-        url: "https://goodzonovka.github.io/mego-production/data/products.json",
+        url: "data/products.json",
         type: "GET",
         dataType: "json",
         success: function (data) {

@@ -121,12 +121,6 @@ h2, .section-title {
         align-items: flex-start;
         margin-top: 8px;
         margin-bottom: -1px;
-        .price {
-            font-weight: 700;
-            &.cheaper-price {
-                color: $success-500;
-            }
-        }
         .became-cheaper {
             display: flex;
             align-items: center;
@@ -144,20 +138,7 @@ h2, .section-title {
             }
         }
         .old-price {
-            position: relative;
             @extend .text-small;
-            color: $dark-600;
-            &:before {
-                content: '';
-                position: absolute;
-                left: -1px;
-                top: 50%;
-                width: calc(100% + 2px);
-                border-bottom: .3px solid $dark-600;
-            }
-        }
-        .new-price {
-            color: $error-700
         }
     }
 
@@ -196,7 +177,7 @@ h2, .section-title {
         }
     }
     @media (min-width: 375px) {
-        width: 156px;
+        width: 155px;
     }
     @media (min-width: 390px) {
         width: 163px;
