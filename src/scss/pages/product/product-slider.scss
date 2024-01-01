@@ -1,5 +1,5 @@
 .product-slider {
-    &__thumbnail {
+    &__thumbnail-wrap {
         display: none;
     }
     &__big-images {
@@ -51,6 +51,98 @@
             svg {
                 margin-right: 4px;
             }
+        }
+    }
+    @media (min-width: $tv) {
+        &__big-images {
+            width: 542px;
+            margin: 0 auto;
+            .swiper-pagination {
+                margin: 1.5rem -4px -8px;
+                &-bullet {
+                    width: 44px;
+                    height: 4px;
+                    margin: 0 4px 8px!important;
+                }
+            }
+        }
+    }
+    @media (min-width: $ds) {
+        display: flex;
+        align-items: flex-start;
+        &__thumbnail {
+            height: 384px;
+            margin-right: 8px;
+            overflow: hidden;
+            &-wrap {
+                display: block;
+            }
+            .swiper-slide {
+                width: 73.6px;
+                height: 73.6px;
+                padding: 3px;
+                border: 1px solid transparent;
+                border-radius: .5rem;
+                cursor: pointer;
+                transition: all .3s;
+                &-thumb-active, &:hover {
+                    border-color: $cyan-500;
+                }
+                img {
+                    border-radius: 4px;
+                }
+            }
+            &-arrow {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 73.6px;
+                height: 44px;
+                background-color: $white;
+                border-radius: 8px;
+                border: 1px solid $dark-300;
+                &:hover {
+                    border-color: $dark-900;
+                }
+                &--prev {
+                    margin-bottom: 4px;
+                }
+                &--next {
+                    margin-top: 4px;
+                }
+            }
+        }
+        &__big-images {
+            margin: 0;
+            .swiper-pagination {
+                display: none;
+            }
+            .swiper-slide {
+                height: 480px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        &__icons {
+            right: 20px;
+        }
+    }
+    @media (min-width: 1366px) {
+        &__thumbnail {
+            height: 446px;
+            .swiper-slide {
+                width: 86px;
+                height: 86px;
+            }
+            &-arrow {
+                width: 86px;
+            }
+        }
+        &__big-images .swiper-slide {
+            height: 542px;
         }
     }
 }

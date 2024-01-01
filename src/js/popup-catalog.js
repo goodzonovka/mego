@@ -73,7 +73,7 @@ function closeCatalog() {
 }
 
 function closeCatalogByEsc(e) {
-    if (e.key === 'Escape') {
+    if (e.key === 'Escape' && catalogMenu.hasClass('active')) {
         btnOpenCatalog.removeClass('active').find('svg use').attr('href', 'images/icons/icons.svg#catalog');
         catalogMenu.removeClass('active');
         $('body').removeClass('overflow-hidden');

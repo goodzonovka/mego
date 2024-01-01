@@ -1,6 +1,7 @@
 import $ from "jquery";
 import MatchHeight from 'matchheight';
 import {isDevice} from "./functions.js";
+import {counterBasket} from "./products/buy.js";
 
 new MatchHeight('.product-item .price-block');
 
@@ -31,8 +32,10 @@ let description = $('.description-js');
 let btnReadMore = description.next('.btn-read-more-js');
 
 description.each(function () {
-    if ($(this).height() > description.find('.user-content').height()) {
-        $(this).next('.btn-read-more-js').addClass('active');
+    if ($(this).height() < $(this).find('.user-content').height()) {
+        $(this).next('.btn-read-more-js').addClass('show');
+    } else {
+        $(this).addClass('visible');
     }
 });
 

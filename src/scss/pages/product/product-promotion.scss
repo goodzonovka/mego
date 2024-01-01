@@ -9,11 +9,12 @@
     border-radius: .5rem;
     &__img {
         flex-shrink: 0;
-        width: 168px;
+        width: 122px;
         margin-right: .5rem;
         border-radius: 4px;
         img {
             width: 100%;
+            height: auto;
             object-fit: cover;
         }
     }
@@ -64,6 +65,61 @@
             font-size: 10px;
             line-height: 1rem;
             color: $dark-600;
+        }
+    }
+    @media (min-width: 360px) {
+        &__img {
+            width: 150px;
+        }
+    }
+    @media (min-width: $sm) {
+        &__img {
+            width: 51.38%;
+            height: 60px;
+        }
+    }
+    @media (min-width: 376px) {
+        &__img {
+            height: auto;
+        }
+    }
+    @media (min-width: 568px) {
+        &__timer-title {
+            margin-bottom: .75rem;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    @media (min-width: $tv) {
+        &__timer {
+            & > * {
+                height: 42px;
+                span {
+                    width: 28px;
+                    font-size: 20px;
+                    line-height: 24px;
+                    border-radius: 8px;
+                }
+                &.dots {
+                    width: 20px;
+                    .dot:not(:last-child) {
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+            &-title {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+    @media (min-width: $ds) {
+        margin-top: 1rem;
+        border-radius: 1rem;
+        background: linear-gradient(90deg, #c6a2c7 0%, #e3d7e7 50%, #a9dcd7 100%);
+        &__img {
+            width: 242px;
+            margin-right: 1.5rem;
         }
     }
 }

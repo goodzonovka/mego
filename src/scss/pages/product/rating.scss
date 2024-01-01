@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 25px 16px 0;
+    margin-bottom: 24px;
     &__left {
         width: 136px;
         .value {
@@ -54,7 +54,7 @@
                     top: 0;
                     height: 100%;
                     background-color: $warning-500;
-                    border-radius: 8px;
+                    border-radius: 8px 0 0 8px;
                 }
             }
             .rating-count {
@@ -66,5 +66,27 @@
         width: 100%;
         margin-top: 1.5rem;
         color: $dark-600;
+    }
+    @media (min-width: $ds) {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        margin-bottom: 14px;
+        &__left {
+            margin-right: 48px;
+        }
+        &__list {
+            width: 400px;
+            margin-right: 48px;
+        }
+        &__text {
+            align-self: center;
+            flex-grow: 1;
+            width: auto;
+            margin-top: 0;
+            &-inner {
+                width: 380px;
+                max-width: 100%;
+            }
+        }
     }
 }

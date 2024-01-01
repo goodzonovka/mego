@@ -36,6 +36,9 @@ $(function() {
 $(window).scroll(function () {
     let scrollTop = $(this).scrollTop();
     let offsetTopForChangeMenu = 150;
+    if (!$('.main-banner-js').length) {
+        offsetTopForChangeMenu = 75;
+    }
 
     if (isDevice()) {
         if (scrollTop > offsetTopForChangeMenu) {

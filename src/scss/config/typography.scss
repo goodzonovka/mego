@@ -36,29 +36,37 @@ h1 {
     & > *:first-child {
         margin-top: 0 !important;
     }
+
     & > *:last-child {
         margin-bottom: 0 !important;
     }
+
     p:not(:last-child), img, ul, ol {
         margin-bottom: 1rem;
     }
+
     img {
         border-radius: .5rem;
     }
+
     ul, ul li {
         list-style: initial;
     }
+
     ul, ol {
         li:not(:last-child) {
             margin-bottom: 4px;
         }
     }
+
     ol, ol li {
         list-style: decimal;
     }
+
     ol {
         padding-left: 16px;
     }
+
     ul {
         padding-left: 20px;
     }
@@ -68,6 +76,7 @@ h1 {
     position: relative;
     height: 394px;
     overflow: hidden;
+
     &:before {
         content: '';
         position: absolute;
@@ -77,17 +86,34 @@ h1 {
         height: 96px;
         background: linear-gradient(180deg, rgba(242, 244, 248, 0) 0%, #F2F4F8 100%);
     }
+
     &.active {
         height: auto !important;
+
         &:before {
             display: none;
         }
     }
+
+    &.visible {
+        height: auto !important;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    & + .btn {
+        display: none;
+        margin-top: 16px;
+
+        &.show {
+            display: flex;
+        }
+    }
+
     &-wrap {
         margin-top: 24px;
-        .btn {
-            margin-top: 16px;
-        }
     }
 }
 
@@ -111,6 +137,7 @@ h1 {
     .description {
         &-wrap {
             margin-top: 64px;
+
             .btn {
                 margin-top: 24px;
             }
@@ -119,6 +146,7 @@ h1 {
     .user-content {
         font-size: 16px;
         line-height: 24px;
+
         p:not(:last-child) {
             margin-bottom: 24px;
         }

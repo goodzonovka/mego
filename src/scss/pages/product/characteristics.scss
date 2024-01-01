@@ -6,12 +6,16 @@
     background-color: $white;
     .description {
         height: 400px;
+        &:before {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+        }
     }
     .inner, .inner ul {
         padding-left: 0;
         list-style: none;
     }
     .item {
+        list-style: none;
         &:not(:last-child) {
             margin-bottom: 1.5rem;
         }
@@ -27,6 +31,8 @@
             display: flex;
             justify-content: space-between;
             padding: .5rem;
+            font-size: 12px;
+            line-height: 18px;
             background-color: $dark-100;
             border-radius: .5rem;
             &:not(:last-child) {
@@ -42,5 +48,31 @@
     }
     .btn {
         margin-top: 1rem;
+    }
+    @media (min-width: 360px) {
+        .list li {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+    @media (min-width: $ds) {
+        margin-top: 64px;
+        margin-left: 0;
+        width: 100%;
+        padding: 48px;
+        border-radius: 1rem;
+        .description {
+            height: 280px;
+        }
+        .inner {
+            column-count: 3;
+            column-gap: 24px;
+        }
+        .item {
+            break-inside: avoid-column;
+        }
+        .btn {
+            margin-top: .5rem;
+        }
     }
 }

@@ -360,8 +360,27 @@ h2, .section-title {
             width: calc(20% - 16px);
         }
     }
+    @media (max-width: $device) {
+        &-slider .swiper-arrow {
+            display: none;
+        }
+    }
     @media (min-width: $ds) {
         margin: 0;
+        &-slider {
+            position: relative;
+            overflow: hidden;
+            .swiper-arrow {
+                transform: none;
+                top: 88px;
+                &__prev {
+                    left: 0;
+                }
+                &__next {
+                    right: 0;
+                }
+            }
+        }
         &.list {
             margin: 0;
             .product-item {

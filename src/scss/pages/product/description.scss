@@ -1,5 +1,8 @@
 .product-description {
     height: 263px;
+    &:before {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+    }
     &-wrap {
         margin-top: 2rem;
         margin-left: -1rem;
@@ -8,6 +11,21 @@
         background-color: $white;
         .btn {
             margin-top: 1.5rem;
+        }
+    }
+    @media (min-width: $tv) {
+        height: 360px;
+    }
+    @media (min-width: $th) {
+        height: 440px;
+    }
+    @media (min-width: $ds) {
+        height: 585px;
+        &-wrap {
+            margin-left: 0;
+            width: 100%;
+            padding: 48px;
+            border-radius: 1rem;
         }
     }
 }

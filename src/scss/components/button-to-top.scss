@@ -19,7 +19,7 @@
     &:hover {
         background-color: $cyan-300;
     }
-    @media (max-width: $device) {
+    @media (max-width: $mobile) {
         &.notification-is-active {
             bottom: 136px;
         }

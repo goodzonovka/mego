@@ -353,6 +353,11 @@
     .new-price {
         color: $error-700
     }
+    @media (min-width: $ds) {
+        .discount {
+            margin-left: 9px;
+        }
+    }
 }
 
 // swiper
@@ -363,7 +368,7 @@
     flex-wrap: wrap;
     margin-top: 1rem;
     &-bullet {
-        width: 44px;
+        width: 40px;
         height: 4px;
         margin: 0 4px;
         background: rgba(1, 4, 9, 0.15);
@@ -372,6 +377,17 @@
         &-active {
             background: $cyan-500 !important;
         }
+    }
+    @media (min-width: $sm) {
+        &-bullet {
+            width: 44px;
+        }
+    }
+    @media (min-width: $tv) {
+        margin-top: 1.5rem;
+    }
+    @media (min-width: $ds) {
+        margin-top: 23px;
     }
 }
 
@@ -400,3 +416,58 @@
     }
 }
 // end swiper
+
+.amount {
+    display: flex;
+    height: 38px;
+    &__minus, &__plus {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 42px;
+        height: 100%;
+        color: $dark-400;
+        border: 1px solid $dark-300;
+        cursor: pointer;
+        &:hover {
+            color: $cyan-500;
+        }
+        svg {
+            transition: color .3s;
+        }
+    }
+    &__minus {
+        border-right: none;
+        border-radius: .5rem 0 0 .5rem;
+    }
+    &__plus {
+        border-left: none;
+        border-radius: 0 .5rem .5rem 0;
+    }
+    &__input {
+        width: 79.5px;
+        height: 100%;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        border-top: 1px solid $dark-300;
+        border-bottom: 1px solid $dark-300;
+    }
+    @media (min-width: $tv) {
+        height: 52px;
+        &__minus, &__plus {
+            width: 52px;
+        }
+        &__input {
+            width: 147px;
+        }
+    }
+    @media (min-width: $ds) {
+        &__minus {
+            border-radius: .75rem 0 0 .75rem;
+        }
+        &__plus {
+            border-radius: 0 .75rem .75rem 0;
+        }
+    }
+}

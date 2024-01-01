@@ -30,4 +30,39 @@
             align-items: center;
         }
     }
+    @media (min-width: $tv) {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        &__img, &__rating-product {
+            display: flex;
+        }
+        &__img {
+            margin-right: 14px;
+        }
+        &__name {
+            font-size: 20px;
+        }
+        &__rating {
+            display: flex;
+            margin-top: 8px;
+            & > *:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+            &-title {
+                margin-right: 5px;
+            }
+        }
+    }
+    @media (min-width: $ds) {
+        .tooltip__dropdown {
+            left: 50%;
+            transform: translateX(-50%);
+            &:before {
+                top: calc(100% - 1px);
+                left: 50%;
+                transform: rotate(45deg) translateX(-50%);
+            }
+        }
+    }
 }

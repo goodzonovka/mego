@@ -34,9 +34,19 @@
     &__info-list {
         margin-top: 1rem;
         li {
+            position: relative;
             display: flex;
             justify-content: space-between;
-            border-bottom: 1px dotted $dark-400;
+            font-size: 12px;
+            line-height: 18px;
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                border-bottom: 1px dotted $dark-400;
+            }
             &:not(:last-child) {
                 margin-bottom: .5rem;
             }
@@ -45,7 +55,6 @@
                 background: $white;
                 position: relative;
                 z-index: 1;
-                margin-bottom: -1px;
                 &:first-child {
                     color: $dark-600;
                 }
@@ -65,5 +74,76 @@
 
     &__buttons {
         margin-top: 1.5rem;
+    }
+    @media (min-width: 360px) {
+        &__info-list li {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+    @media (max-width: $device) {
+        &__buttons {
+            .btn-to-basket {
+                display: none;
+            }
+        }
+    }
+    @media (min-width: $ds) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &__price-block, &__info {
+            width: calc(50% - 12px);
+        }
+        &__info {
+            margin-top: 0;
+        }
+        &__buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            &.active {
+                .btn-to-basket, .btn-buy-now {
+                    display: none;
+                }
+                .amount, .btn-basket {
+                    display: flex;
+                }
+            }
+            & > * {
+                width: calc(50% - 12px);
+                height: 56px;
+                font-size: 18px;
+                line-height: 28px;
+                border-radius: 12px;
+            }
+            .amount, .btn-basket {
+                display: none;
+            }
+            .amount {
+                &__minus, &__plus {
+                    width: 56px;
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+                &__input {
+                    width: 158px;
+                    font-size: 18px;
+                }
+            }
+            .btn-to-basket {
+                order: -1;
+                .text-2 {
+                    display: none;
+                }
+            }
+            .btn-basket svg {
+                width: 24px;
+                height: 24px;
+                margin-left: 8px;
+            }
+        }
     }
 }

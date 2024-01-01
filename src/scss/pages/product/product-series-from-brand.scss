@@ -3,4 +3,10 @@
     .product-item .additional-information {
         height: 19px;
     }
+    @media (min-width: $ds) {
+        margin-top: 3rem;
+        .product-item .additional-information {
+            height: 20px;
+        }
+    }
 }

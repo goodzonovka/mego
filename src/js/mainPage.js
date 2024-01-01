@@ -29,20 +29,40 @@ window.addEventListener('load', function () {
     /* end main banner */
 
     /* products list slider */
-    if (isDevice()) {
-        new Swiper('.products-list-slider-js', {
-            modules: [Pagination],
-            loop: true,
-            slidesPerView: "auto",
-            slidesPerGroup: 2,
-            spaceBetween: 16,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
+    new Swiper('.products-list-slider-js', {
+        modules: [Pagination, Navigation],
+        loop: true,
+        slidesPerView: "auto",
+        slidesPerGroup: 2,
+        spaceBetween: 16,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            prevEl: '.swiper-arrow__prev',
+            nextEl: '.swiper-arrow__next',
+        },
+        breakpoints: {
+            568: {
+                slidesPerGroup: 3,
             },
-        });
-
-        /* end products list slider */
+            768: {
+                slidesPerGroup: 4,
+            },
+            // 992: {
+            //     slidesPerGroup: 5,
+            // },
+            1200: {
+                speed: 1000,
+                slidesPerView: 6,
+                slidesPerGroup: 6,
+                spaceBetween: 0,
+            }
+        }
+    });
+    /* end products list slider */
+    if (isDevice()) {
 
         /* banner slider */
         new Swiper('.banner-slider-js', {
@@ -139,7 +159,7 @@ window.addEventListener('load', function () {
                                     </svg>
                                 </button>
     
-                                <button class="buy buy-js" aria-label="Купить">
+                                <button class="buy buy-js" aria-label="Купить" data-buy-count="0">
                                     <svg width="18" height="19">
                                         <use href="images/icons/icons.svg#shopping-cart"></use>
                                     </svg>

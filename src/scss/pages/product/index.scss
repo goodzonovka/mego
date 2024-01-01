@@ -17,26 +17,80 @@
 
 .product {
     &-page-wrap {
-        bottom: 129px;
-
-        .button-to-top, .notification {
-            bottom: 129px;
+        .wrapper {
+            padding-bottom: 114px;
         }
-        .button-to-top.notification-is-active {
-            bottom: 186px;
+        @media (max-width: $device) {
+            .button-to-top, .notification {
+                bottom: 129px;
+            }
         }
     }
+
     &-page {
         .section-title {
             font-size: 1.5rem;
             line-height: 2rem;
         }
     }
+
     &__inner {
         margin-top: 24px;
     }
+
     &__right {
         margin-top: 24px;
+    }
+    @media (max-width: $mobile) {
+        &-page-wrap .button-to-top.notification-is-active {
+            bottom: 186px;
+        }
+    }
+    @media (min-width: $tv) and (max-width: $device) {
+        &-page-wrap {
+            .wrapper {
+                padding-bottom: 136px;
+            }
+            .button-to-top, .notification {
+                bottom: 150px;
+            }
+        }
+    }
+    @media (min-width: $ds) {
+        &-page-wrap {
+            .wrapper {
+                overflow: visible;
+                padding-bottom: 0;
+            }
+        }
+        &-page {
+            .section-title {
+                margin-bottom: 24.5px;
+                font-size: 2rem;
+                line-height: 38px;
+            }
+        }
+        &__inner {
+            display: flex;
+            align-items: flex-start;
+        }
+        &__left {
+            position: sticky;
+            top: 84px;
+            flex-shrink: 0;
+            //width: 636px;
+            width: 49.075%;
+            margin-right: 30px;
+        }
+        &__right {
+            flex-grow: 1;
+            margin-top: 0;
+        }
+    }
+    @media (min-width: 1366px) {
+        &__left {
+            margin-right: 48px;
+        }
     }
 }
 

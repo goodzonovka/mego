@@ -5,12 +5,14 @@
     height: 44px;
     padding: 0 19px;
     @extend .text-medium;
+    color: $dark-900;
     font-weight: 500;
     background-color: $white;
     border: 1px solid $dark-300;
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
     border-radius: 8px;
     &:hover {
+        color: $dark-900;
         border-color: $dark-900;
         box-shadow: none;
     }

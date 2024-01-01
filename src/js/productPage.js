@@ -1,9 +1,10 @@
 import $ from 'jquery';
 import Swiper from "swiper";
-import {FreeMode, Pagination} from "swiper/modules";
+import {Navigation, Pagination, FreeMode, Thumbs} from "swiper/modules";
 import Countdown from 'countdown-js';
+import {isDesktop, isDevice} from "./functions.js";
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
     let productTabs = $('.product-tab-js');
     let btnMoreOffers = $('.btn-more-offers-js');
@@ -12,15 +13,83 @@ document.addEventListener("DOMContentLoaded", function() {
     let btnReviewsMoreReviews = $('.product-reviews-more-reviews-js')
 
     let responseAuthorScroll = $('.in-response-js');
+    let productsTabs = $('.product-tabs-js');
+    let btnToBasket = $('.btn-to-basket');
+    let amount = $('.product-amount-js');
+    let btnBasketLink = $('.btn-basket-link-js');
+
+    let productStickyBuyBlock = $('.product-sticky-buy-block');
+    let productStickyBuyBlockInner = $('.product-sticky-buy-block .inner');
+
+
+    // перенос цены и корзины в фиксированную шапку товара и в блок purchase
+    // в зависимости от скролла
+    if (isDesktop()) {
+        $('.product-purchase__buttons').append(btnToBasket, amount, btnBasketLink);
+
+        let productTabsSlider = $('.product-tabs-slider-js');
+        let productTabsOffsetTop = productTabsSlider.offset().top
+        let productTabsHeight = productTabsSlider.outerHeight();
+
+        let productPage = $('.product-page');
+        let header = $('.header');
+        let productHeaderWrap = $('.product-header-wrap');
+        let productHeaderWrapHeight = productHeaderWrap.outerHeight();
+
+        $(window).scroll(function () {
+            let scrollTop = $(this).scrollTop();
+
+            if (scrollTop + header.outerHeight() > productTabsOffsetTop + productTabsHeight) {
+                productStickyBuyBlockInner.append(btnToBasket, amount, btnBasketLink);
+                $('.product-header__left').after(productStickyBuyBlock);
+
+                productPage.css('padding-top',  productHeaderWrapHeight + 24);
+                productHeaderWrap.addClass('fixed');
+                $('#notification').addClass('product-header-is-fixed');
+            } else {
+                $('.product-purchase__buttons').append(btnToBasket, amount, btnBasketLink);
+
+                productPage.css('padding-top',  0);
+                productHeaderWrap.removeClass('fixed');
+                $('#notification').removeClass('product-header-is-fixed');
+            }
+        })
+
+        // скролл к верху страницы по клику на картину из фиксированной шапки
+        $('.product-header__img').click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 0);
+        });
+    }
+
+
+    // миниатюры главного слайдера
+    let productSliderThumbs = new Swiper('.product-slider-thumbnail-js', {
+        modules: [FreeMode, Navigation],
+        loop: true,
+        slidesPerView: 5,
+        spaceBetween: 4,
+        direction: 'vertical',
+        freeMode: true,
+        watchSlidesProgress: true,
+        navigation: {
+            prevEl: '.product-slider__thumbnail-arrow--prev',
+            nextEl: '.product-slider__thumbnail-arrow--next',
+        },
+    });
 
     // главный слайдер
-    new Swiper('.product-slider-big-images-js', {
-        modules: [Pagination],
+    let productMainSlider = new Swiper('.product-slider-big-images-js', {
+        modules: [Thumbs, Pagination],
         slidesPerView: 1,
         loop: true,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
+        },
+        thumbs: {
+            swiper: productSliderThumbs,
         },
     });
 
@@ -67,11 +136,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // слайдер табов
-    new Swiper('.product-tabs-js', {
-        modules: [FreeMode],
-        slidesPerView: "auto",
-        freeMode: true,
-    });
+    if (isDevice()) {
+        new Swiper('.product-tabs-slider-js', {
+            modules: [FreeMode],
+            slidesPerView: "auto",
+            freeMode: true,
+        });
+    }
 
     // клик по табу
     productTabs.mousedown(changeTab);
@@ -84,6 +155,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
         productTabs.removeClass('active');
         $(this).addClass('active');
+
+        // scroll к блокам
+        let headerHeight = $('.header').outerHeight();
+        let paddingTop = 16;
+        let newScrollTopValue;
+        if (isDevice()) {
+            let productTabsHeight = productsTabs.outerHeight();
+            newScrollTopValue = $(target).offset().top - headerHeight - paddingTop - productTabsHeight;
+        } else {
+            let productHeaderFixed = $('.product-header-wrap').outerHeight();
+            newScrollTopValue = $(target).offset().top - headerHeight - productHeaderFixed - paddingTop;
+        }
+
+        $('html, body').animate({
+            scrollTop: newScrollTopValue
+        }, 0);
+
+        if ($(this).attr('data-target-tab')) {
+            let targetTab = $(this).data('target-tab');
+            $(`[data-target='${targetTab}']`).trigger('click');
+        }
     }
 
     btnMoreOffers.click(function () {
@@ -93,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     new Swiper('.product-buy-together-js', {
-        modules: [Pagination],
+        modules: [Pagination, Navigation],
         loop: true,
         slidesPerView: "auto",
         slidesPerGroup: 2,
@@ -102,6 +194,18 @@ document.addEventListener("DOMContentLoaded", function() {
             el: ".swiper-pagination",
             clickable: true,
         },
+        navigation: {
+            prevEl: '.product-buy-together-js .swiper-arrow__prev',
+            nextEl: '.product-buy-together-js .swiper-arrow__next',
+        },
+        breakpoints: {
+            1200: {
+                speed: 1000,
+                slidesPerView: 6,
+                slidesPerGroup: 6,
+                spaceBetween: 32,
+            }
+        }
     });
 
 
@@ -118,10 +222,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     responseAuthorScroll.click(function () {
         let target = $(this).data('target');
+        let headerHeight = $('.header').outerHeight();
+        let paddingTop = 16;
 
-        console.log($('.header').outerHeight())
         $('html, body').animate({
-            scrollTop: $(target).offset().top - $('.header').outerHeight() - 16
+            scrollTop: $(target).offset().top - headerHeight - paddingTop
         }, 0);
     })
 
@@ -131,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function() {
         $('.product-reviews__tabs .tab').removeClass('active');
         $(this).addClass('active')
 
-        $('.product-reviews__list-wrap').removeClass('open');
+        $('.product-reviews__list').removeClass('open');
         $(target).addClass('open');
 
     })
@@ -139,5 +244,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // фиксированный блок купить, при клике на кнопку купить
     // отобразить amount и ссылку в корзину
+    $('.show-amount-and-basket-js').click(function () {
+        $('.product-purchase__buttons, .product-sticky-buy-block .inner').addClass('active');
+    });
+
+
+    // sticky для product tabs
+    if (isDevice()) {
+        let productsTabs = $('.product-tabs-js:has(> .swiper-wrapper)');
+        let productsTabsOffsetTop = productsTabs.offset().top;
+        $(window).scroll(function () {
+            let scrollTop = $(this).scrollTop();
+
+            let wrapper = $('.wrapper');
+
+            if (scrollTop + $('.header').outerHeight() >= productsTabsOffsetTop) {
+                productsTabs.addClass('fixed');
+                wrapper.addClass('product-tabs-fixed');
+            } else {
+                productsTabs.removeClass('fixed');
+                wrapper.removeClass('product-tabs-fixed');
+            }
+        });
+    }
 
 });
