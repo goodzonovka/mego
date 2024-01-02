@@ -22,6 +22,8 @@ import "./products/wishlist.js";
 import "./products/comparison.js";
 
 import './productPage.js';
+import './stockPage.js';
+import './contactPage.js';
 
 /* проверка на поддержку webp формата */
 import BaseHelpers from './helpers/BaseHelpers.js';

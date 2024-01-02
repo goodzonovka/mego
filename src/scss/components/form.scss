@@ -69,7 +69,8 @@
         width: 24px;
         height: 24px;
         margin-right: 8px;
-        border: 2px solid $dark-300;
+        background-color: $white;
+        border: 1px solid $dark-300;
         border-radius: 50%;
         transition: all .3s;
         &:before {
@@ -111,6 +112,7 @@
         width: 24px;
         height: 24px;
         margin-right: 8px;
+        background-color: $white;
         border: 1px solid $dark-300;
         border-radius: 4px;
         transition: background-color .3s, border-color .3s;

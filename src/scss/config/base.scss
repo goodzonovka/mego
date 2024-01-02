@@ -20,6 +20,9 @@
 .page {
     position: relative;
     flex: 1 1 auto;
+    @media (min-width: $ds) {
+        min-height: 503px;
+    }
 }
 
 .container {

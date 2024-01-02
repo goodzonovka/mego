@@ -1,4 +1,16 @@
 .banner-slider {
+    .link {
+        z-index: 1;
+        &:hover {
+            & + .img img {
+                transform: scale(1.05);
+                opacity: .75;
+            }
+        }
+    }
+    .img img {
+        transition: all .3s;
+    }
     .tooltip-slider {
         top: 8px;
         right: 8px;

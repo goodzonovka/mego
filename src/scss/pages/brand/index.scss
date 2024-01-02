@@ -1,0 +1,21 @@
+.brand-header {
+    padding: 1.5rem 0;
+    background-color: $white;
+    .back, .breadcrumbs {
+        margin-top: 0;
+    }
+    .page-title {
+        margin-top: 4px;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+    &__img {
+        height: 48px;
+        margin-right: 2rem;
+    }
+    .page-title {
+        margin: 0;
+    }
+}

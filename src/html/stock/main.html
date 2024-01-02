@@ -1,0 +1,97 @@
+<div class="stock-inner">
+    <div class="container">
+        <a href="stocks.html" class="back">
+            <svg width="18" height="18">
+                <use href="images/icons/icons.svg#chevron-left-small"></use>
+            </svg>
+            Акции
+        </a>
+
+        <ul class="breadcrumbs">
+            <li>
+                <a href="category.html">
+                    Акции
+                </a>
+                <svg width="18" height="18">
+                    <use href="images/icons/icons.svg#chevron-right-small"></use>
+                </svg>
+            </li>
+            <li>К зимним шинам рамки в подарок</li>
+        </ul>
+
+        <div class="stock__img">
+            <picture>
+                <source media="(min-width: 768px)" srcset="images/stock/banner-desktop.png">
+                <img src="images/stock/banner-mobile.png" alt="">
+            </picture>
+        </div>
+
+        <h1 class="page-title">К зимним шинам рамки в подарок</h1>
+
+        <div class="stock__text">Faucibus venenatis sit neque mauris donec tellus aliquam purus. Eget volutpat nunc sed
+            vulputate
+            tellus. Nulla pulvinar eu semper aenean pellentesque placerat amet id.
+        </div>
+
+        <div class="stock__hidden-text user-content">
+            <p>Leo nunc sit pulvinar massa leo faucibus urna ligula. Massa feugiat nunc duis tellus augue pharetra
+                congue lectus
+                cras. Pellentesque integer ut magna fames donec nisi aliquam. Urna sagittis felis suscipit egestas
+                rhoncus. Ut
+                id
+                elit porttitor turpis ut dui. Quam orci quisque eu risus elementum enim integer. Volutpat quam nisl
+                parturient
+                enim
+                turpis elementum imperdiet leo. Sed feugiat feugiat erat pretium tellus in fames. Turpis lacus nunc nisl
+                in amet
+                orci pretium donec. Eleifend facilisis morbi facilisis facilisi. Nunc viverra morbi egestas vestibulum
+                dui
+                lorem.
+                Vel est augue augue luctus.</p>
+            <p>Fermentum dui diam quisque elementum. Consequat feugiat consequat lectus pretium tortor convallis. Id
+                fringilla
+                nisi
+                tristique sit posuere pellentesque. Habitasse tincidunt sed habitasse amet ipsum ac fermentum pulvinar
+                fringilla.
+                Volutpat convallis amet tincidunt purus aliquet rhoncus arcu eu vestibulum. Vel nunc et velit aliquam in
+                pharetra
+                augue vitae. Feugiat fermentum sed vestibulum a orci. Vulputate tortor malesuada velit posuere nunc
+                dolor. Massa
+                cras at augue faucibus viverra. Purus blandit amet non vitae ultricies id ultricies.</p>
+        </div>
+
+        <button
+                class="btn btn-full-width stock__show-more stock-read-more-js"
+                data-text-show="Подробные условия акции"
+                data-text-hide="Скрыть"
+        >Подробные условия акции
+        </button>
+
+        @@include('presents.html', {})
+
+    </div>
+</div>
+
+<div class="container">
+
+    <h2 class="stock__title">Товары, которые участвуют в акции</h2>
+    <div class="subcategory stock" id="subcategory">
+
+        <div class="subcategory__content">
+
+            <div class="subcategory-buttons">
+                @@include('../subcategory/sort.html', {})
+
+                <button class="filter__btn-open" id="filter-btn-open" aria-label="Открыть фильтр">
+                    <svg width="18" height="18">
+                        <use href="images/icons/icons.svg#settings"></use>
+                    </svg>
+                </button>
+            </div>
+
+            @@include('products.html', {})
+
+            @@include('../subcategory/pagination.html', {})
+        </div>
+    </div>
+</div>

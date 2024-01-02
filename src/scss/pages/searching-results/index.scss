@@ -1,0 +1,13 @@
+.searching-results-header {
+    padding: 1.5rem 0;
+    background-color: $white;
+    .page-title {
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+    &__text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $dark-600;
+    }
+}

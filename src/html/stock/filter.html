@@ -1,0 +1,234 @@
+<form class="filter" id="filter">
+    <div class="filter__header">
+        <span class="title">Фильтры</span>
+        <button type="button" class="filter__reset" id="filter-reset">Сбросить</button>
+        <button type="button" class="close-popup close-filter-js" aria-label="Закрыть фильтр">
+            <svg width="18" height="18">
+                <use href="images/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+
+    <div class="filter__content" id="filter-content">
+        <div class="filter__block filter-categories">
+            <div class="filter__title">Категория</div>
+
+            <ul class="filter-categories__list">
+                <li>
+                    <a href="#">
+                        <svg width="18" height="18" class="icon-left">
+                            <use href="images/icons/icons.svg#chevron-left-small"></use>
+                        </svg>
+                        <span>Одежда</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg width="18" height="18" class="icon-left">
+                            <use href="images/icons/icons.svg#chevron-left-small"></use>
+                        </svg>
+                        <span>Женщинам</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <svg width="18" height="18" class="icon-left">
+                            <use href="images/icons/icons.svg#chevron-left-small"></use>
+                        </svg>
+                        <span>Верхняя одежда</span>
+                    </a>
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span>Дубленки</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Джинсовые куртки</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Кожанные куртки</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Шубы</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Пуховик</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="filter__block">
+            <div class="filter__title">Сроки доставки</div>
+
+            <div class="filter-list">
+                <label class="input-radio__label">
+                    <input type="radio" name="delivery_terms" class="input-radio" checked value="1">
+                    <span class="input-radio__icon"></span>
+
+                    <span class="input-radio__value">Неважно</span>
+
+                    <span class="filter__count">(23463)</span>
+                </label>
+                <label class="input-radio__label">
+                    <input type="radio" name="delivery_terms" class="input-radio" value="2">
+                    <span class="input-radio__icon"></span>
+
+                    <span class="input-radio__value">Сегодня</span>
+
+                    <span class="filter__count">(3411)</span>
+                </label>
+                <label class="input-radio__label">
+                    <input type="radio" name="delivery_terms" class="input-radio" value="3">
+                    <span class="input-radio__icon"></span>
+
+                    <span class="input-radio__value">Завтра</span>
+
+                    <span class="filter__count">(234)</span>
+                </label>
+                <label class="input-radio__label">
+                    <input type="radio" name="delivery_terms" class="input-radio" value="4">
+                    <span class="input-radio__icon"></span>
+
+                    <span class="input-radio__value">До 3 дней</span>
+
+                    <span class="filter__count">(4)</span>
+                </label>
+                <label class="input-radio__label">
+                    <input type="radio" name="delivery_terms" class="input-radio" value="5">
+                    <span class="input-radio__icon"></span>
+
+                    <span class="input-radio__value">До 7 дней</span>
+
+                    <span class="filter__count">(56)</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="filter__block filter-slider filter-slider-js">
+            <div class="filter__title">Цена</div>
+
+            <div class="slider"></div>
+
+            <div class="filter-slider__inputs">
+                <input type="text" class="min-value" value="50">
+                <input type="text" class="max-value" value="134879">
+            </div>
+        </div>
+
+        <div class="filter__block filter-brands">
+            <div class="filter__title">Продавцы</div>
+
+            <input type="text" class="filter-brands__input" id="filter-brands-input" placeholder="Поиск">
+
+            <div class="filter-list" id="filter-brands-list">
+                <label class="input-checkbox__label">
+                    <input type="checkbox" class="input-checkbox" checked>
+                    <span class="input-checkbox__icon"></span>
+
+                    <span class="input-checkbox__value">Milana</span>
+
+                    <span class="filter__count">(320)</span>
+                </label>
+
+                <label class="input-checkbox__label">
+                    <input type="checkbox" class="input-checkbox">
+                    <span class="input-checkbox__icon"></span>
+
+                    <span class="input-checkbox__value">Obba</span>
+
+                    <span class="filter__count">(10)</span>
+                </label>
+
+                <label class="input-checkbox__label">
+                    <input type="checkbox" class="input-checkbox">
+                    <span class="input-checkbox__icon"></span>
+
+                    <span class="input-checkbox__value">A-A Awesome Apparel by Ksenia Avakyan</span>
+
+                    <span class="filter__count">(3)</span>
+                </label>
+
+                <label class="input-checkbox__label">
+                    <input type="checkbox" class="input-checkbox">
+                    <span class="input-checkbox__icon"></span>
+
+                    <span class="input-checkbox__value">Alize</span>
+
+                    <span class="filter__count">(21)</span>
+                </label>
+
+                <label class="input-checkbox__label">
+                    <input type="checkbox" class="input-checkbox">
+                    <span class="input-checkbox__icon"></span>
+
+                    <span class="input-checkbox__value">Zara</span>
+
+                    <span class="filter__count">(12)</span>
+                </label>
+
+                <label class="input-checkbox__label">
+                    <input type="checkbox" class="input-checkbox">
+                    <span class="input-checkbox__icon"></span>
+
+                    <span class="input-checkbox__value">Apple</span>
+
+                    <span class="filter__count">(56)</span>
+                </label>
+
+                <label class="input-checkbox__label">
+                    <input type="checkbox" class="input-checkbox">
+                    <span class="input-checkbox__icon"></span>
+
+                    <span class="input-checkbox__value">Xiaomi</span>
+
+                    <span class="filter__count">(134)</span>
+                </label>
+
+                <label class="input-checkbox__label">
+                    <input type="checkbox" class="input-checkbox">
+                    <span class="input-checkbox__icon"></span>
+
+                    <span class="input-checkbox__value">Honor</span>
+
+                    <span class="filter__count">(12)</span>
+                </label>
+
+                <label class="input-checkbox__label">
+                    <input type="checkbox" class="input-checkbox">
+                    <span class="input-checkbox__icon"></span>
+
+                    <span class="input-checkbox__value">Realme</span>
+
+                    <span class="filter__count">(44)</span>
+                </label>
+            </div>
+
+            <button
+                    type="button"
+                    class="filter-brands__view-all"
+                    id="filter-brands-view-all"
+                    data-text-view-all="Посмотреть все"
+                    data-text-hide="Скрыть"
+            >Посмотреть все
+            </button>
+        </div>
+
+    </div>
+
+    <div class="filter__apply-wrap" id="filter-apply-block-js">
+        <button class="btn-full-width btn-green filter__apply filter-apply-js">Применить</button>
+    </div>
+</form>

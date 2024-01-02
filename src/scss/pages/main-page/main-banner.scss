@@ -6,11 +6,15 @@
     }
     .item {
         position: relative;
+    }
+
+    .img {
+        border-radius: 8px;
+        overflow: hidden;
         img {
             width: 100%;
             height: auto;
             object-fit: cover;
-            border-radius: 8px;
         }
     }
 
@@ -39,7 +43,7 @@
         .swiper-pagination {
             bottom: 12px;
         }
-        .item img {
+        .img {
             border-radius: 16px;
         }
     }

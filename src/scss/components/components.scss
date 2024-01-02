@@ -2,6 +2,7 @@
     margin-top: 24px;
     display: inline-flex;
     align-items: center;
+    font-weight: 500;
     color: $dark-600;
     &:hover {
         color: $cyan-500;
@@ -139,6 +140,7 @@
 
 .tooltip-slider {
     position: absolute;
+    z-index: 1;
     right: 4px;
     top: 4px;
 

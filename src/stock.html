@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/head.html', {
+'title': 'К зимним шинам рамки в подарок'
+})
+<body class="user-is-authorized"> <!-- user-is-authorized/user-is-no-authorized -->
+<!--
+    для отображения аватара в шапке и меню для авторизованного пользователя,
+    нужно задать класс body "user-is-authorized"
+    или "user-is-no-authorized", что отобразить дефолтную верстку для не авторизованного юзера
+-->
+
+<div class="wrapper">
+
+    <!-- Шапка сайта -->
+    <header class="header" id="header">
+        @@include('html/components/header.html', {})
+    </header>
+
+    <main class="page stock-page">
+        @@include('html/stock/main.html', {})
+    </main>
+
+    <!-- Футер сайта -->
+    <footer class="footer">
+        @@include('html/components/footer.html', {})
+    </footer>
+
+    <!-- Фильтр -->
+    @@include('html/stock/filter.html', {})
+
+    @@include('html/components/popups.html', {})
+</div>
+
+<script src="js/app.min.js"></script>
+
+</body>
+</html>
