@@ -32,6 +32,14 @@
             font-size: 1.5rem;
             line-height: 2rem;
         }
+        .tooltip__btn {
+            svg {
+                transition: all .3s;
+            }
+            &:hover svg {
+                color: $dark-900 !important;
+            }
+        }
     }
 
     &__inner {

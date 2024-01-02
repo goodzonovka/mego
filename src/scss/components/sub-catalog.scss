@@ -137,6 +137,14 @@
                 &:not(:last-child) {
                     margin-bottom: 24px;
                 }
+                a {
+                    display: block;
+                    padding: 8px;
+                    border-radius: 8px;
+                    &:hover {
+                        background-color: $dark-100;
+                    }
+                }
                 ul {
                     margin-top: 12px;
                     &.subcategories-hidden {
@@ -147,10 +155,8 @@
                             }
                         }
                     }
-                    li:not(:last-child) {
-                        margin-bottom: 12px;
-                    }
                     a {
+                        font-weight: 500;
                         color: $dark-600;
                     }
                 }
@@ -172,6 +178,7 @@
                 }
                 &-wrap {
                     margin-top: 12px;
+                    padding-left: 8px;
                 }
                 svg {
                     margin-left: 4px;
