@@ -33,6 +33,7 @@
         overflow: auto;
     }
     .title {
+        width: calc(100% - 56px);
         display: block;
         margin-bottom: 16px;
         font-weight: 700;
@@ -47,6 +48,7 @@
     }
     @media (min-width: $ds) {
         .inner {
+            max-width: 500px;
             padding: 2rem;
         }
     }

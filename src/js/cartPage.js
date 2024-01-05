@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import {isDesktop} from "./functions.js";
+import {openPopup} from "./choice-language-and-city.js";
 
+openPopup('#product-changes');
 
 if (isDesktop()) {
     $('.cart__sidebar').append($('.cart-order-block-js'));

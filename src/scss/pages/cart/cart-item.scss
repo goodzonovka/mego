@@ -58,6 +58,7 @@
     }
 
     .img {
+        flex-shrink: 0;
         width: 64px;
         height: 64px;
         margin-right: .5rem;
@@ -80,11 +81,9 @@
         margin-bottom: .5rem;
     }
 
-    .title {
-        &-wrap {
-            width: calc(100% - 72px);
-            padding-right: 2rem;
-        }
+    .title-wrap {
+        width: calc(100% - 72px);
+        padding-right: 2rem;
     }
 
     .seller {
@@ -96,6 +95,7 @@
     }
 
     .price-amount-wrap {
+        flex-shrink: 0;
         width: 100%;
         margin-top: 1rem;
         display: flex;
@@ -124,6 +124,7 @@
         }
     }
     @media (min-width: $ds) {
+        flex-wrap: nowrap;
         &-wrap {
             padding: 23px 2rem 1.5rem 5rem;
             .status-list {
@@ -140,15 +141,24 @@
             left: -3rem;
         }
         .title-wrap {
-            width: calc(100% - 204px);
+            flex-grow: 1;
+            width: auto;
+            padding-right: 0;
         }
         .price-amount-wrap {
             flex-direction: column;
-            width: 132px;
+            width: auto;
             margin-top: 0;
+            margin-left: 1.5rem;
         }
         .amount {
             order: -1;
+            &__minus {
+                border-radius: .5rem 0 0 .5rem;
+            }
+            &__plus {
+                border-radius: 0 .5rem .5rem 0;
+            }
         }
         .price-block {
             margin-top: 9px;

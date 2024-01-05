@@ -6,13 +6,15 @@ import $ from "jquery";
 $('.open-popup-js').click(function () {
     let target = $(this).data('target');
 
-    // скрыть уведомление на десктопе о выборе города,
-    // если нажали по "Укажите адрес доставки"
+    openPopup(target);
+});
+
+export function openPopup(target) {
     $(target).addClass('active');
     $('body').addClass('overflow-hidden');
 
     $('.notification-enter-delivery').hide();
-});
+}
 
 // Выбор языка, вставка кода языка в шапке сайта
 $('#choice-language a').click(function (e) {
