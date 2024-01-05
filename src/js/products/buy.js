@@ -64,24 +64,42 @@ let amountPlus = $('.amount-plus-js');
 
 amountMinus.click(function () {
     let input = $(this).next();
-    let inputVal = input.val();
+    let dataAddCount = 1;
 
-    if (inputVal < 2) return;
-    input.val(+inputVal - 1);
+    if ($(this).closest('.amount').data('add-count')) {
+        dataAddCount = $(this).closest('.amount').data('add-count');
+    }
+
+
+    console.log(input.val())
+    input.val(+input.val() - dataAddCount);
+    if (input.val() < 1) {
+        input.val(1);
+        $(this).parent().siblings('.buy-js').attr('data-buy-count', 1);
+        return;
+    }
     $(this).parent().siblings('.buy-js').attr('data-buy-count', input.val());
-
-    // counterBasket = counterBasket - 1;
 
     displayCounter();
 })
 
 amountPlus.click(function () {
     let input = $(this).prev();
+    let dataAddCount = 1;
+    let dataMax = $(this).closest('.amount').data('max');
 
-    input.val(+input.val() + 1);
+    if ($(this).closest('.amount').data('add-count')) {
+        dataAddCount = $(this).closest('.amount').data('add-count');
+    }
 
-    // counterBasket = counterBasket + 1;
+    input.val(+input.val() + dataAddCount);
     $(this).parent().siblings('.buy-js').attr('data-buy-count', input.val());
+    if (input.val() > dataMax) {
+        input.val(dataMax);
+        $(this).parent().siblings('.buy-js').attr('data-buy-count', dataMax);
+        return
+    }
+
     displayCounter();
 })
 

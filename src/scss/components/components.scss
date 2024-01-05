@@ -322,6 +322,9 @@
 
 
 .price-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     &__old-price-discount {
         display: flex;
         align-items: center;

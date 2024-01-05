@@ -1,0 +1,93 @@
+.cart-order-block {
+    background-color: $white;
+    @media (max-width: $device) {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        border-radius: 1rem 1rem 0 0;
+        box-shadow: 0px -4px 6px -2px #10182808, 0px -12px 16px -4px #10182814;
+    }
+    .inner {
+        padding: 1rem 0 1.5rem
+    }
+    .text {
+        display: none;
+    }
+    ul {
+        li {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                border-bottom: 1px dotted #98a2b3;
+            }
+            &:not(:last-child) {
+                margin-bottom: .25rem;
+            }
+            & > * {
+                max-width: calc(50% - 12px);
+                background: #fff;
+                position: relative;
+                z-index: 1;
+                &:first-child {
+                    color: $dark-600;
+                }
+            }
+        }
+    }
+    .btn {
+        margin-top: .5rem;
+    }
+    @media (min-width: $ds) {
+        &.disabled {
+            .title, ul {
+                display: none;
+            }
+            .text {
+                display: block;
+            }
+            .btn {
+                color: $dark-400;
+                background-color: $dark-300;
+                pointer-events: none;
+            }
+        }
+        .container {
+            width: auto;
+        }
+        .inner {
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+        .text {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: $dark-600;
+        }
+        .title {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: bold;
+        }
+        ul {
+            margin-top: 1.5rem;
+            li:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+        .btn {
+            height: 56px;
+            margin-top: 1.5rem;
+            font-size: 18px;
+            border-radius: 12px;
+        }
+    }
+}

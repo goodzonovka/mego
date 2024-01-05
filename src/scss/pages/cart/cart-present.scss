@@ -1,0 +1,47 @@
+.cart__present {
+    position: relative;
+    padding-top: 8px;
+    .img {
+        position: absolute;
+        top: 8px;
+        left: 12px;
+        width: 44px;
+        height: 44px;
+        border-radius: .5rem;
+        overflow: hidden;
+        &:hover img {
+            transform: scale(1.05);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all .3s;
+        }
+    }
+    .status-list {
+        justify-content: center;
+        min-height: 44px;
+        margin-left: 72px;
+    }
+    .status {
+        padding: 1px 8px;
+    }
+    .title {
+        margin-top: 4px;
+        margin-bottom: 8px;
+    }
+    @media (min-width: $ds) {
+        padding-left: 4rem;
+        padding-bottom: 8px;
+        .status-list {
+            justify-content: flex-start;
+            min-height: auto;
+            margin-left: 0;
+        }
+        .title {
+            margin-bottom: 0;
+            padding: 0;
+        }
+    }
+}
