@@ -133,10 +133,11 @@
 
         ul {
             ul {
+                display: none;
                 margin-top: 4px;
                 padding-left: 26px;
-                ul {
-                    display: none;
+                &:has(> li > a.active) {
+                    display: block;
                 }
             }
         }
@@ -152,6 +153,9 @@
             font-weight: 500;
             color: $dark-600;
             border-radius: .5rem;
+            &.active + ul {
+                display: block;
+            }
 
             &:hover {
                 color: $cyan-500;

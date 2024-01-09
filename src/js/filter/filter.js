@@ -15,6 +15,7 @@ let filterContent = $('#filter-content');
 let startX;
 
 $('.filter-categories__list a:has(svg)').click(function (e) {
+    if ($(this).find('+ ul > li > a').hasClass('current-category')) return;
     e.preventDefault();
     e.stopPropagation();
 
@@ -28,8 +29,13 @@ $('.filter-categories__list a:has(svg)').click(function (e) {
         linkSvg.find('use').attr('href', 'images/icons/icons.svg#chevron-right-small');
     }
 
-    $(this).toggleClass('active');
-    $(this).next().slideToggle(300);
+    if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+        $(this).next().slideUp(300);
+    } else {
+        $(this).addClass('active');
+        $(this).next().slideDown(300);
+    }
 });
 
 // открытие формы
