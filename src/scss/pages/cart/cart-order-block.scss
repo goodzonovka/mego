@@ -9,6 +9,9 @@
         z-index: 10;
         border-radius: 1rem 1rem 0 0;
         box-shadow: 0px -4px 6px -2px #10182808, 0px -12px 16px -4px #10182814;
+        .title, .total {
+            display: none;
+        }
     }
     .inner {
         padding: 1rem 0 1.5rem
@@ -47,17 +50,13 @@
         margin-top: .5rem;
     }
     @media (min-width: $ds) {
+        border-radius: 1rem;
         &.disabled {
             .title, ul {
                 display: none;
             }
             .text {
                 display: block;
-            }
-            .btn {
-                color: $dark-400;
-                background-color: $dark-300;
-                pointer-events: none;
             }
         }
         .container {

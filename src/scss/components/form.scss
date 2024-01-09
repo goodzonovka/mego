@@ -1,20 +1,43 @@
 .form-group {
     position: relative;
+
     &:not(:last-child) {
         margin-bottom: 1.5rem;
+    }
+}
+
+.error-text {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 18px;
+    color: $error-700;
+}
+
+.form-group {
+    &:has(input.error-empty) .error-text.error-empty {
+        display: block;
+    }
+    &:has(input.error-phone) .error-text.error-phone {
+        display: block;
     }
 }
 
 .form-input {
     width: 100%;
     height: 44px;
-    padding-left: 56px;
+    padding: 0 11px;
     @extend .text-medium;
     border: 1px solid rgba(208, 213, 221, 1);
     border-radius: 8px;
+
     &::placeholder {
-        color: $dark-400;
+        color: $dark-600;
     }
+
     &:focus {
         border-color: $dark-900;
 
@@ -22,6 +45,59 @@
             color: $dark-900;
         }
     }
+
+    &.error-empty {
+        border-color: $error-500;
+
+        & ~ .error-empty {
+            display: block;
+        }
+
+        & ~ .form-group-title {
+            color: $error-700;
+        }
+    }
+
+    &.error-email {
+        border-color: $error-500;
+
+        & ~ .error-email {
+            display: block;
+        }
+
+        & ~ .form-group-title {
+            color: $error-700;
+        }
+    }
+
+    &.error-phone {
+        border-color: $error-500;
+
+        & ~ .error-phone {
+            display: block;
+        }
+
+        & ~ .form-group-title {
+            color: $error-700;
+        }
+    }
+
+    &.error-repeat-password {
+        border-color: $error-500;
+
+        & ~ .error-repeat-password {
+            display: block;
+        }
+    }
+
+    &.error-length-password {
+        border-color: $error-500;
+
+        & ~ .error-length-password {
+            display: block;
+        }
+    }
+
     & + .search-submit {
         display: flex;
         justify-content: center;
@@ -33,11 +109,19 @@
         left: 0;
         color: $dark-400;
     }
+
     @media (max-width: 1199px) {
         &:has(~ .search-popup__open-category-filter) {
             padding-right: 44px;
         }
     }
+}
+
+.form-textarea {
+    display: block;
+    height: 180px;
+    padding: 9px 13px;
+    resize: none;
 }
 
 .radio-wrap {
@@ -48,21 +132,26 @@
 
 .input-radio {
     display: none;
+
     &:checked + .input-radio__icon {
         background-color: $cyan-500;
         border-color: $cyan-500;
+
         &:before {
             background-color: $dark-900;
         }
     }
+
     &__label {
         display: flex;
         align-items: flex-start;
         cursor: pointer;
+
         &:hover .input-radio__icon {
             border-color: $cyan-500;
         }
     }
+
     &__icon {
         flex-shrink: 0;
         position: relative;
@@ -73,6 +162,7 @@
         border: 1px solid $dark-300;
         border-radius: 50%;
         transition: all .3s;
+
         &:before {
             content: '';
             position: absolute;
@@ -85,6 +175,7 @@
             background-color: transparent;
         }
     }
+
     &__value {
         flex-grow: 1;
         line-height: 24px;
@@ -93,19 +184,23 @@
 
 .input-checkbox {
     display: none;
+
     &:checked + .input-checkbox__icon {
         background: $cyan-500 url("../images/icons/icons.svg#check") no-repeat center;
         background-size: 18px;
         border-color: $cyan-500;
     }
+
     &__label {
         display: flex;
         align-items: flex-start;
         cursor: pointer;
+
         &:hover .input-checkbox__icon {
             border-color: $cyan-500;
         }
     }
+
     &__icon {
         flex-shrink: 0;
         position: relative;
@@ -117,6 +212,7 @@
         border-radius: 4px;
         transition: background-color .3s, border-color .3s;
     }
+
     &__value {
         flex-grow: 1;
         line-height: 24px;
@@ -126,15 +222,19 @@
 .switch {
     margin-left: 1rem;
     cursor: pointer;
+
     input {
         display: none;
+
         &:checked + .switch__icon {
             background-color: $cyan-500;
+
             &:before {
                 left: calc(100% - 22px)
             }
         }
     }
+
     &__icon {
         display: block;
         width: 44px;
@@ -142,6 +242,7 @@
         position: relative;
         background-color: $dark-300;
         border-radius: 24px;
+
         &:before {
             content: '';
             position: absolute;

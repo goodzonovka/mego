@@ -1,68 +1,7 @@
 .wishlist-page {
-    .page-title + .wishlist-white-block {
-        margin-top: 1.5rem;
-    }
-}
-
-.wishlist-white-block {
-    width: 635px;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1.5rem auto 0;
-    padding: 1.5rem;
-    text-align: center;
-    background-color: $white;
-    border-radius: 1rem;
-    .wrap-icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        width: 64px;
-        height: 64px;
-        background-color: $cyan-500;
-        border-radius: 50%;
-        .icon-heart {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 2rem;
-            height: 2rem;
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            color: $error-500;
-            background-color: $white;
-            background-size: 18px;
-            border-radius: 50%;
-            box-shadow: 0px 16px 64px 0px #030C1C80;
-        }
-    }
-    .title {
-        margin-top: 1rem;
-        font-size: 20px;
-        line-height: 1.5rem;
-        font-weight: 700;
-    }
-    .text {
-        width: 420px;
-        max-width: 100%;
-        margin-top: .5rem;
-        color: $dark-600;
-    }
-    .btn {
-        padding: 0 20px;
-        margin-top: 1.5rem;
-    }
     @media (min-width: $ds) {
-        margin-top: 64px;
-        padding: 48px 64px;
-        .text {
-            width: 507px;
-            font-size: 1rem;
-            line-height: 1.5rem;
+        .page-title + .wishlist-white-block {
+            margin-top: 1.5rem;
         }
     }
 }

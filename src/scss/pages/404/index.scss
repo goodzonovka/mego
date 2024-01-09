@@ -1,0 +1,36 @@
+.page-not-found {
+    width: 635px;
+    max-width: 100%;
+    margin: 24px auto 0;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: $white;
+    border-radius: 1rem;
+    .img {
+        max-width: 100%;
+        width: 433px;
+        margin: 0 auto 1rem;
+    }
+    .page-title {
+        margin-top: 0;
+        margin-bottom: .5rem;
+    }
+    .text {
+        max-width: 100%;
+        width: 450px;
+        margin: 0 auto;
+        color: $dark-600;
+    }
+    .btn {
+        margin-top: 1.5rem;
+    }
+    @media (min-width: $ds) {
+        margin-top: 64px;
+        padding: 3rem;
+        .text {
+            width: 507px;
+            font-size: 1rem;
+            line-height: 24px;
+        }
+    }
+}

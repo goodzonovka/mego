@@ -1,0 +1,45 @@
+<h1 class="page-title">Оформление заказа</h1>
+
+<form class="form-valid-js">
+    <div class="cart__inner">
+        <div class="cart__content">
+            @@include('recipient.html', {})
+
+            @@include('products.html', {})
+
+            @@include('delivery.html', {})
+
+            @@include('payment.html', {})
+
+            @@include('comments-order.html', {})
+        </div>
+        <div class="cart__sidebar"></div>
+    </div>
+
+    <div class="cart-order-block">
+        <div class="container">
+            <div class="inner">
+                <div class="text">Вам нужно выбрать хотя бы один товар, чтобы сделать заказ</div>
+                <div class="title">Итого</div>
+                <ul>
+                    <li>
+                        <div>Tовары (<span id="cart-order-count">3</span>)</div>
+                        <div>1 220 леев</div>
+                    </li>
+
+                    <li>
+                        <div>Доставка</div>
+                        <div>50 леев</div>
+                    </li>
+
+                    <li class="total">
+                        <div>К оплате</div>
+                        <div>1 320 леев</div>
+                    </li>
+                </ul>
+
+                <button class="btn btn-full-width btn-green order-confirmed-js">Заказ подтверждаю</button>
+            </div>
+        </div>
+    </div>
+</form>

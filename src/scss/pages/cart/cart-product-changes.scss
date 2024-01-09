@@ -2,13 +2,6 @@
     .inner {
         padding: 1rem;
     }
-    .text {
-        width: calc(100% - 56px);
-        color: $dark-600;
-    }
-    .btn {
-        margin-top: 1.5rem;
-    }
     .cart__list {
         margin-top: 2rem;
     }
@@ -54,11 +47,6 @@
         .inner {
             padding: 24px;
         }
-        .text {
-            padding-right: 64px;
-            font-size: 1rem;
-            line-height: 1.5rem;
-        }
         .cart__item {
             .title-wrap {
                 width: auto;
@@ -66,9 +54,6 @@
             .price-amount-wrap {
                 margin-left: 1rem;
             }
-        }
-        .btn {
-            margin-top: 2rem;
         }
     }
 }

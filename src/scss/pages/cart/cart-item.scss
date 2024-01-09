@@ -21,26 +21,9 @@
             padding: 2px 8px;
             font-size: 12px;
             line-height: 18px;
-            font-weight: 500;
-            border-radius: 1rem;
 
             &:not(:last-child) {
                 margin-bottom: .5rem;
-            }
-
-            &-green {
-                color: $success-700;
-                background-color: $cyan-50;
-            }
-
-            &-orange {
-                color: $warning-700;
-                background-color: $warning-50;
-            }
-
-            &-red {
-                color: $error-700;
-                background-color: $error-50;
             }
         }
     }

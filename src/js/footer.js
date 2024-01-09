@@ -5,13 +5,11 @@ import {isDevice, isDesktop} from "./functions.js";
 
 if (isDevice()) {
     $('.footer-menu-header-js').click(function () {
-        if (!$(this).hasClass('active')) {
-            $('.footer-menu-header-js').removeClass('active');
-            $('.footer-menu-list-js').slideUp(300);
+        $('.footer-menu-header-js').not($(this)).removeClass('active');
+        $('.footer-menu-list-js').not($(this).next()).slideUp(300);
 
-            $(this).addClass('active');
-            $(this).next().slideToggle(300);
-        }
+        $(this).toggleClass('active');
+        $(this).next().slideToggle(300);
     });
 }
 /* end footer menu */

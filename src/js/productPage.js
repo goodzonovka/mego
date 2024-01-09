@@ -3,6 +3,8 @@ import Swiper from "swiper";
 import {Navigation, Pagination, FreeMode, Thumbs} from "swiper/modules";
 import Countdown from 'countdown-js';
 import {isDesktop, isDevice} from "./functions.js";
+import { Fancybox } from "@fancyapps/ui";
+
 
 document.addEventListener("DOMContentLoaded", function () {
     if ($('.product-page').length) {
@@ -63,6 +65,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 }, 0);
             });
         }
+
+
+        $('.product-variants__variant-color').mouseenter(function (e) {
+             e.preventDefault();
+
+             let target = $(this).attr('href');
+
+             if (target) {
+
+                 $('.product-slider__active-color-img img').attr('src', target);
+                 $('.product-slider__active-color-img').addClass('active');
+             }
+        }).mouseleave(function () {
+            $('.product-slider__active-color-img').removeClass('active');
+        }).click(function (e) {
+            e.preventDefault();
+        });
+
+        Fancybox.bind("[data-fancybox]", {
+            // Your custom options
+        });
 
 
         // миниатюры главного слайдера

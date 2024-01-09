@@ -1,0 +1,50 @@
+<div class="cart-block order-block-user">
+    <div class="cart-block__title">Получатель</div>
+
+    <div class="order-block-user__info">
+        <div class="img">
+            <img src="images/components/avatar.png" width="44" height="44" alt="">
+        </div>
+        <div class="content">
+            <div class="name order-name-js">Константин Константинопольский</div>
+            <div class="phone order-phone-js">+373 069 26 68 83</div>
+        </div>
+
+        <button type="button" class="btn btn-full-width change-user order-change-user-js">Изменить получателя</button>
+    </div>
+
+    <div class="order-block-user__form form-valid-js order-change-user-form-js">
+        <div class="form-group">
+            <input type="text" class="form-input form-input-required-js" name="name" placeholder="Имя" disabled>
+            <span class="error-text error-empty">Это обязательное поле</span>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-input form-input-required-js" name="surname" placeholder="Фамилия" disabled>
+            <span class="error-text error-empty">Это обязательное поле</span>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-input form-input-phone-js form-input-required-js" name="phone"
+                   placeholder="Телефон" disabled>
+            <span class="error-text error-empty">Это обязательное поле</span>
+            <span class="error-text error-phone">Некорректный номер телефона</span>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-input form-input-additional-phone-js" placeholder="Дополнительный телефон">
+            <span class="error-text error-phone">Некорректный номер телефона</span>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-input form-input-email-js form-input-required-js" placeholder="Email"
+                   disabled>
+            <span class="error-text error-empty">Это обязательное поле</span>
+            <span class="error-text error-email">Некорректный email</span>
+        </div>
+        <div class="form-group">
+            <textarea class="form-input form-textarea" placeholder="Дополнительная информация"></textarea>
+        </div>
+
+        <div class="form-group form-group__buttons">
+            <button type="button" class="btn btn-cancel-change-user-js">Отмена</button>
+            <button type="button" class="btn btn-green btn-save btn-order-change-user-save-js">Сохранить</button>
+        </div>
+    </div>
+</div>

@@ -31,6 +31,9 @@
         box-shadow: 0px 8px 8px -4px #10182808, 0px 20px 24px -4px #10182814;
         border-radius: 16px;
         overflow: auto;
+        &:has(.title-vertical-center) {
+            padding-top: 31px;
+        }
     }
     .title {
         width: calc(100% - 56px);
@@ -40,16 +43,37 @@
         font-size: 20px;
         line-height: 24px;
     }
+    .text {
+        width: calc(100% - 56px);
+        color: #475467;
+    }
+    .content {
+        margin-top: 2rem;
+        img {
+            width: 100%;
+        }
+    }
     .close-popup {
         position: absolute;
         top: 22px;
         right: 22px;
         margin-left: 8px;
     }
+    .btn {
+        margin-top: 1.5rem;
+    }
     @media (min-width: $ds) {
         .inner {
             max-width: 500px;
             padding: 2rem;
+        }
+        .text {
+            padding-right: 64px;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+        .btn {
+            margin-top: 2rem;
         }
     }
 }
@@ -88,6 +112,11 @@
 
     .choice-city {
         margin-top: 32px;
-
+        .form-input {
+            padding-left: 56px;
+            &::placeholder {
+                color: $dark-400;
+            }
+        }
     }
 }

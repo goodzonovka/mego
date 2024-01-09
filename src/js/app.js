@@ -13,8 +13,6 @@ import "./popup-sub-catalog.js";
 import "./search.js";
 
 import "./subcategory.js";
-import "./products-sort.js";
-import "./products-pagination.js";
 import "./filter/filter.js";
 
 import "./products/buy.js";
@@ -25,6 +23,11 @@ import './productPage.js';
 import './stockPage.js';
 import './contactPage.js';
 import './cartPage.js';
+import './orderPage.js';
+import './accountPage.js';
+import './accountDiscountsOffersPage.js';
+import './accountOrders.js';
+import './loginPage.js';
 
 /* проверка на поддержку webp формата */
 import BaseHelpers from './helpers/BaseHelpers.js';

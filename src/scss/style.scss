@@ -21,6 +21,8 @@
 */
 @import 'libs/swiper';
 @import 'libs/jquery-ui';
+@import "libs/intlTellInput";
+@import "libs/fancybox";
 
 /**
 * Общие параметры, шаблоны(заготовки) и вспомогательные классы
@@ -55,3 +57,10 @@
 @import "pages/stock";
 @import "pages/contact";
 @import "pages/cart";
+@import "pages/order";
+@import "pages/account";
+@import "pages/account-discounts-and-offers";
+@import "pages/account-orders";
+@import "pages/404";
+@import "pages/delivery";
+@import "pages/login";

@@ -69,10 +69,10 @@ window.addEventListener('load', function () {
             modules: [EffectFade, Pagination, Autoplay],
             loop: true,
             speed: 1000,
-            // autoplay: {
-            //     delay: 6000,
-            //     disableOnInteraction: false, // Отключить автопрокрутку при взаимодействии пользователя
-            // },
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false, // Отключить автопрокрутку при взаимодействии пользователя
+            },
             effect: "fade",
             fadeEffect: {
                 crossFade: true

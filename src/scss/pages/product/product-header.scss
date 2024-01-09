@@ -30,8 +30,8 @@
     }
     &__compare, &__wishlist {
         color: $blue-700;
-        &:hover {
-            color: $dark-900;
+        &:hover, &.active {
+            color: $error-500;
         }
         .text {
             margin-left: 4px;

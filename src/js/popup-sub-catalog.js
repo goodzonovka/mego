@@ -21,6 +21,9 @@ if (isDesktop()) {
     btnOpenSubCatalog.mouseenter(openSubCatalog);
 } else {
     btnOpenSubCatalog.click(openSubCatalog);
+
+    // раскрытие подкатегорий
+    $(document).on('click', '.sub-catalog-menu-list__link', disclosureSubcategories)
 }
 
 // закрытие
@@ -35,9 +38,6 @@ subCatalogMenu.on('touchstart', getStartX);
 subCatalogMenu.on('touchmove', closingBySwipe);
 
 // end закрытие по touch событию вправо
-
-// раскрытие подкатегорий
-$(document).on('click', '.sub-catalog-menu-list-arrow-js', disclosureSubcategories)
 
 function openSubCatalog(e) {
     let categoryId = $(this).data('id');

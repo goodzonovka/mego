@@ -1,0 +1,48 @@
+<div class="cart-block order-block-payment">
+    <div class="cart-block__title">Оплата</div>
+
+
+    <div class="order-block-payment__radios">
+        <label>
+            <input type="radio" name="payment" value="1">
+            <span>Оплата картой</span>
+        </label>
+        <label>
+            <input type="radio" name="payment" value="2">
+            <span>Оплата наличными</span>
+        </label>
+        <label>
+            <input type="radio" name="payment" value="3" data-target="#order-block-payment_3" checked>
+            <span>Банковский перевод</span>
+        </label>
+    </div>
+
+    <div id="order-block-payment_3" class="order-block-payment__content active">
+        <div class="order-block-payment__content-inner">
+            <div class="form-group">
+                <input type="text" class="form-input form-input-required-js" placeholder="Название компании">
+                <span class="error-text error-empty">Это обязательное поле</span>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input form-input-required-js" placeholder="Фискальный код">
+                <span class="error-text error-empty">Это обязательное поле</span>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input form-input-required-js" placeholder="Код НДС">
+                <span class="error-text error-empty">Это обязательное поле</span>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input form-input-required-js" placeholder="Юридический адрес">
+                <span class="error-text error-empty">Это обязательное поле</span>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input form-input-required-js" placeholder="IBAN">
+                <span class="error-text error-empty">Это обязательное поле</span>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input form-input-required-js" placeholder="Код банка">
+                <span class="error-text error-empty">Это обязательное поле</span>
+            </div>
+        </div>
+    </div>
+</div>

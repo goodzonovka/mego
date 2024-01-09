@@ -1,0 +1,87 @@
+.login {
+    width: 380px;
+    max-width: 100%;
+    margin: 1.5rem auto 0;
+    padding: 1.5rem;
+    background-color: $white;
+    border-radius: 1rem;
+    .page-title {
+        margin-top: 0;
+    }
+    .form-group {
+        margin-bottom: 0;
+    }
+    input[type=tel] {
+        padding-left: 122px !important;
+        &::placeholder {
+            color: $dark-400;
+        }
+    }
+    .text {
+        margin-bottom: 2rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $dark-600;
+    }
+    .btn-login {
+        height: 56px;
+        margin-top: 46px;
+        font-size: 18px;
+        border-radius: 12px;
+    }
+    .error-text {
+        margin-top: 5px;
+    }
+    .or {
+        margin-top: 23px;
+        text-align: center;
+        span {
+            position: relative;
+            font-size: 12px;
+            line-height: 18px;
+            color: $dark-600;
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                border-bottom: 1px solid $dark-200;
+                top: 8px;
+                width: 64px;
+            }
+            &:before {
+                right: 100%;
+                margin-right: 18px;
+            }
+            &:after {
+                left: 100%;
+                margin-left: 18px;
+            }
+        }
+    }
+    &__socials {
+        margin-top: 23px;
+        .btn {
+            height: 56px;
+            padding: 0;
+            font-size: 16px;
+            border-radius: 12px;
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+            svg {
+                margin-right: .5rem;
+            }
+        }
+    }
+    @media (min-width: 360px) {
+        &__socials .btn {
+            font-size: 18px;
+        }
+    }
+    @media (min-width: $ds) {
+        margin-top: 64px;
+        padding: 2rem;
+        &__socials {
+            margin-top: 19px;
+        }
+    }
+}

@@ -37,3 +37,9 @@
         background-color: $cyan-500;
     }
 }
+
+.btn-disabled {
+    color: #98a2b3;
+    background-color: #d0d5dd;
+    pointer-events: none;
+}

@@ -113,6 +113,9 @@ h2, .section-title {
             text-overflow: ellipsis;
             white-space: normal; /* Для обработки переноса строк */
             transition: color .3s;
+            &:hover {
+                color: $blue-700;
+            }
         }
     }
 

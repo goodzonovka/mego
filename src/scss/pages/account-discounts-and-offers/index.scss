@@ -1,0 +1,52 @@
+.discounts-and-offers-list {
+    display: grid;
+    grid-gap: 1rem;
+    &:has(~ .btn.active) .item-hidden {
+        display: block;
+    }
+    .item {
+        position: relative;
+        padding: 1.5rem;
+        background-color: $white;
+        border-radius: 1rem;
+        &-hidden {
+            display: none;
+        }
+        &-notification:before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            width: 10px;
+            height: 10px;
+            background-color: $cyan-500;
+            border-radius: 50%;
+        }
+        .date {
+            color: $dark-400;
+        }
+        .title {
+            margin-top: 1rem;
+            font-size: 20px;
+            line-height: 1.5rem;
+            font-weight: bold;
+        }
+        .text {
+            margin-top: 1rem;
+            color: $dark-600;
+        }
+        .btn {
+            margin-top: 1rem;
+        }
+    }
+    & ~ .btn {
+        margin-top: 1rem;
+    }
+    @media (min-width: $ds) {
+        grid-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        & ~ .btn {
+            margin-top: 2rem;
+        }
+    }
+}

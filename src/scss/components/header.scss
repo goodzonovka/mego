@@ -78,7 +78,7 @@
 
     @media (min-width: $ds) {
         padding: 16px 0 14px;
-        transition: padding .3s;
+        transition: padding-bottom .3s;
         &.shortened {
             padding-bottom: 0;
         }

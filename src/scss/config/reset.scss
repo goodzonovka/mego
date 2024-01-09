@@ -73,6 +73,14 @@ body {
             }
         }
     }
+    @media (min-width: $ds) {
+        &.overflow-hidden {
+            overflow: hidden;
+            .header, .wrapper {
+                padding-right: 8px;
+            }
+        }
+    }
 }
 
 input,

@@ -1,0 +1,42 @@
+@import "order-item-top";
+@import "order-item-bottom";
+
+.account-orders {
+    &:has(+ .btn.active) .order-hidden {
+        display: block;
+    }
+    .order {
+        margin-bottom: 1.5rem;
+        font-size: 12px;
+        line-height: 18px;
+        background-color: $white;
+        border-radius: 1rem;
+        &.active {
+            .number svg {
+                transform: rotate(180deg);
+            }
+            .order__bottom {
+                display: block;
+            }
+        }
+        &-hidden {
+            display: none;
+        }
+        .title {
+            font-size: 20px;
+            line-height: 1.5rem;
+            font-weight: bold;
+        }
+    }
+    @media (min-width: 360px) {
+       .order {
+           font-size: 14px;
+           line-height: 20px;
+       }
+    }
+    @media (min-width: $ds) {
+        .order.active .order__bottom {
+            display: flex;
+        }
+    }
+}

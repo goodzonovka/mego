@@ -5,11 +5,13 @@
             margin-bottom: 1.5rem;
         }
         &.product-variants__item-colors {
-            .product-variants__variant:hover .value img {
-                opacity: .75;
-            }
-            &:checked + .value {
-                border-color: $cyan-500;
+            .product-variants__variant {
+                &:hover .value img {
+                    opacity: .75;
+                }
+                &.active .value {
+                    border-color: $cyan-500;
+                }
             }
             .value {
                 padding: 3px;
@@ -64,6 +66,65 @@
             }
         }
     }
+    &__additions {
+        display: flex;
+        flex-wrap: wrap;
+        margin: .5rem -4px -8px;
+        .item {
+            display: flex;
+            align-items: center;
+            margin: 0 4px 8px;
+            padding: .5rem;
+            background-color: $white;
+            border-radius: .5rem;
+            &:hover {
+                color: $dark-900;
+                .img img {
+                    opacity: .75;
+                }
+            }
+        }
+        .img {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            margin-right: .5rem;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: .5rem;
+                transition: all .3s;
+            }
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .old-price {
+            position: relative;
+            margin-right: .5rem;
+            font-size: 12px;
+            line-height: 15px;
+            color: $dark-600;
+            &:before {
+                content: "";
+                position: absolute;
+                left: -1px;
+                top: 50%;
+                width: calc(100% + 2px);
+                border-bottom: 0.3px solid #475467;
+            }
+        }
+        .state {
+            margin-top: 4px;
+            .title {
+                color: $dark-600;
+            }
+        }
+
+    }
     &__title {
         margin-bottom: 4px;
         color: $dark-600;
@@ -82,8 +143,11 @@
         &:has(> input[disabled]) {
             pointer-events: none;
         }
-        &:hover .value {
-            border-color: $cyan-500;
+        &:hover {
+            color: $dark-900;
+            .value {
+                border-color: $cyan-500;
+            }
         }
         input {
             display: none;

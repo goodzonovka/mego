@@ -1,0 +1,113 @@
+<div class="account">
+
+    @@include('sidebar.html', {})
+
+    <div class="account-content">
+        <h1 class="page-title">Аккаунт</h1>
+
+        <div class="account-content__inner">
+            <div class="block">
+                <div class="block-title">Личные данные</div>
+
+                <form method="get" class="account-content__form form-valid-js">
+                    <div class="form-group">
+                        <input type="text" name="phone"
+                               class="form-input form-input-phone-js form-input-required-js valid"
+                               disabled value="+373 69 22 22">
+
+                        <span class="form-group-title">Телефон</span>
+
+                        <button type="button" class="form-input-edit form-input-edit-js"
+                                aria-label="Редактировать поле">
+                            <svg width="18" height="18">
+                                <use href="images/icons/icons.svg#edit"></use>
+                            </svg>
+                        </button>
+                        <span class="error-text error-empty">Это обязательное поле</span>
+                        <span class="error-text error-phone">Некорректный номер телефона</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="email"
+                               class="form-input form-input-required-js form-input-email-js valid"
+                               disabled
+                               value="username@example.com">
+
+                        <span class="form-group-title">Email</span>
+
+                        <button type="button" class="form-input-edit form-input-edit-js"
+                                aria-label="Редактировать поле">
+                            <svg width="18" height="18">
+                                <use href="images/icons/icons.svg#edit"></use>
+                            </svg>
+                        </button>
+                        <span class="error-text error-empty">Это обязательное поле</span>
+                        <span class="error-text error-email">Некорректный email</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-input form-input-required-js valid" value="Константин">
+
+                        <span class="form-group-title">Имя</span>
+
+                        <span class="error-text error-empty">Это обязательное поле</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="surname" class="form-input form-input-required-js valid"
+                               value="Константинопольский">
+
+                        <span class="form-group-title">Фамилия</span>
+
+                        <span class="error-text error-empty">Это обязательное поле</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="additional_phone" class="form-input form-input-additional-phone-js"
+                               placeholder="Дополнительный телефон" autocomplete="off">
+                        <span class="error-text error-phone">Некорректный номер телефона</span>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-input form-textarea" placeholder="Дополнительная информация"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="input-checkbox__label">
+                            <input type="checkbox" class="input-checkbox">
+                            <span class="input-checkbox__icon"></span>
+
+                            <span class="input-checkbox__value">Подписаться на рассылку</span>
+                        </label>
+
+                        <button type="submit" class="btn btn-green form-valid-submit">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="block">
+                <div class="block-title">Изменить пароль</div>
+
+                <form action="" class="form-valid-js account-content__form-passwords form-valid-passwords-js">
+                    <div class="form-group">
+                        <input type="password" class="form-input form-input-required-js" placeholder="Старый пароль">
+                        <span class="error-text error-empty">Это обязательное поле</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password"
+                               class="form-input form-input-required-js form-input-password-js"
+                               placeholder="Новый пароль">
+                        <span class="error-text error-empty">Это обязательное поле</span>
+                        <span class="error-text error-length-password">Минимальная длина пароля 8 символов</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="repeatPassword"
+                               class="form-input form-input-required-js form-input-password-js"
+                               placeholder="Повторите новый пароль">
+                        <span class="error-text error-empty">Это обязательное поле</span>
+                        <span class="error-text error-repeat-password">Пароли не совпадают</span>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-disabled">Изменить</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

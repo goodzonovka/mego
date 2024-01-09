@@ -14,6 +14,24 @@ let applyBlock = $('#filter-apply-block-js');
 let filterContent = $('#filter-content');
 let startX;
 
+$('.filter-categories__list a:has(svg)').click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    let linkSvg = $(this).find('svg');
+
+    if (linkSvg.hasClass('icon-right')) {
+        linkSvg.removeClass('icon-right').addClass('icon-left');
+        linkSvg.find('use').attr('href', 'images/icons/icons.svg#chevron-left-small');
+    } else {
+        linkSvg.removeClass('icon-left').addClass('icon-right');
+        linkSvg.find('use').attr('href', 'images/icons/icons.svg#chevron-right-small');
+    }
+
+    $(this).toggleClass('active');
+    $(this).next().slideToggle(300);
+});
+
 // открытие формы
 btnOpenFilter.click(openFilter);
 
