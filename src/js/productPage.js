@@ -282,7 +282,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 let wrapper = $('.wrapper');
 
-                if (scrollTop + $('.header').outerHeight() >= productsTabsOffsetTop) {
+                if (scrollTop >= productsTabsOffsetTop) {
                     productsTabs.addClass('fixed');
                     wrapper.addClass('product-tabs-fixed');
                 } else {

@@ -2,6 +2,15 @@ import $ from "jquery";
 import Swiper from "swiper";
 import {Navigation, Pagination, EffectFade, Autoplay} from "swiper/modules";
 import {isDevice, isDesktop} from "./functions.js";
+import {openPopup} from "./choice-language-and-city.js";
+
+
+if (isDesktop()) {
+    // openPopup('#product-changes');
+    // $('.open-user-menu-js.is-authorized').click(function () {
+    //
+    // });
+}
 
 window.addEventListener('load', function () {
     /* main banner */
