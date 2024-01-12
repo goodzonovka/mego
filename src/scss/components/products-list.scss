@@ -54,6 +54,10 @@ h2, .section-title {
                 color: $white;
                 background-color: $violet-500;
             }
+            &-percent {
+                color: #030c1c;
+                background-color: #f2a143;
+            }
             &-tooltip {
                 position: absolute;
                 top: 50%;
@@ -197,10 +201,6 @@ h2, .section-title {
         &:hover {
             background-color: $white;
             border-radius: 16px;
-            .icons-list {
-                visibility: visible;
-                opacity: 1;
-            }
             .buttons {
                 .compare, .wishlist {
                     visibility: visible;
@@ -212,9 +212,6 @@ h2, .section-title {
             margin-bottom: 1rem;
         }
         .icons-list {
-            visibility: hidden;
-            opacity: 0;
-            transition: all .3s;
             .icon:hover .icon-tooltip {
                 visibility: visible;
                 opacity: 1;

@@ -34,11 +34,18 @@
         <div class="subcategory-buttons">
             @@include('sort.html', {})
 
-            <button class="subcategory-view subcategory-view-js" aria-label="Вид сетка/список">
+            <button class="subcategory-view subcategory-view__grid subcategory-view-js active" data-view="grid" aria-label="Вид сетка/список">
                 <svg width="18" height="18">
                     <use href="images/icons/icons.svg#grid"></use>
                 </svg>
             </button>
+
+            <button class="subcategory-view subcategory-view__list subcategory-view-js" data-view="list" aria-label="Вид списком">
+                <svg width="18" height="18">
+                    <use href="images/icons/icons.svg#catalog"></use>
+                </svg>
+            </button>
+
 
             <button class="filter__btn-open" id="filter-btn-open" aria-label="Открыть фильтр">
                 <svg width="18" height="18">

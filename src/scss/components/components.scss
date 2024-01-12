@@ -11,6 +11,10 @@
         border: 1px solid #d0d5dd;
         border-radius: 8px;
         cursor: pointer;
+        transition: border-color .3s;
+        &:hover {
+            border-color: $dark-900;
+        }
         &-inner {
             flex-grow: 1;
             max-width: calc(100% - 26px);

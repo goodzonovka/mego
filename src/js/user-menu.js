@@ -1,5 +1,6 @@
 import $ from "jquery";
 import {isDesktop, isMobile} from "./functions.js";
+import {openPopup} from "./choice-language-and-city.js";
 
 /* User menu */
 let userMenuBtn = $('.open-user-menu-js');
@@ -12,10 +13,13 @@ if (isDesktop()) {
 }
 
 // открытие
+// openPopup('#popup-login');
 userMenuBtn.click(function () {
-    userMenu.toggleClass('active');
-    if (isMobile()) {
+    if (isMobile() || (isDesktop() && $(this).hasClass('is-authorized'))) {
+        userMenu.toggleClass('active');
         $('body').addClass('overflow-hidden');
+    } else {
+        openPopup('#popup-login');
     }
 });
 

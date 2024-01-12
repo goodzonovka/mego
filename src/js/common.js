@@ -1,8 +1,68 @@
 import $ from "jquery";
 import MatchHeight from 'matchheight';
 import {isDesktop, isDevice} from "./functions.js";
+import Swiper from "swiper";
 
 new MatchHeight('.product-item .price-block');
+
+$('.product-item-slider-js').each(function () {
+    let item = this;
+
+    new Swiper(item, {
+        loop: true,
+    });
+
+    let slideInterval;
+    let directionLeft = false, directionRight = false;
+
+    if (isDesktop()) {
+        $(item).mousemove(function (e) {
+            let containerWidth = item.offsetWidth;
+
+            let mouseX = event.clientX - item.getBoundingClientRect().left;
+
+            if (mouseX < containerWidth / 3) {
+                if (!directionLeft) {
+                    clearInterval(slideInterval);
+
+                    prevSlide(item);
+
+                    directionRight = false;
+                    directionLeft = true;
+                    slideInterval = setInterval(function () {
+                        prevSlide(item);
+                    }, 1000);
+                }
+            } else if (mouseX > (2 * containerWidth) / 3) {
+                if (!directionRight) {
+                    clearInterval(slideInterval);
+
+                    nextSlide(item);
+
+                    directionLeft = false;
+                    directionRight = true;
+                    slideInterval = setInterval(function () {
+                        nextSlide(item);
+                    }, 1000);
+                }
+            }
+        }).mouseleave(function () {
+            clearInterval(slideInterval);
+        }).mouseenter(function () {
+            directionLeft = false;
+            directionRight = false;
+        });
+    }
+});
+function prevSlide(item) {
+    let mySwiper = item.swiper;
+    mySwiper.slidePrev();
+}
+
+function nextSlide(item) {
+    let mySwiper = item.swiper;
+    mySwiper.slideNext();
+}
 
 /* pagination */
 

@@ -1,6 +1,6 @@
 import $ from "jquery";
 import MatchHeight from "matchheight";
-import {isDesktop} from "./functions.js";
+import {isDesktop, isDevice} from "./functions.js";
 
 let btnChangeViewProducts = $('.subcategory-view-js');
 let btnChangeViewProductsIcon = btnChangeViewProducts.find('svg use');
@@ -15,9 +15,15 @@ if (isDesktop()) {
 }
 
 
+
 if (localStorage.getItem('productsViewList') === 'true') {
-    btnChangeViewProducts.addClass('list');
-    btnChangeViewProductsIcon.attr('href', 'images/icons/icons.svg#catalog');
+    if (isDevice()) {
+        btnChangeViewProducts.addClass('list');
+        btnChangeViewProductsIcon.attr('href', 'images/icons/icons.svg#catalog');
+    } else {
+        $('.subcategory-view__grid').removeClass('active');
+        $('.subcategory-view__list').addClass('active');
+    }
     productsList.addClass('list');
 }
 
@@ -26,16 +32,31 @@ btnChangeViewProducts.click(changeViewProducts);
 
 
 function changeViewProducts() {
-    $(this).toggleClass('list');
+    if (isDevice()) {
+        $(this).toggleClass('list');
 
-    if ($(this).hasClass('list')) {
-        btnChangeViewProductsIcon.attr('href', 'images/icons/icons.svg#catalog');
-        productsList.addClass('list');
-        localStorage.setItem('productsViewList', 'true');
+        if ($(this).hasClass('list')) {
+            btnChangeViewProductsIcon.attr('href', 'images/icons/icons.svg#catalog');
+            productsList.addClass('list');
+            localStorage.setItem('productsViewList', 'true');
+        } else {
+            btnChangeViewProductsIcon.attr('href', 'images/icons/icons.svg#grid');
+            productsList.removeClass('list');
+            localStorage.setItem('productsViewList', 'false');
+        }
+        new MatchHeight('.product-item .price-block');
     } else {
-        btnChangeViewProductsIcon.attr('href', 'images/icons/icons.svg#grid');
-        productsList.removeClass('list');
-        localStorage.setItem('productsViewList', 'false');
+        let view = $(this).data('view');
+
+        btnChangeViewProducts.removeClass('active');
+        $(this).addClass('active');
+
+        if (view === 'list') {
+            productsList.addClass('list');
+            localStorage.setItem('productsViewList', 'true');
+        } else {
+            productsList.removeClass('list');
+            localStorage.setItem('productsViewList', 'false');
+        }
     }
-    new MatchHeight('.product-item .price-block');
 }

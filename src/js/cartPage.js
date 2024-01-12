@@ -46,6 +46,7 @@ if ($('.cart-page').length) {
                 $('.order-selected-js').addClass('btn-disabled');
             }
         } else {
+            $('.order-selected-js').removeClass('btn-disabled');
             if (countCheckedCheckboxes > 0) {
                 $('.cart-order-block-js').show();
                 $('.cart-page-wrap').addClass('cart-is-active');

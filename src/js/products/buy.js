@@ -71,7 +71,6 @@ amountMinus.click(function () {
     }
 
 
-    console.log(input.val())
     input.val(+input.val() - dataAddCount);
     if (input.val() < 1) {
         input.val(1);

@@ -1,119 +1,232 @@
-<ul class="product-variants">
-    <li class="product-variants__item">
-        <div class="product-variants__title">Состояние товара</div>
+<div class="product-variants">
 
-        <div class="product-variants__list">
-            <a href="#" class="product-variants__variant">
-                <span class="value">Новый</span>
-            </a>
-            <a href="#" class="product-variants__variant">
-                <span class="value">Уцененный</span>
-            </a>
+    <div class="product-variants-tabs__wrap">
+        <div class="product-variants-tabs__title">Состояние товара</div>
+        <div class="product-variants-tabs">
+            <button type="button" class="product-variants-tabs__tab active" data-target="#vartiant-new">Новый</button>
+            <button type="button" class="product-variants-tabs__tab" data-target="#variant-discounted">Уцененный</button>
         </div>
-    </li>
+    </div>
 
-    <li class="product-variants__item product-variants__item-colors">
-        <div class="product-variants__title">Цвет <span class="color-dark">как на картинке</span></div>
+    <ul class="product-variants__inner active" id="vartiant-new">
 
-        <div class="product-variants__list">
-            <span class="product-variants__variant product-variants__variant-color active">
-                <span class="value">
-                    <img src="images/product/colors/image-1.png" width="36" height="36" alt="">
+        <li class="product-variants__item product-variants__item-colors">
+            <div class="product-variants__title">Цвет <span class="color-dark">как на картинке</span></div>
+
+            <div class="product-variants__list">
+                <span class="product-variants__variant product-variants__variant-color active">
+                    <span class="value">
+                        <img src="images/product/colors/image-1.png" width="36" height="36" alt="">
+                    </span>
                 </span>
-            </span>
 
-            <a href="images/product/colors/big/image-1.png" class="product-variants__variant product-variants__variant-color">
-                <span class="value">
-                    <img src="images/product/colors/image-2.png" width="36" height="36" alt="">
-                </span>
-            </a>
+                <a href="images/product/colors/big/image-1.png"
+                   class="product-variants__variant product-variants__variant-color">
+                    <span class="value">
+                        <img src="images/product/colors/image-2.png" width="36" height="36" alt="">
+                    </span>
+                </a>
 
-            <a href="images/product/colors/big/image-2.png" class="product-variants__variant product-variants__variant-color">
-                <span class="value">
-                    <img src="images/product/colors/image-3.png" width="36" height="36" alt="">
-                </span>
-            </a>
+                <a href="images/product/colors/big/image-2.png"
+                   class="product-variants__variant product-variants__variant-color">
+                    <span class="value">
+                        <img src="images/product/colors/image-3.png" width="36" height="36" alt="">
+                    </span>
+                </a>
 
-            <a href="images/product/colors/big/image-3.png" class="product-variants__variant product-variants__variant-color">
-                <span class="value">
-                    <img src="images/product/colors/image-4.png" width="36" height="36" alt="">
-                </span>
-            </a>
-        </div>
-    </li>
-
-    <li class="product-variants__item product-variants__item-size">
-        <div class="product-variants__title">
-            Размер
-            <div class="tooltip">
-                <div class="tooltip__btn open-popup-js" data-target="#popup-table-size">
-                    <svg width="18" height="18">
-                        <use href="images/icons/icons.svg#info"></use>
-                    </svg>
-                    Таблица размеров
-                </div>
-
+                <a href="images/product/colors/big/image-3.png"
+                   class="product-variants__variant product-variants__variant-color">
+                    <span class="value">
+                        <img src="images/product/colors/image-4.png" width="36" height="36" alt="">
+                    </span>
+                </a>
             </div>
-        </div>
+        </li>
 
-        <div class="product-variants__list">
-            <a href="#" class="product-variants__variant">
-                <span class="value">
-                    <span class="size">S</span>
-                    <span class="size-value">42–44</span>
+        <li class="product-variants__item product-variants__item-size">
+            <div class="product-variants__title">
+                Размер
+                <div class="tooltip">
+                    <div class="tooltip__btn open-popup-js" data-target="#popup-table-size">
+                        <svg width="18" height="18">
+                            <use href="images/icons/icons.svg#info"></use>
+                        </svg>
+                        Таблица размеров
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="product-variants__list">
+                <a href="#" class="product-variants__variant">
+                    <span class="value">
+                        <span class="size">S</span>
+                        <span class="size-value">42–44</span>
+                    </span>
+                </a>
+                <span class="product-variants__variant active">
+                    <span class="value">
+                        <span class="size">M</span>
+                        <span class="size-value">46–48</span>
+                    </span>
                 </span>
-            </a>
-            <a href="#" class="product-variants__variant">
-                <span class="value">
-                    <span class="size">M</span>
-                    <span class="size-value">46–48</span>
+                <a href="#" class="product-variants__variant">
+                    <span class="value">
+                        <span class="size">L</span>
+                        <span class="size-value">50</span>
+                    </span>
+                </a>
+            </div>
+        </li>
+
+        <li class="product-variants__item product-variants__item-width">
+            <div class="product-variants__title">
+                Ширина, см
+            </div>
+
+            <div class="product-variants__list">
+                <span class="product-variants__variant active">
+                    <span class="value">80</span>
                 </span>
-            </a>
-            <a href="#" class="product-variants__variant">
-                <span class="value">
-                    <span class="size">L</span>
-                    <span class="size-value">50</span>
+                <a href="#" class="product-variants__variant">
+                    <span class="value">90</span>
+                </a>
+                <a href="#" class="product-variants__variant">
+                    <span class="value">120</span>
+                </a>
+                <a href="#" class="product-variants__variant disabled">
+                    <span class="value">140</span>
+                </a>
+            </div>
+        </li>
+
+        <li class="product-variants__item product-variants__item-length">
+            <div class="product-variants__title">
+                Длина, см
+            </div>
+
+            <div class="product-variants__list">
+                <span class="product-variants__variant active">
+                    <span class="value">190</span>
                 </span>
-            </a>
-        </div>
-    </li>
+                <a href="#" class="product-variants__variant">
+                    <span class="value">200</span>
+                </a>
+            </div>
+        </li>
+    </ul>
 
-    <li class="product-variants__item product-variants__item-width">
-        <div class="product-variants__title">
-            Ширина, см
-        </div>
+    <ul class="product-variants__inner" id="variant-discounted">
 
-        <div class="product-variants__list">
-            <a href="#" class="product-variants__variant">
-                <span class="value">80</span>
-            </a>
-            <a href="#" class="product-variants__variant">
-                <span class="value">90</span>
-            </a>
-            <a href="#" class="product-variants__variant">
-                <span class="value">120</span>
-            </a>
-            <a href="#" class="product-variants__variant">
-                <span class="value">140</span>
-            </a>
-        </div>
-    </li>
+        <li class="product-variants__item product-variants__item-additions">
+            <div class="product-variants__list">
+                <a href="#" class="item">
+                   <span class="img">
+                       <img src="images/product/colors/image-5.png" width="44" height="44" alt="">
+                   </span>
+                    <span class="content">
+                       <span class="price-wrap">
+                           <span class="old-price">2 069 леев</span>
+                           <span class="price">1 446 леев</span>
+                       </span>
+                       <span class="state">
+                           <span class="title">Состояние:</span>
+                           <span class="value">уцененный</span>
+                       </span>
+                   </span>
+                </a>
 
-    <li class="product-variants__item product-variants__item-length">
-        <div class="product-variants__title">
-            Длина, см
-        </div>
+                <a href="#" class="item">
+                   <span class="img">
+                       <img src="images/product/colors/image-5.png" width="44" height="44" alt="">
+                   </span>
+                    <span class="content">
+                       <span class="price-wrap">
+                           <span class="old-price">2 069 леев</span>
+                           <span class="price">1 446 леев</span>
+                       </span>
+                       <span class="state">
+                           <span class="title">Состояние:</span>
+                           <span class="value">уцененный</span>
+                       </span>
+                   </span>
+                </a>
+            </div>
+        </li>
 
-        <div class="product-variants__list">
-            <a href="#" class="product-variants__variant">
-                <span class="value">190</span>
-            </a>
-            <a href="#" class="product-variants__variant">
-                <span class="value">200</span>
-            </a>
-        </div>
-    </li>
-</ul>
+        <li class="product-variants__item product-variants__item-colors">
+            <div class="product-variants__title">Цвет <span class="color-dark">как на картинке</span></div>
+
+            <div class="product-variants__list">
+                <span class="product-variants__variant product-variants__variant-color active">
+                    <span class="value">
+                        <img src="images/product/colors/image-1.png" width="36" height="36" alt="">
+                    </span>
+                </span>
+            </div>
+        </li>
+
+        <li class="product-variants__item product-variants__item-size">
+            <div class="product-variants__title">
+                Размер
+                <div class="tooltip">
+                    <div class="tooltip__btn open-popup-js" data-target="#popup-table-size">
+                        <svg width="18" height="18">
+                            <use href="images/icons/icons.svg#info"></use>
+                        </svg>
+                        Таблица размеров
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="product-variants__list">
+                <a href="#" class="product-variants__variant">
+                    <span class="value">
+                        <span class="size">S</span>
+                        <span class="size-value">42–44</span>
+                    </span>
+                </a>
+                <span class="product-variants__variant active">
+                    <span class="value">
+                        <span class="size">M</span>
+                        <span class="size-value">46–48</span>
+                    </span>
+                </span>
+                <a href="#" class="product-variants__variant">
+                    <span class="value">
+                        <span class="size">L</span>
+                        <span class="size-value">50</span>
+                    </span>
+                </a>
+            </div>
+        </li>
+
+        <li class="product-variants__item product-variants__item-width">
+            <div class="product-variants__title">
+                Ширина, см
+            </div>
+
+            <div class="product-variants__list">
+                <span class="product-variants__variant active">
+                    <span class="value">80</span>
+                </span>
+            </div>
+        </li>
+
+        <li class="product-variants__item product-variants__item-length">
+            <div class="product-variants__title">
+                Длина, см
+            </div>
+
+            <div class="product-variants__list">
+                <span class="product-variants__variant active">
+                    <span class="value">190</span>
+                </span>
+            </div>
+        </li>
+    </ul>
+</div>
 
 <div class="popup" id="popup-table-size">
     <div class="popup-bg popup-bg-js"></div>

@@ -66,11 +66,21 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
+        $('.product-variants-tabs__tab').click(function () {
+            let target = $(this).data('target');
+
+            $('.product-variants-tabs__tab, .product-variants__inner').removeClass('active');
+
+            $(this).addClass('active');
+            $(target).addClass('active');
+
+        });
+
 
         $('.product-variants__variant-color').mouseenter(function (e) {
              e.preventDefault();
 
-             let target = $(this).attr('href');
+             let target = $(this).data('image');
 
              if (target) {
 
@@ -80,11 +90,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }).mouseleave(function () {
             $('.product-slider__active-color-img').removeClass('active');
         }).click(function (e) {
-            e.preventDefault();
+
         });
 
         Fancybox.bind("[data-fancybox]", {
-            // Your custom options
+            Images: {
+                zoom: false,
+            },
         });
 
 

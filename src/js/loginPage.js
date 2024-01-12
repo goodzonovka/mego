@@ -6,15 +6,18 @@ import 'intl-tel-input/build/js/intlTelInput';
 import {checkValidForm} from "./common.js";
 
 document.addEventListener('DOMContentLoaded', () => {
-    if ($('.login-page').length) {
-        const input = document.querySelector("#phone");
+    if ($('.phone-countries-js').length) {
 
-        intlTelInput(input, {
-            initialCountry: "MD",
-            separateDialCode: true,
-        });
+        let input = document.querySelectorAll(".phone-countries-js");
 
-        $('.btn-login').click(function (e) {
+        input.forEach(function (item) {
+            intlTelInput(item, {
+                initialCountry: "MD",
+                separateDialCode: true,
+            });
+        })
+
+        $('.login .login__btn').click(function (e) {
             e.preventDefault();
 
             let form = $(this).closest('.form-valid-js');

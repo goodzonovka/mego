@@ -7,6 +7,7 @@
     padding: .5rem 0 7px;
     color: $white;
     background-color: $violet-500;
+    transition: top .4s;
 
     button, a {
         &:hover {
@@ -76,6 +77,18 @@
 
 
 
+    @media (max-width: $device) {
+        &.hide-header {
+            top: -53px;
+            //top: -152px;
+        }
+        &.show-search {
+            top: 0;
+            & ~ .product-page .product-tabs.fixed {
+                top: 53px;
+            }
+        }
+    }
     @media (min-width: $ds) {
         padding: 16px 0 14px;
         transition: padding-bottom .3s;

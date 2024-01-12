@@ -33,36 +33,43 @@ $(function() {
     }
 });
 /* header: fixed menu */
+
+let prevScrollTop = $(window).scrollTop();
 $(window).scroll(function () {
     let scrollTop = $(this).scrollTop();
     let offsetTopForChangeMenu = 150;
-    let offsetTopForHideSearch = 340;
+    let header = $('.header');
 
     if (!$('.main-banner-js').length) {
         offsetTopForChangeMenu = 75;
     }
 
-    console.log(scrollTop)
-
     if (isDevice()) {
-        if (scrollTop > offsetTopForChangeMenu) {
-            $('#header-top, #header-bottom').slideUp();
+        if (scrollTop > prevScrollTop) {
+            header.removeClass('show-search');
         } else {
-            $('#header-top, #header-bottom').slideDown();
+            if (scrollTop > offsetTopForChangeMenu) {
+                header.addClass('show-search');
+            }
         }
 
-        if (scrollTop > offsetTopForHideSearch) {
-            $('#header').slideUp();
-        } else {
-            $('#header').slideDown();
+        if (scrollTop > offsetTopForChangeMenu && !header.hasClass('hide-header')) {
+            header.addClass('hide-header');
+            $('#header-top, #header-bottom').slideUp(400);
         }
+        if (offsetTopForChangeMenu > scrollTop) {
+            header.removeClass('hide-header');
+            $('#header-top, #header-bottom').slideDown(400);
+        }
+
+        prevScrollTop = scrollTop;
     }
     if (isDesktop()) {
         if (scrollTop > offsetTopForChangeMenu) {
-            $('.header').addClass('shortened');
+            header.addClass('shortened');
             $('#header-bottom').slideUp();
         } else {
-            $('.header').removeClass('shortened');
+            header.removeClass('shortened');
             $('#header-bottom').slideDown();
         }
     }

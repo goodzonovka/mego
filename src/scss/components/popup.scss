@@ -78,6 +78,34 @@
     }
 }
 
+.popup-login {
+    .inner {
+        width: 380px;
+        max-width: calc(100% - 20px);
+        .text {
+            margin-bottom: 23px;
+            padding-right: 0;
+        }
+        .form-group {
+            margin-bottom: 0;
+        }
+        .login {
+            &__btn {
+                margin-top: 45px;
+            }
+            &__socials {
+                margin-top: 23px;
+                .btn {
+                    margin-top: 0;
+                    &:not(:last-child) {
+                        margin-bottom: 23px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .popup-choice-language-and-city {
     .choice-language {
         .list {

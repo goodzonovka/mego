@@ -20,6 +20,7 @@
 
     .link {
         position: absolute;
+        z-index: 1;
         left: 0;
         top: 0;
         width: 100%;
@@ -40,6 +41,12 @@
         }
     }
     @media (min-width: $tv) {
+        &-mobile {
+            display: none;
+        }
+        &-desktop {
+            display: block;
+        }
         .swiper-pagination {
             bottom: 12px;
         }
@@ -48,12 +55,6 @@
         }
     }
     @media (min-width: $ds) {
-        &-mobile {
-            display: none;
-        }
-        &-desktop {
-            display: block;
-        }
         .swiper-pagination {
             bottom: 16px;
         }

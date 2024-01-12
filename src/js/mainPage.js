@@ -4,24 +4,16 @@ import {Navigation, Pagination, EffectFade, Autoplay} from "swiper/modules";
 import {isDevice, isDesktop} from "./functions.js";
 import {openPopup} from "./choice-language-and-city.js";
 
-
-if (isDesktop()) {
-    // openPopup('#product-changes');
-    // $('.open-user-menu-js.is-authorized').click(function () {
-    //
-    // });
-}
-
 window.addEventListener('load', function () {
     /* main banner */
     new Swiper('.main-banner-js', {
         modules: [Navigation, EffectFade, Pagination, Autoplay],
         loop: true,
         speed: 1000,
-        autoplay: {
-            delay: 6000,
-            pauseOnMouseEnter: true,
-        },
+        // autoplay: {
+        //     delay: 6000,
+        //     pauseOnMouseEnter: true,
+        // },
         effect: "fade",
         fadeEffect: {
             crossFade: true
@@ -39,11 +31,15 @@ window.addEventListener('load', function () {
 
     /* products list slider */
     new Swiper('.products-list-slider-js', {
-        modules: [Pagination, Navigation],
+        modules: [Pagination, Navigation, Autoplay],
         loop: true,
         slidesPerView: "auto",
         slidesPerGroup: 2,
         spaceBetween: 16,
+        autoplay: {
+            delay: 2000,
+            pauseOnMouseEnter: true,
+        },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -68,7 +64,16 @@ window.addEventListener('load', function () {
                 slidesPerGroup: 6,
                 spaceBetween: 0,
             }
-        }
+        },
+        on: {
+            init: function () {
+                if (window.innerWidth < 1200) {
+                    this.autoplay.stop();
+                } else {
+                    this.autoplay.start();
+                }
+            },
+        },
     });
     /* end products list slider */
     if (isDevice()) {
