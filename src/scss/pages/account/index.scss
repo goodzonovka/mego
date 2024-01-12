@@ -21,10 +21,6 @@
             font-weight: bold;
         }
 
-        .form-group:has(.form-group-title) .form-input {
-            padding-top: 12px;
-        }
-
         .form-group-title {
             position: absolute;
             top: 4px;
@@ -37,7 +33,6 @@
 
         .form-input {
             &[disabled] {
-                background-color: $dark-100;
                 & ~ .form-input-edit {
                     color: $dark-600;
                 }

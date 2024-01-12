@@ -24,6 +24,19 @@
     &:has(input.error-phone) .error-text.error-phone {
         display: block;
     }
+    &:has(.form-group-title) .form-input {
+        padding-top: 12px;
+    }
+}
+
+.form-group-title {
+    position: absolute;
+    top: 4px;
+    left: 12px;
+    font-size: 10px;
+    line-height: 1rem;
+    font-weight: bold;
+    color: $dark-400;
 }
 
 .form-input {
@@ -36,6 +49,9 @@
 
     &::placeholder {
         color: $dark-600;
+    }
+    &[disabled] {
+        background-color: $dark-100;
     }
 
     &:focus {

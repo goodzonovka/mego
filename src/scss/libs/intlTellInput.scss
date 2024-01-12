@@ -1,6 +1,9 @@
 .iti {
     position: relative;
     font-size: 1rem;
+    &:has(input[disabled]) {
+    pointer-events: none;
+    }
 }
 .iti * {
     box-sizing: border-box;

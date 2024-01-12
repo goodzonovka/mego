@@ -3,7 +3,8 @@ import $ from "jquery";
 /* popup выбор языка сайта и города */
 
 // открытие popup
-$('.open-popup-js').click(function () {
+$('.open-popup-js').click(function (e) {
+    e.preventDefault();
     let target = $(this).data('target');
 
     openPopup(target);

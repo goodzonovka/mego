@@ -27,7 +27,7 @@ import './orderPage.js';
 import './accountPage.js';
 import './accountDiscountsOffersPage.js';
 import './accountOrders.js';
-import './loginPage.js';
+import './login.js';
 
 /* проверка на поддержку webp формата */
 import BaseHelpers from './helpers/BaseHelpers.js';

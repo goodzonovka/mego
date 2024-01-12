@@ -2,14 +2,43 @@
     <h1 class="page-title">Войти</h1>
     <div class="login__text">Мы отправим вам код в СМС<br> или позвоним</div>
 
-    <form action="" class="form-valid-js no-scroll-to-error">
+    <form class="form-valid-js login__form no-scroll-to-error">
         <div class="form-group">
-            <input type="tel" id="phone" class="form-input phone-countries-js form-input-required-js form-input-phone-js" name="phone"
-                   placeholder="Телефон"/>
+            <input type="tel" id="phone"
+                   class="form-input login__input phone-countries-js form-input-required-js form-input-phone-js"
+
+                   placeholder="Телефон" autocomplete="new-password"/>
             <span class="error-text error-empty">Это обязательное поле</span>
             <span class="error-text error-phone">Некорректный номер телефона</span>
         </div>
-        <button class="btn login__btn btn-full-width btn-green">Войти</button>
+        <div class="form-group login__password">
+            <input type="password" class="form-input form-input-required-js"
+                   placeholder="Пароль" disabled>
+            <span class="error-text error-empty">Это обязательное поле</span>
+        </div>
+
+        <div class="login__code">
+            <div class="form-group">
+                <div class="form-group-title">Проверочный код</div>
+                <input type="password" class="form-input form-input__code form-input-required-js" autocomplete="new-password" disabled>
+                <span class="error-text error-empty">Это обязательное поле</span>
+            </div>
+            <div class="login__code-timer">
+                <svg width="16" height="16" class="login__spinner">
+                    <use href="images/icons/icons.svg#spinner"></use>
+                </svg>
+                <span class="timer-value"></span>
+            </div>
+        </div>
+
+        <button class="btn login__btn btn-full-width btn-green" data-text-enter="Войти" data-text-confirm="Подтвердить">
+            Войти
+        </button>
+
+        <div class="login__buttons">
+            <a href="#" class="login__change-phone">Изменить телефон</a>
+            <a href="#" class="login__request-new-code">Запросить новый код</a>
+        </div>
     </form>
 
     <div class="login__or">
