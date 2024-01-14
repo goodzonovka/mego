@@ -39,19 +39,21 @@ if ($('.cart-page').length) {
 
         if (isDesktop()) {
             if (countCheckedCheckboxes > 0) {
+                $('.cart-remove-selected-js').show();
                 $('.cart-order-block-js').removeClass('disabled');
                 $('.order-selected-js').removeClass('btn-disabled');
             } else {
+                $('.cart-remove-selected-js').hide();
                 $('.cart-order-block-js').addClass('disabled');
                 $('.order-selected-js').addClass('btn-disabled');
             }
         } else {
             $('.order-selected-js').removeClass('btn-disabled');
             if (countCheckedCheckboxes > 0) {
-                $('.cart-order-block-js').show();
+                $('.cart-order-block-js, .cart-remove-selected-js').show();
                 $('.cart-page-wrap').addClass('cart-is-active');
             } else {
-                $('.cart-order-block-js').hide();
+                $('.cart-order-block-js, .cart-remove-selected-js').hide();
                 $('.cart-page-wrap').removeClass('cart-is-active');
             }
         }

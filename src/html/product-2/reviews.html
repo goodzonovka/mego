@@ -1,0 +1,14 @@
+<div class="product-reviews" id="product-reviews">
+    <div class="product-reviews__tabs product-reviews-tabs-js">
+        <button class="tab active" data-target="#product-reviews-list">Отзывы о товаре</button>
+        <button class="tab" data-target="#product-questions-list">Вопросы о товаре</button>
+    </div>
+
+    <div class="product-reviews__list open" id="product-reviews-list">
+        @@include('reviews-list.html', {})
+    </div>
+
+    <div class="product-reviews__list" id="product-questions-list">
+        @@include('questions-list.html', {})
+    </div>
+</div>

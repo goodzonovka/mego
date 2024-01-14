@@ -1,5 +1,6 @@
 import $ from "jquery";
 import "./slider.js";
+import {isDevice} from "../functions.js";
 
 let btnOpenFilter = $('#filter-btn-open');
 let btnCloseFilter = $('.close-filter-js');
@@ -62,7 +63,9 @@ filterTitleToggle.click(filterBlockToggle);
 btnFilterReset.click(filterReset);
 
 // отобразить кнопку "применить", если в форме что-то изменилось
-filter.find('input').not(filterBrandsInput).on('change input keypress', displayApplyBtn)
+if (isDevice()) {
+    filter.find('input').not(filterBrandsInput).on('change input keypress', displayApplyBtn)
+}
 
 function openFilter() {
     filter.addClass('active');
@@ -133,7 +136,9 @@ function filterReset() {
     filter.find('.min-value, .max-value').each(function () {
         $(this).trigger('change');
     })
-    hideApplyBtn();
+    if (isDevice()) {
+        hideApplyBtn();
+    }
 }
 
 function displayApplyBtn() {

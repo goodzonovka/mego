@@ -120,6 +120,37 @@
     }
 }
 
+.popup.popup-change-phone {
+    .inner {
+        padding-top: 2rem;
+    }
+    .login__text {
+        margin-bottom: 32px;
+    }
+    .btn {
+        margin-top: 30px;
+    }
+    .close-popup {
+        top: 22px;
+    }
+}
+
+.popup.popup-information-saved {
+    .inner {
+        padding-top: 32px;
+    }
+    .login__text {
+        margin-bottom: 32px;
+        padding-right: 64px;
+    }
+    .btn {
+        margin-top: 0;
+    }
+    .close-popup {
+        top: 22px;
+    }
+}
+
 .popup-choice-language-and-city {
     .choice-language {
         .list {

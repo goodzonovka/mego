@@ -1,0 +1,78 @@
+<div class="container">
+    <a href="category.html" class="back">
+        <svg width="18" height="18">
+            <use href="images/icons/icons.svg#chevron-left-small"></use>
+        </svg>
+        Шкафы
+    </a>
+
+    <ul class="breadcrumbs">
+        <li>
+            <a href="category.html">
+                Мебель
+            </a>
+            <svg width="18" height="18">
+                <use href="images/icons/icons.svg#chevron-right-small"></use>
+            </svg>
+        </li>
+        <li>
+            <a href="category.html">
+                Мебель для хранения
+            </a>
+            <svg width="18" height="18">
+                <use href="images/icons/icons.svg#chevron-right-small"></use>
+            </svg>
+        </li>
+        <li>
+            <a href="category.html">
+                Шкафы
+            </a>
+            <svg width="18" height="18">
+                <use href="images/icons/icons.svg#chevron-right-small"></use>
+            </svg>
+        </li>
+        <li>
+            <a href="category.html">
+                Планета мебели
+            </a>
+        </li>
+    </ul>
+</div>
+
+@@include('product-header.html', {})
+
+<div class="container">
+    <div class="product__inner">
+        <div class="product__left">
+            @@include('product-slider.html', {})
+
+            @@include('product-seller-info.html', {})
+        </div>
+
+        <form class="product__right">
+            @@include('product-purchase.html', {})
+
+            @@include('product-promotion.html', {})
+
+            @@include('product-variants.html', {})
+
+            @@include('product-purchase-additions.html', {})
+        </form>
+    </div>
+
+    @@include('product-tabs.html', {})
+
+    @@include('product-series-from-brand.html', {})
+
+    @@include('offers-others-seller.html', {})
+
+    @@include('buy-together.html', {})
+
+    @@include('description.html', {})
+
+    @@include('characteristics.html', {})
+
+    @@include('reviews.html', {})
+
+    @@include('sticky-buy-block.html', {})
+</div>

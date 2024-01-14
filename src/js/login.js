@@ -4,6 +4,7 @@ import intlTelInput from 'intl-tel-input';
 import 'intl-tel-input/build/js/utils';
 import 'intl-tel-input/build/js/intlTelInput';
 import {checkValidForm} from "./common.js";
+import {openPopup} from "./choice-language-and-city.js";
 
 window.addEventListener('load', () => {
     if ($('.phone-countries-js').length) {
@@ -20,7 +21,7 @@ window.addEventListener('load', () => {
         let dataPhones = ['111111111', '222222222', '333333333']
 
         function findPhone(value) {
-           return dataPhones.indexOf(value) !== -1 && true;
+            return dataPhones.indexOf(value) !== -1 && true;
         }
 
         let initialSeconds = 29
@@ -30,11 +31,6 @@ window.addEventListener('load', () => {
 
         let btnEnterText = $('.login__btn').data('text-enter');
         let btnConfirmText = $('.login__btn').data('text-confirm');
-
-        function newCode() {
-            clearInterval(intervalId);
-            showTimer();
-        }
 
         $('.login__change-phone').click(function (e) {
             e.preventDefault();
@@ -58,7 +54,7 @@ window.addEventListener('load', () => {
         }
 
         function resetForm(form) {
-            form.find('input').attr('disabled', 'disabled');
+            form.find('input').attr('disabled', 'disabled').removeClass('valid');
             form.find('.phone-countries-js').removeAttr('disabled').val('');
             form.removeClass('state-code');
             form.find('.btn').text(btnEnterText);
@@ -96,11 +92,12 @@ window.addEventListener('load', () => {
 
             let inputCode = form.find('.form-input__code');
 
-            if (findPhone(inputVal)) {
+            if ($(this).hasClass('error-empty') || $(this).hasClass('error-phone')) return;
+
+            if (findPhone(inputVal) && !$(this).closest('.popup-change-phone').length) {
                 inputPassword.removeAttr('disabled')
                 passwordWrap.slideDown(300);
             } else {
-                if ($(this).hasClass('error-empty')) return;
                 passwordWrap.slideUp(300);
                 inputPassword.attr('disabled', 'disabled');
 
@@ -109,7 +106,7 @@ window.addEventListener('load', () => {
                 inputCode.removeAttr('disabled')
                 form.addClass('state-code');
 
-                if(timerOff) showTimer(form);
+                if (timerOff) showTimer(form);
             }
             $(this).attr('disabled', 'disabled');
 
@@ -121,7 +118,13 @@ window.addEventListener('load', () => {
             let form = $(this).closest('.form-valid-js');
 
             if (checkValidForm(this)) {
-                form.submit();
+                console.log('valid')
+                if ($(this).closest('.popup-change-phone').length) {
+                    $('.close-popup-js').trigger('click');
+                    openPopup('#popup-information-saved');
+                } else {
+                    form.submit();
+                }
             }
         });
     }

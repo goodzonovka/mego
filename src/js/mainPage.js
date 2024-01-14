@@ -10,10 +10,10 @@ window.addEventListener('load', function () {
         modules: [Navigation, EffectFade, Pagination, Autoplay],
         loop: true,
         speed: 1000,
-        // autoplay: {
-        //     delay: 6000,
-        //     pauseOnMouseEnter: true,
-        // },
+        autoplay: {
+            delay: 6000,
+            pauseOnMouseEnter: true,
+        },
         effect: "fade",
         fadeEffect: {
             crossFade: true

@@ -10,6 +10,7 @@ $('.product-item-slider-js').each(function () {
 
     new Swiper(item, {
         loop: true,
+        speed: 600,
     });
 
     let slideInterval;
@@ -17,6 +18,7 @@ $('.product-item-slider-js').each(function () {
 
     if (isDesktop()) {
         $(item).mousemove(function (e) {
+
             let containerWidth = item.offsetWidth;
 
             let mouseX = event.clientX - item.getBoundingClientRect().left;
@@ -52,8 +54,13 @@ $('.product-item-slider-js').each(function () {
             directionLeft = false;
             directionRight = false;
         });
+
+        // $('.compare-js, .wishlist-js').mousemove(function (e) {
+        //     e.stopPropagation();
+        // })
     }
 });
+
 function prevSlide(item) {
     let mySwiper = item.swiper;
     mySwiper.slidePrev();
@@ -88,7 +95,7 @@ $(document).mouseup(function (e) {
     let tooltipDropdown = $('.tooltip-dropdown-js'),
         tooltipBtn = $('.tooltip-btn-js');
 
-    if ( !tooltipDropdown.is(e.target) && tooltipDropdown.has(e.target).length === 0 &&
+    if (!tooltipDropdown.is(e.target) && tooltipDropdown.has(e.target).length === 0 &&
         !tooltipBtn.is(e.target) && tooltipBtn.has(e.target).length === 0
     ) {
         tooltipBtn.removeClass('active');
@@ -125,7 +132,7 @@ btnReadMore.click(function () {
 
 /* кнопка вверх */
 let buttonToTop = $('#button-to-top');
-$(window).scroll(function() {
+$(window).scroll(function () {
 
     if ($(this).scrollTop() > 600) {
         buttonToTop.addClass('active');
@@ -135,7 +142,7 @@ $(window).scroll(function() {
 });
 
 buttonToTop.click(function () {
-    $('html, body').animate({ scrollTop: 0 }, 0);
+    $('html, body').animate({scrollTop: 0}, 0);
     return false;
 });
 /* end кнопка вверх */
@@ -172,12 +179,13 @@ function setActiveLink(e) {
 }
 
 function closingSelectDropdownOutside(e) {
-    if ( !selectDropdown.is(e.target) && selectDropdown.has(e.target).length === 0 &&
+    if (!selectDropdown.is(e.target) && selectDropdown.has(e.target).length === 0 &&
         !selectButton.is(e.target) && selectButton.has(e.target).length === 0
     ) {
         selectDropdown.fadeOut(300);
     }
 }
+
 /* end select */
 
 
@@ -243,9 +251,9 @@ export function checkValidForm(btn) {
         if ($(this).val() === '') $(this).addClass('error-empty');
     })
 
-    if (form.find('.form-input-required-js:not([disabled]):not(.valid)').length) {
+    if (form.find('input.error-empty:not([disabled]), input.error-phone:not([disabled]), input.error-email:not([disabled])').length) {
         if (!form.hasClass('no-scroll-to-error')) {
-            form.find('.form-input-required-js:not([disabled]):not(.valid)').each(function () {
+            form.find('input.error-empty:not([disabled]), input.error-phone:not([disabled]), input.error-email:not([disabled])').each(function () {
                 $('html, body').animate({
                     scrollTop: $(this).offset().top - 100
                 }, 0);

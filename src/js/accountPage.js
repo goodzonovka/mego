@@ -8,15 +8,15 @@ let inputPassword = $('#password');
 let inputRepeatPassword = $('#repeatPassword');
 
 
-editInput.click(function () {
-    let input = $(this).siblings('input');
-
-    if (input.attr('disabled')) {
-        input.removeAttr('disabled');
-    } else {
-        input.attr('disabled', 'disabled');
-    }
-})
+// editInput.click(function () {
+//     let input = $(this).siblings('input');
+//
+//     if (input.attr('disabled')) {
+//         input.removeAttr('disabled');
+//     } else {
+//         input.attr('disabled', 'disabled');
+//     }
+// })
 
 inputPassword.on('input blur', function () {
 

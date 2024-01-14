@@ -78,7 +78,7 @@
 
 
     @media (max-width: $device) {
-        &.hide-header {
+        &.hide-header:not(.show-search) {
             top: -53px;
             //top: -152px;
         }

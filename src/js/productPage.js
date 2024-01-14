@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         $('.product-variants-tabs__tab').click(function () {
+            if ($(this).attr('href')) return;
             let target = $(this).data('target');
 
             $('.product-variants-tabs__tab, .product-variants__inner').removeClass('active');
@@ -80,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
         $('.product-variants__variant-color').mouseenter(function (e) {
              e.preventDefault();
 
-             let target = $(this).data('image');
+             let target = $(this).attr('href');
 
              if (target) {
 
