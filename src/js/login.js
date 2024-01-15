@@ -55,7 +55,9 @@ window.addEventListener('load', () => {
 
         function resetForm(form) {
             form.find('input').attr('disabled', 'disabled').removeClass('valid');
-            form.find('.phone-countries-js').removeAttr('disabled').val('');
+            form.find('input').val('');
+            form.find('.phone-countries-js').removeAttr('disabled');
+            form.find('.form-input-change-email').removeAttr('disabled');
             form.removeClass('state-code');
             form.find('.btn').text(btnEnterText);
             resetTimer();
@@ -109,8 +111,22 @@ window.addEventListener('load', () => {
                 if (timerOff) showTimer(form);
             }
             $(this).attr('disabled', 'disabled');
-
         })
+
+        $('.form-input-change-email').on('blur', function () {
+            let form = $(this).closest('.form-valid-js');
+            let inputCode = form.find('.form-input__code');
+            let btn = form.find('.login__btn');
+
+            if ($(this).hasClass('error-empty') || $(this).hasClass('error-email')) return;
+
+            btn.text(btnConfirmText);
+            inputCode.removeAttr('disabled')
+            form.addClass('state-code');
+
+            if (timerOff) showTimer(form);
+            $(this).attr('disabled', 'disabled');
+        });
 
         $('.login__btn').click(function (e) {
             e.preventDefault();
@@ -118,14 +134,23 @@ window.addEventListener('load', () => {
             let form = $(this).closest('.form-valid-js');
 
             if (checkValidForm(this)) {
-                console.log('valid')
                 if ($(this).closest('.popup-change-phone').length) {
+
                     $('.close-popup-js').trigger('click');
-                    openPopup('#popup-information-saved');
+
+                    setTimeout(function () {
+                        openPopup('#popup-information-saved');
+                        resetForm(form);
+                    }, 600);
+
                 } else {
                     form.submit();
                 }
             }
+        });
+
+        $('.popup-login .popup-bg-js, .popup-login .close-popup-js').click(function () {
+            resetForm($('.popup-login .form-valid-js'));
         });
     }
 });

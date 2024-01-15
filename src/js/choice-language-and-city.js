@@ -56,7 +56,6 @@ inputChoiceCity.on('input', function () {
 $('.popup-bg-js, .close-popup-js').click(function () {
     $('.popup').removeClass('active');
     $('body').removeClass('overflow-hidden');
-
 });
 
 /* end popup выбор языка сайта и города */

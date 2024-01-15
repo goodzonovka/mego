@@ -3,7 +3,7 @@ import Swiper from "swiper";
 import {Navigation, Pagination, FreeMode, Thumbs} from "swiper/modules";
 import Countdown from 'countdown-js';
 import {isDesktop, isDevice} from "./functions.js";
-import { Fancybox } from "@fancyapps/ui";
+import {Fancybox} from "@fancyapps/ui";
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -78,21 +78,47 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        $('.product-variants__variant-color').mouseenter(function (e) {
-             e.preventDefault();
+        if (isDesktop()) {
+            $('.product-variants__variant-color').mouseenter(function (e) {
+                e.preventDefault();
 
-             let target = $(this).attr('href');
+                let imageUrl = $(this).data('image');
 
-             if (target) {
+                if (imageUrl) {
+                    $('.product__image-preloader-wrap').addClass('active');
 
-                 $('.product-slider__active-color-img img').attr('src', target);
-                 $('.product-slider__active-color-img').addClass('active');
-             }
-        }).mouseleave(function () {
-            $('.product-slider__active-color-img').removeClass('active');
-        }).click(function (e) {
+                    let img = new Image();
 
-        });
+                    // Устанавливаем обработчик события загрузки изображения
+                    img.onload = function () {
+                        // Показываем контейнер с изображением
+                        $('.product-slider__active-color-img').addClass('active');
+
+                        // Устанавливаем src изображения
+                        $('.product-slider__active-color-img img').attr('src', imageUrl);
+
+                        setTimeout(function () {
+                            $('.product__image-preloader-wrap').removeClass('active');
+                        }, 600);
+                    };
+
+                    img.src = imageUrl;
+
+                    if (img.complete) {
+                        // Показываем контейнер с изображением
+                        $('.product-slider__active-color-img').addClass('active');
+
+                        // Устанавливаем src изображения
+                        $('.product-slider__active-color-img img').attr('src', imageUrl);
+
+                        $('.product__image-preloader-wrap').removeClass('active');
+                    }
+                }
+
+            }).mouseleave(function () {
+                $('.product-slider__active-color-img').removeClass('active');
+            });
+        }
 
         Fancybox.bind("[data-fancybox]", {
             Images: {

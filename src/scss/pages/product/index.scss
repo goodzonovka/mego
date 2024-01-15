@@ -49,6 +49,51 @@
     &__right {
         margin-top: 24px;
     }
+    &__image-preloader {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        &-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background-color: $white;
+            visibility: hidden;
+            opacity: 0;
+            //transition: opacity .3s;
+            &.active {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 8px solid $blue-700;
+            border-radius: 50%;
+            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: $blue-700 transparent transparent transparent;
+        }
+        div:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+        div:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+        div:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+    }
     @media (max-width: $mobile) {
         &-page-wrap .button-to-top.notification-is-active {
             bottom: 186px;

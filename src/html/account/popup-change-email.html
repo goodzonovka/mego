@@ -5,15 +5,35 @@
 
         <div class="login__text">Amet ac augue donec aliquam risus turpis nunc. Dolor tincidunt.</div>
 
-        <form action="" class="form-valid-js no-scroll-to-error">
+        <form action="" class="form-valid-js login__form no-scroll-to-error">
 
             <div class="form-group">
-                <input type="text" class="form-input form-input-required-js form-input-email-js" placeholder="Email">
+                <input type="text" class="form-input form-input-required-js form-input-change-email form-input-email-js" placeholder="Email">
                 <span class="error-text error-empty">Это обязательное поле</span>
                 <span class="error-text error-email">Некорректный email</span>
             </div>
 
-            <button class="btn login__btn btn-full-width btn-green">
+            <div class="login__code">
+                <div class="form-group">
+                    <div class="form-group-title">Проверочный код</div>
+                    <input type="password" class="form-input form-input__code form-input-required-js" autocomplete="new-password" disabled>
+                    <span class="error-text error-empty">Это обязательное поле</span>
+                </div>
+                <div class="login__code-timer">
+                    <svg width="16" height="16" class="login__spinner">
+                        <use href="images/icons/icons.svg#spinner"></use>
+                    </svg>
+                    <span class="timer-value"></span>
+                </div>
+            </div>
+
+            <div class="login__buttons">
+                <a href="#" class="login__request-new-code">Запросить новый код</a>
+                <a href="#" class="login__change-phone">Изменить email</a>
+            </div>
+
+            <button class="btn login__btn btn-full-width btn-green" data-text-save="Сохранить"
+                    data-text-confirm="Подтвердить">
                 Сохранить
             </button>
         </form>
