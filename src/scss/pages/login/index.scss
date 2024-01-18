@@ -36,6 +36,9 @@
             margin-left: 1.5rem;
             font-size: 1rem;
             line-height: 1.5rem;
+            &.stop-animate .login__spinner {
+                animation: initial;
+            }
             svg {
                 margin-right: .5rem;
             }
@@ -73,6 +76,9 @@
                 color: $dark-900;
             }
         }
+    }
+    &__request-new-code {
+        display: none;
     }
     &__or {
         margin-top: 23px;

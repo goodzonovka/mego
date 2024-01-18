@@ -34,7 +34,7 @@ const scss = (isBuild) => {
 		.pipe(plugins.if(isBuild, postcss([autoprefixer(), postcssPresetEnv()])))
 
 		/** Раскомментировать если нужен не сжатый дубль файла стилей */
-		// .pipe(gulp.dest(filePaths.build.css))
+		.pipe(gulp.dest(filePaths.build.css))
 
 		.pipe(plugins.if(isBuild, cleanCss()))
 		.pipe(rename({extname: '.min.css'}))

@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
             return dataPhones.indexOf(value) !== -1 && true;
         }
 
-        let initialSeconds = 29
+        let initialSeconds = 29;
         let startSeconds = initialSeconds;
         let timerOff = true;
         let intervalId;
@@ -43,24 +43,28 @@ window.addEventListener('load', () => {
             e.preventDefault();
             let form = $(this).closest('.form-valid-js');
 
-            resetTimer();
+            $(this).hide();
+
+            resetTimer(form);
             showTimer(form);
         })
 
-        function resetTimer() {
+        function resetTimer(form) {
+            form.find('.login__code-timer').removeClass('stop-animate');
             clearInterval(intervalId);
             startSeconds = initialSeconds;
             timerOff = true;
         }
 
         function resetForm(form) {
+            form.find('.login__request-new-code').hide();
             form.find('input').attr('disabled', 'disabled').removeClass('valid');
             form.find('input').val('');
             form.find('.phone-countries-js').removeAttr('disabled');
             form.find('.form-input-change-email').removeAttr('disabled');
             form.removeClass('state-code');
             form.find('.btn').text(btnEnterText);
-            resetTimer();
+            resetTimer(form);
         }
 
         function showTimer(form) {
@@ -69,7 +73,9 @@ window.addEventListener('load', () => {
             intervalId = setInterval(function () {
                 if (startSeconds < 0) {
                     clearInterval(intervalId);
-                    resetForm(form);
+                    form.find('.login__request-new-code').show();
+                    $('.login__code-timer').addClass('stop-animate');
+                    // resetForm(form);
                     return;
                 }
 
