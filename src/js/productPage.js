@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
         let btnReviewsMoreReviews = $('.product-reviews-more-reviews-js')
 
         let responseAuthorScroll = $('.in-response-js');
-        let productsTabs = $('.product-tabs-js');
         let btnToBasket = $('.btn-to-basket');
         let amount = $('.product-amount-js');
         let btnBasketLink = $('.btn-basket-link-js');
@@ -142,11 +141,16 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         });
 
+        let allowTouchMove = true
+        if (isDesktop()) {
+            allowTouchMove = false;
+        }
         // главный слайдер
         let productMainSlider = new Swiper('.product-slider-big-images-js', {
             modules: [Thumbs, Pagination],
             slidesPerView: 1,
             loop: true,
+            allowTouchMove: allowTouchMove,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -155,6 +159,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 swiper: productSliderThumbs,
             },
         });
+
+        let thumbsItems = document.querySelectorAll('.product-slider-thumbnail-js .swiper-slide');
+
+        thumbsItems.forEach(function (item, index) {
+            item.addEventListener('mouseenter', function () {
+                changeMainSlide(index);
+            });
+        });
+
+        // Функция для изменения активного слайда в обоих слайдерах
+        function changeMainSlide(index) {
+            productMainSlider.slideTo(index);
+            // productSliderThumbs.slideTo(index);
+        }
 
         // let time = 1000 * 60 * 60 * 24 * 3
         let time = 1000 * 60 * 60 * 36
@@ -217,17 +235,19 @@ document.addEventListener("DOMContentLoaded", function () {
             let target = $(this).data('target');
 
             productTabs.removeClass('active');
-            $(this).addClass('active');
+            $(`.product-tab-js[data-target='${target}']`).addClass('active');
+            $('.btn-read-more-js.active').trigger('click');
 
             // scroll к блокам
             let headerHeight = $('.header').outerHeight();
             let paddingTop = 16;
             let newScrollTopValue;
+
             if (isDevice()) {
-                let productTabsHeight = productsTabs.outerHeight();
-                newScrollTopValue = $(target).offset().top - headerHeight - paddingTop - productTabsHeight;
+                let productTabsHeight = $('.product-tabs-slider-js').outerHeight();
+                newScrollTopValue = $(target).offset().top - 53 - productTabsHeight;
             } else {
-                let productHeaderFixed = $('.product-header-wrap').outerHeight();
+                let productHeaderFixed = 110;
                 newScrollTopValue = $(target).offset().top - headerHeight - productHeaderFixed - paddingTop;
             }
 
@@ -235,15 +255,59 @@ document.addEventListener("DOMContentLoaded", function () {
                 scrollTop: newScrollTopValue
             }, 0);
 
+            if ($(target).find('.btn-read-more-js').length) {
+                $(target).find('.btn-read-more-js').trigger('click');
+            }
+
             if ($(this).attr('data-target-tab')) {
                 let targetTab = $(this).data('target-tab');
                 $(`[data-target='${targetTab}']`).trigger('click');
             }
         }
 
+        $(window).scroll(function () {
+            // Получение текущей позиции скролла
+            var scrollPosition = $(window).scrollTop();
+
+            // Перебор каждого блока и проверка его положения
+            $('.product-tab-content').each(function () {
+                var targetId = $(this).attr('id');
+                var targetTop = $(this).offset().top;
+                var targetBottom = targetTop + $(this).outerHeight();
+
+                console.log('q1')
+                // Проверка, находится ли блок в зоне видимости
+                let conditionForScroll = scrollPosition + $('.header').outerHeight() + $('.product-header-wrap.fixed').outerHeight() + 80 >= targetTop;
+
+                if (isDevice()) {
+                    conditionForScroll = scrollPosition + 64 + $('.product-tabs-slider-js').outerHeight() >= targetTop;
+                }
+
+                if (conditionForScroll) {
+                    $('.product-tab-js').removeClass('active');
+                    if (targetId === 'product-reviews') {
+                        let activeTabTarget = $(this).find('.tab.active').data('target');
+
+                        $('.tab[data-target-tab="' + activeTabTarget + '"]').addClass('active');
+                    } else {
+                        $('.tab[data-target="#' + targetId + '"]').addClass('active');
+                    }
+                }
+            });
+        });
+
         btnMoreOffers.click(function () {
-            $('.offers-others-seller').addClass('active');
-            $(this).hide();
+            let dataShowText = $(this).data('text-show');
+            let dataHideText = $(this).data('text-hide');
+
+            $('.offers-others-seller').toggleClass('active');
+            $(this).toggleClass('active');
+
+            if ($(this).hasClass('active')) {
+                $(this).text(dataHideText);
+            } else {
+                $(this).text(dataShowText);
+            }
         });
 
 
@@ -274,13 +338,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // reviews: больше отзывов
         btnReviewsMoreAnswers.click(function () {
-            $(this).closest('.product-reviews__item').addClass('active');
-            $(this).hide();
+            let dataShowText = $(this).data('text-show');
+            let dataHideText = $(this).data('text-hide');
+
+            $(this).closest('.product-reviews__item').toggleClass('active');
+
+            $(this).toggleClass('active');
+
+            if ($(this).hasClass('active')) {
+                $(this).text(dataHideText);
+            } else {
+                $(this).text(dataShowText);
+            }
         })
 
         btnReviewsMoreReviews.click(function () {
-            $('.product-reviews__list').addClass('active');
-            $(this).hide();
+            let dataShowText = $(this).data('text-show');
+            let dataHideText = $(this).data('text-hide');
+
+            $('.product-reviews__list').toggleClass('active');
+
+            $(this).toggleClass('active');
+
+            if ($(this).hasClass('active')) {
+                $(this).text(dataHideText);
+            } else {
+                $(this).text(dataShowText);
+            }
         })
 
         responseAuthorScroll.click(function () {

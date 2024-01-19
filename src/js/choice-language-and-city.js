@@ -6,6 +6,11 @@ import $ from "jquery";
 $('.open-popup-js').click(function (e) {
     e.preventDefault();
     let target = $(this).data('target');
+    let state = $(this).data('state');
+
+    if (state) {
+        $(target).attr('data-state', state);
+    }
 
     openPopup(target);
 });
@@ -56,6 +61,10 @@ inputChoiceCity.on('input', function () {
 $('.popup-bg-js, .close-popup-js').click(function () {
     $('.popup').removeClass('active');
     $('body').removeClass('overflow-hidden');
+
+    setTimeout(function () {
+        $('.popup').removeAttr('data-state')
+    }, 300);
 });
 
 /* end popup выбор языка сайта и города */

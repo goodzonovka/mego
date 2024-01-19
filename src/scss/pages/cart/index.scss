@@ -6,8 +6,15 @@
 
 .cart {
     &-page-wrap {
-        &.cart-is-active .wrapper {
-            padding-bottom: 126px;
+        &.cart-is-active {
+            .wrapper {
+                padding-bottom: 126px;
+            }
+            @media (max-width: $device) {
+                .button-to-top {
+                    bottom: 156px;
+                }
+            }
         }
         .wrapper {
             padding-bottom: 0;

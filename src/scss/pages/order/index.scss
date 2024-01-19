@@ -6,6 +6,11 @@
         .fixed-menu {
             display: none;
         }
+        @media (max-width: $device) {
+            .button-to-top {
+                bottom: 156px;
+            }
+        }
     }
     &-page {
         .cart-order-block {
@@ -191,6 +196,7 @@
                 color: $dark-600;
                 background-color: $dark-100;
                 transition: all .3s;
+                user-select: none;
                 &:hover {
                     color: $dark-900;
                     background-color: $white;

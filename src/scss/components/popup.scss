@@ -121,6 +121,9 @@
 }
 
 .popup.popup-change-phone {
+    &.active-dropdown .inner {
+        height: 420px;
+    }
     .inner {
         padding-top: 2rem;
     }
@@ -152,6 +155,19 @@
 }
 
 .popup-choice-language-and-city {
+    &[data-state="no-languages"] .choice-language {
+        display: none;
+        & ~ .choice-city {
+            margin-top: 0;
+            .title {
+                padding-top: 6px;
+                margin-bottom: 2rem;
+                @media (min-width: 1200px) {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
     .choice-language {
         .list {
             display: flex;

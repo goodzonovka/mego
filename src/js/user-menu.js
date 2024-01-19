@@ -18,8 +18,6 @@ userMenuBtn.click(function () {
     if (isMobile() || (isDesktop() && $(this).hasClass('is-authorized'))) {
         userMenu.toggleClass('active');
         $('body').addClass('overflow-hidden');
-    } else {
-        openPopup('#popup-login');
     }
 });
 
@@ -38,6 +36,7 @@ if (isDesktop()) {
             !userMenuBtn.is(e.target) && userMenuBtn.has(e.target).length === 0
         ) {
             userMenu.removeClass('active');
+            $('body').removeClass('overflow-hidden');
         }
     });
 }

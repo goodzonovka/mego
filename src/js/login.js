@@ -5,6 +5,7 @@ import 'intl-tel-input/build/js/utils';
 import 'intl-tel-input/build/js/intlTelInput';
 import {checkValidForm} from "./common.js";
 import {openPopup} from "./choice-language-and-city.js";
+import {isDesktop, isMobile} from "./functions.js";
 
 window.addEventListener('load', () => {
     if ($('.phone-countries-js').length) {
@@ -17,6 +18,19 @@ window.addEventListener('load', () => {
                 separateDialCode: true,
             });
         })
+
+        if (isDesktop() && $('#input-change-phone').length) { 
+            let inputChangePhone = document.querySelector("#input-change-phone");
+
+            inputChangePhone.addEventListener("open:countrydropdown", function () {
+                // do something with iti.getSelectedCountryData()
+                $('#popup-change-phone').addClass('active-dropdown');
+            });
+            inputChangePhone.addEventListener("close:countrydropdown", function () {
+                // do something with iti.getSelectedCountryData()
+                $('#popup-change-phone').removeClass('active-dropdown');
+            });
+        }
 
         let dataPhones = ['111111111', '222222222', '333333333']
 
@@ -31,6 +45,13 @@ window.addEventListener('load', () => {
 
         let btnEnterText = $('.login__btn').data('text-enter');
         let btnConfirmText = $('.login__btn').data('text-confirm');
+
+        $('.open-user-menu-js').click(function () {
+            if (!isMobile() && !(isDesktop() && $(this).hasClass('is-authorized'))) {
+                resetForm($('.login__form'));
+                openPopup('#popup-login');
+            }
+        })
 
         $('.login__change-phone').click(function (e) {
             e.preventDefault();

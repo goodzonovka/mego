@@ -22,7 +22,7 @@
         line-height: 1.5rem;
         font-weight: 500;
         color: $dark-600;
-        &:hover, &.active {
+        &.active {
             color: $dark-900;
             box-shadow: inset 0 -5px 0 -2px $cyan-500;
         }
@@ -33,6 +33,10 @@
         width: 100%;
         .tab {
             padding: 10px 16.3px 12px;
+            &:hover {
+                color: $dark-900;
+                box-shadow: inset 0 -5px 0 -2px $cyan-500;
+            }
         }
     }
 }

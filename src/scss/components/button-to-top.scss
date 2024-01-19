@@ -16,9 +16,6 @@
         visibility: visible;
         opacity: 1;
     }
-    &:hover {
-        background-color: $cyan-300;
-    }
     @media (max-width: $mobile) {
         &.notification-is-active {
             bottom: 136px;
@@ -29,6 +26,9 @@
         height: 48px;
         right: 16px;
         bottom: 30px;
+        &:hover {
+            background-color: $cyan-300;
+        }
         svg {
             width: 20px;
             height: 20px;

@@ -37,7 +37,7 @@ window.addEventListener('load', function () {
         slidesPerGroup: 2,
         spaceBetween: 16,
         autoplay: {
-            delay: 2000,
+            delay: 4000,
             pauseOnMouseEnter: true,
         },
         pagination: {

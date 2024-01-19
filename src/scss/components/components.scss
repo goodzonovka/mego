@@ -503,6 +503,8 @@
 .amount {
     display: flex;
     height: 38px;
+    border: 1px solid $dark-300;
+    border-radius: .5rem;
     &__minus, &__plus {
         display: flex;
         justify-content: center;
@@ -510,7 +512,6 @@
         width: 42px;
         height: 100%;
         color: $dark-400;
-        border: 1px solid $dark-300;
         cursor: pointer;
         &:hover {
             color: $cyan-500;
@@ -519,22 +520,13 @@
             transition: color .3s;
         }
     }
-    &__minus {
-        border-right: none;
-        border-radius: .5rem 0 0 .5rem;
-    }
-    &__plus {
-        border-left: none;
-        border-radius: 0 .5rem .5rem 0;
-    }
     &__input {
         width: 79.5px;
         height: 100%;
         text-align: center;
         font-size: 1rem;
         font-weight: 500;
-        border-top: 1px solid $dark-300;
-        border-bottom: 1px solid $dark-300;
+        border: none;
     }
     @media (min-width: $tv) {
         height: 52px;
@@ -546,12 +538,7 @@
         }
     }
     @media (min-width: $ds) {
-        &__minus {
-            border-radius: .75rem 0 0 .75rem;
-        }
-        &__plus {
-            border-radius: 0 .75rem .75rem 0;
-        }
+       border-radius: .75rem;
     }
 }
 

@@ -85,7 +85,7 @@ function closingBySwipe(e) {
     let currentX = e.originalEvent.touches[0].pageX;
     let distance = currentX - startX;
 
-    if (distance > 100) {
+    if (distance > 100 && !$(e.target).closest('.slider').length) {
         filter.removeClass('active');
         $('body').removeClass('overflow-hidden');
     }

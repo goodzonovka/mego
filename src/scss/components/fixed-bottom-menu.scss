@@ -10,7 +10,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 8px 0;
+        padding: 8px 0 11px;
         font-size: 10px;
         line-height: 16px;
         color: $white;
@@ -23,7 +23,7 @@
         padding: 2px 4px;
         color: rgba(255,255,255,.8);
         border-radius: 8px;
-        &.active, &:hover {
+        &.active {
             color: #fff;
             background-color: #702D72;
         }

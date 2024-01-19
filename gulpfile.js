@@ -20,7 +20,7 @@ import { ftpDeploy } from './gulp/tasks/ftpDeploy.js';
 const isBuild = process.argv.includes('--build');
 const handleHTML = html.bind(null, true);
 const handleSCSS = scss.bind(null, true);
-const handleJS = javaScript.bind(null, !isBuild);
+const handleJS = javaScript.bind(null, isBuild);
 const handleImages = images.bind(null, true);
 
 /**

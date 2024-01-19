@@ -150,18 +150,18 @@
                 margin-left: 2rem;
             }
         }
-    }
-    &-bottom {
-        padding-top: 64px;
-        .list {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -16px -32px;
-            .item {
-                width: calc(33.33% - 32px);
-                margin: 0 16px 32px;
-                &:first-child {
-                    padding: 1.5rem;
+        &-bottom {
+            padding-top: 64px;
+            .list {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -16px -32px;
+                .item {
+                    width: calc(33.33% - 32px);
+                    margin: 0 16px 32px;
+                    &:first-child {
+                        padding: 1.5rem;
+                    }
                 }
             }
         }

@@ -14,6 +14,12 @@ h2, .section-title {
         transition: none;
         border-radius: 8px;
         overflow: hidden;
+        &:has(.product-item__slider) {
+            overflow: visible;
+            .product-item__slider {
+                overflow: hidden;
+            }
+        }
         &:hover img {
             transform: scale(1.05);
         }
@@ -26,6 +32,21 @@ h2, .section-title {
     }
     &__slider {
         display: block;
+    }
+    .swiper-pagination {
+        position: absolute;
+        top: 100%;
+        margin: -12px 0 -4px;
+        &-bullet {
+            width: 6px;
+            height: 6px;
+            margin: 0 2px 4px!important;
+            background-color: #d0d5dd;
+            border-radius: 4px;
+        }
+        @media (min-width: $ds) {
+            margin-top: 6px;
+        }
     }
 
     .icons-list {
@@ -167,7 +188,7 @@ h2, .section-title {
             transition: background-color .3s, color .3s;
         }
         .compare, .wishlist {
-            &:hover, &.active {
+            &.active {
                 color: $error-500;
             }
         }
@@ -175,9 +196,6 @@ h2, .section-title {
             margin-left: auto;
             background-color: $cyan-500;
             border-radius: 8px;
-            &:hover {
-                background-color: $cyan-300;
-            }
             &-text {
                 display: none;
             }
@@ -270,6 +288,7 @@ h2, .section-title {
                 border-radius: 8px;
 
                 &.active, &:hover {
+                    color: $error-500;
                     background: rgba(255, 255, 255, 0.8);
                 }
             }
@@ -281,6 +300,10 @@ h2, .section-title {
 
             .wishlist {
                 top: 20px;
+            }
+
+            .buy:hover {
+                background-color: $cyan-300;
             }
         }
     }

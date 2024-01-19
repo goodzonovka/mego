@@ -7,12 +7,12 @@ export const webpackConfig = (isMinify) => {
   };
 
   const optimization = isMinify
-      ? { minimize: true }
-      : { minimize: false };
+      ? { minimize: false }
+      : { minimize: true };
 
   return {
     entry: path.join(paths.src, 'js/app.js'),
-    mode: 'production',
+    mode: isMinify ? 'development' : 'production',
     output: {
       path: path.join(paths.build, 'js'),
       filename: isMinify ? 'app.min.js' : 'app.js',

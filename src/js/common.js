@@ -2,6 +2,7 @@ import $ from "jquery";
 import MatchHeight from 'matchheight';
 import {isDesktop, isDevice} from "./functions.js";
 import Swiper from "swiper";
+import {Pagination} from "swiper/modules";
 
 new MatchHeight('.product-item .price-block');
 
@@ -9,8 +10,13 @@ $('.product-item-slider-js').each(function () {
     let item = this;
 
     new Swiper(item, {
+        modules: [Pagination],
         loop: true,
         speed: 600,
+        pagination: {
+            el: $(item).siblings('.swiper-pagination')[0],
+            clickable: true,
+        },
     });
 
     let slideInterval;
@@ -198,6 +204,10 @@ let inputEmail = $('.form-input-email-js');
 let phonePattern = /^(\+)?[\d\s\(\)\-]+$/;
 let additionalPhonePattern = /^(\+)?[\d\s\(\)\-]*$/;
 let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+$('input[type=number]').on('input', function (event) {
+    this.value = this.value.replace(/e/gi, '');
+});
 
 inputRequired.on('input blur', function () {
     let inputVal = $(this).val();

@@ -136,12 +136,7 @@
         }
         .amount {
             order: -1;
-            &__minus {
-                border-radius: .5rem 0 0 .5rem;
-            }
-            &__plus {
-                border-radius: 0 .5rem .5rem 0;
-            }
+            border-radius: .5rem;
         }
         .price-block {
             margin-top: 9px;

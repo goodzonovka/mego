@@ -20,6 +20,9 @@
         .wrapper {
             padding-bottom: 114px;
         }
+        .fancybox__backdrop {
+            background-color: rgba(255,255,255,.9);
+        }
         @media (max-width: $device) {
             .button-to-top, .notification {
                 bottom: 129px;
