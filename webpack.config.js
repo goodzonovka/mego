@@ -7,8 +7,8 @@ export const webpackConfig = (isMinify) => {
   };
 
   const optimization = isMinify
-      ? { minimize: false }
-      : { minimize: true };
+      ? { minimize: true }
+      : { minimize: false };
 
   return {
     entry: path.join(paths.src, 'js/app.js'),
