@@ -267,15 +267,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         $(window).scroll(function () {
             // Получение текущей позиции скролла
-            var scrollPosition = $(window).scrollTop();
+            let scrollPosition = $(window).scrollTop();
 
             // Перебор каждого блока и проверка его положения
             $('.product-tab-content').each(function () {
-                var targetId = $(this).attr('id');
-                var targetTop = $(this).offset().top;
-                var targetBottom = targetTop + $(this).outerHeight();
+                let targetId = $(this).attr('id');
+                let targetTop = $(this).offset().top;
 
-                console.log('q1')
                 // Проверка, находится ли блок в зоне видимости
                 let conditionForScroll = scrollPosition + $('.header').outerHeight() + $('.product-header-wrap.fixed').outerHeight() + 80 >= targetTop;
 
@@ -383,9 +381,11 @@ document.addEventListener("DOMContentLoaded", function () {
             $('.product-reviews__tabs .tab').removeClass('active');
             $(this).addClass('active')
 
+            productTabs.removeClass('active');
+            $(`.product-tab-js[data-target-tab='${target}']`).addClass('active');
+
             $('.product-reviews__list').removeClass('open');
             $(target).addClass('open');
-
         })
 
 

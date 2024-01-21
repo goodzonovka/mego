@@ -17,15 +17,48 @@
 
 .product {
     &-page-wrap {
-        .wrapper {
-            padding-bottom: 114px;
+        &:has(.fancybox__container.is-closing) {
+            margin-right: 0;
+            overflow: visible !important;
+        }
+        .fancybox__container.is-closing .fancybox__carousel {
+            display: none;
         }
         .fancybox__backdrop {
-            background-color: rgba(255,255,255,.9);
+            background-color: #0F1111;
+            opacity: .5;
+        }
+        .fancybox__carousel {
+            background-color: $white;
+            //border: 1px solid #D5D9D9;
+            //box-shadow: 0 0 14px 0 rgba(15,17,17,.5);
+        }
+        .fancybox__footer {
+            background: $white;
+        }
+        .wrapper {
+            padding-bottom: 114px;
         }
         @media (max-width: $device) {
             .button-to-top, .notification {
                 bottom: 129px;
+            }
+        }
+        @media (min-width: $ds) {
+            .fancybox__carousel {
+                margin: 4rem 4rem 0;
+                border-radius: .5rem .5rem 0 0;
+            }
+            .fancybox__toolbar {
+                top: 4rem;
+                left: 4rem;
+                right: 4rem;
+                border-radius: 0 .5rem 0 0;
+                overflow: hidden;
+            }
+            .fancybox__footer {
+                margin: 0 4rem 4rem;
+                border-radius: 0 0 .5rem .5rem;
             }
         }
     }

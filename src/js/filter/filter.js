@@ -46,9 +46,9 @@ btnOpenFilter.click(openFilter);
 btnCloseFilter.click(closeFilter);
 
 // закрытие по touch событию вправо
-filter.on('touchstart', getStartX);
-
-filter.on('touchmove', closingBySwipe);
+// filter.on('touchstart', getStartX);
+//
+// filter.on('touchmove', closingBySwipe);
 
 // раскрыть/скрыть бренды
 btnBrandsViewAll.click(brandsViewAll);

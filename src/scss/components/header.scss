@@ -36,15 +36,33 @@
 
         &-user {
             width: 38px;
-
             &.is-authorized {
-                &:hover img {
-                    opacity: .8;
+                width: auto;
+                color: $cyan-500;
+                &:hover {
+                    color: $cyan-300;
+                    img {
+                        opacity: .8;
+                    }
                 }
 
                 img {
                     transition: all .3s;
                 }
+            }
+            .icon {
+                position: relative;
+            }
+            .counter {
+                right: -10px;
+                top: -7px;
+            }
+            &-name {
+                white-space: nowrap;
+                max-width: 60px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
         }
     }
@@ -150,8 +168,8 @@
                 width: auto;
                 margin-right: 0;
                 .counter {
-                    right: 4px;
-                    top: -4px;
+                    right: -6px;
+                    top: -8px;
                 }
             }
 
@@ -161,7 +179,7 @@
             }
 
             &.cart .counter {
-                right: 7px;
+                right: 6px;
                 top: -6px;
             }
         }

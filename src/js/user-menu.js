@@ -17,7 +17,9 @@ if (isDesktop()) {
 userMenuBtn.click(function () {
     if (isMobile() || (isDesktop() && $(this).hasClass('is-authorized'))) {
         userMenu.toggleClass('active');
-        $('body').addClass('overflow-hidden');
+        if (isMobile()) {
+            $('body').addClass('overflow-hidden');
+        }
     }
 });
 
@@ -34,9 +36,9 @@ if (isDesktop()) {
     $(document).mouseup(function (e) {
         if (!userMenu.is(e.target) && userMenu.has(e.target).length === 0 &&
             !userMenuBtn.is(e.target) && userMenuBtn.has(e.target).length === 0
+            && userMenu.hasClass('active')
         ) {
             userMenu.removeClass('active');
-            $('body').removeClass('overflow-hidden');
         }
     });
 }
