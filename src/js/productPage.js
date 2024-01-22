@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let productStickyBuyBlockInner = $('.product-sticky-buy-block .inner');
 
 
+
         // перенос цены и корзины в фиксированную шапку товара и в блок purchase
         // в зависимости от скролла
         if (isDesktop()) {
@@ -222,20 +223,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // слайдер табов
+        let productTabsSwiper;
         if (isDevice()) {
-            new Swiper('.product-tabs-slider-js', {
+                productTabsSwiper = new Swiper('.product-tabs-slider-js', {
                 modules: [FreeMode],
                 slidesPerView: "auto",
-                freeMode: true,
             });
         }
 
         // клик по табу
         productTabs.mousedown(changeTab);
 
+        let disableSwiperScroll = false;
 
         function changeTab(e) {
             e.preventDefault();
+            disableSwiperScroll = true;
 
             let target = $(this).data('target');
 
@@ -260,6 +263,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 scrollTop: newScrollTopValue
             }, 0);
 
+            setTimeout(function () {
+                disableSwiperScroll = false;
+            }, 600)
+
             if ($(target).find('.btn-read-more-js').length) {
                 $(target).find('.btn-read-more-js').trigger('click');
             }
@@ -273,6 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
         $(window).scroll(function () {
             // Получение текущей позиции скролла
             let scrollPosition = $(window).scrollTop();
+            if (disableSwiperScroll) return;
 
             // Перебор каждого блока и проверка его положения
             $('.product-tab-content').each(function () {
@@ -280,10 +288,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 let targetTop = $(this).offset().top;
 
                 // Проверка, находится ли блок в зоне видимости
-                let conditionForScroll = scrollPosition + $('.header').outerHeight() + $('.product-header-wrap.fixed').outerHeight() + 80 >= targetTop;
+                let conditionForScroll = scrollPosition + $('.header').outerHeight()
+                                        + $('.product-header-wrap.fixed').outerHeight() + 80 >= targetTop;
 
                 if (isDevice()) {
-                    conditionForScroll = scrollPosition + 64 + $('.product-tabs-slider-js').outerHeight() >= targetTop;
+                    conditionForScroll = scrollPosition + $(window).height() / 2 > targetTop &&
+                        targetTop + $(this).height() > scrollPosition + $(window).height() / 2;
                 }
 
                 if (conditionForScroll) {
@@ -294,6 +304,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         $('.tab[data-target-tab="' + activeTabTarget + '"]').addClass('active');
                     } else {
                         $('.tab[data-target="#' + targetId + '"]').addClass('active');
+                    }
+
+                    if (isDevice()) {
+                        productTabsSwiper.slideTo($('.swiper-slide:has(.product-tab-js.active)').index());
                     }
                 }
             });
