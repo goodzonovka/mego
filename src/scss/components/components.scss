@@ -208,12 +208,12 @@
             line-height: 20px;
         }
     }
-    @media (min-width: $ds) {
-        &__dropdown:before {
-            width: 7px;
-            height: 7px;
-        }
-    }
+    //@media (min-width: $ds) {
+    //    &__dropdown:before {
+    //        width: 7px;
+    //        height: 7px;
+    //    }
+    //}
 }
 
 .tooltip-slider {

@@ -1,7 +1,12 @@
 .product-purchase-additions {
     margin-top: 1.5rem;
-    li:not(:last-child) {
-        margin-bottom: 1.5rem;
+    &.active {
+        .title svg {
+            transform: rotate(180deg);
+        }
+        .product-purchase-additions__item {
+            display: block;
+        }
     }
     .title {
         display: flex;
@@ -14,18 +19,41 @@
         user-select: none;
         svg {
             margin-left: .5rem;
+            transition: transform .3s;
         }
     }
     .inner {
         padding: 0 1rem 1rem;
     }
-    .input-radio, .input-checkbox {
-        &__label:not(:last-child) {
-            margin-bottom: .5rem;
+    &__item {
+        &:not(:first-child) {
+            display: none;
         }
+        &:not(:first-child) {
+            margin-top: 1.5rem;
+        }
+        &-title {
+            display: flex;
+
+            svg {
+                margin-top: 1px;
+                margin-right: .5rem;
+                color: $dark-400;
+            }
+        }
+        ul {
+            margin-top: .75rem;
+            padding-left: 26px;
+            li:not(:last-child) {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+    .input-radio, .input-checkbox {
         &__value {
             display: flex;
-            line-height: 20px;
+            font-size: 12px;
+            line-height: 18px;
             color: $dark-600;
             .text {
                 flex-grow: 1;
@@ -47,5 +75,22 @@
     }
     .input-checkbox:checked + .input-checkbox__icon {
        background-size: 14px;
+    }
+    @media (min-width: $tv) {
+        .input-radio, .input-checkbox {
+            &__value {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+    @media (min-width: $ds) {
+        .title {
+            cursor: pointer;
+            transition: color .3s;
+            &:hover {
+                color: $cyan-500;
+            }
+        }
     }
 }

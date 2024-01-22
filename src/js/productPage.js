@@ -77,6 +77,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
 
+        $('.product-purchase-additions-title-js').click(function () {
+            $('.product-purchase-additions').toggleClass('active');
+        })
+
 
         if (isDesktop()) {
             $('.product-variants__variant-color').mouseenter(function (e) {
