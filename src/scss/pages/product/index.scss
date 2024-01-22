@@ -21,17 +21,16 @@
             margin-right: 0;
             overflow: visible !important;
         }
-        .fancybox__container.is-closing .fancybox__carousel {
-            display: none;
+        .fancybox__container.is-closing {
+            .fancybox__carousel, .fancybox__footer {
+                display: none;
+            }
         }
         .fancybox__backdrop {
-            background-color: #0F1111;
-            opacity: .5;
+            background: rgba(15, 17, 17, .5);
         }
         .fancybox__carousel {
             background-color: $white;
-            //border: 1px solid #D5D9D9;
-            //box-shadow: 0 0 14px 0 rgba(15,17,17,.5);
         }
         .fancybox__footer {
             background: $white;

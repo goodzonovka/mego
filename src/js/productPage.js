@@ -126,6 +126,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
+        $(document).on('click', '.fancybox__backdrop', function() {
+            Fancybox.close();
+        })
+
+
         // миниатюры главного слайдера
         let productSliderThumbs = new Swiper('.product-slider-thumbnail-js', {
             modules: [FreeMode, Navigation],

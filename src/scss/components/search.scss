@@ -103,11 +103,17 @@
             margin-left: 16px;
             margin-right: 32px;
             margin-bottom: 0 !important;
+            .form-group {
+                display: flex;
+            }
             &__select-category {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 92px;
+                //position: absolute;
+                //left: 0;
+                //top: 0;
+                //width: 92px;
+                max-width: 185px;
+                position: relative;
+                flex-shrink: 0;
                 height: 44px;
                 padding: 0 8px;
                 display: flex;
@@ -116,6 +122,10 @@
                 font-size: 16px;
                 line-height: 24px;
                 color: $dark-900;
+                background-color: $white;
+                border: 1px solid $cyan-500;
+                border-right: 0;
+                border-radius: .5rem 0 0 .5rem;
                 cursor: pointer;
                 transition: all .3s;
                 &:hover {
@@ -140,11 +150,13 @@
                 overflow: hidden;
             }
             &__input {
-                padding-left: 104px;
+                padding-left: 12px;
                 padding-right: 70px;
                 color: $dark-900;
                 background-color: $white;
                 border-color: $cyan-500;
+                border-left: 0;
+                border-radius: 0 .5rem .5rem 0;
                 &:focus {
                     border-color: $cyan-300;
                 }
