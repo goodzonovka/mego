@@ -77,8 +77,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
 
-        $('.product-purchase-additions-title-js').click(function () {
+        const checkboxes = document.querySelectorAll('.purchase-input-checkbox-js');
+
+        checkboxes.forEach(function (checkbox) {
+            checkbox.addEventListener('change', function () {
+                // Если текущий чекбокс отмечен, деактивируем остальные в той же группе
+                if (this.checked) {
+                    const groupName = this.name;
+                    checkboxes.forEach(function (otherCheckbox) {
+                        if (otherCheckbox.name === groupName && otherCheckbox !== checkbox) {
+                            otherCheckbox.checked = false;
+                        }
+                    });
+                }
+            });
+        });
+
+        $('.product-purchase-additions-show-more-js').click(function () {
+
+            let dataShowText = $(this).data('text-show');
+            let dataHideText = $(this).data('text-hide');
+
             $('.product-purchase-additions').toggleClass('active');
+            $(this).toggleClass('active');
+
+            if ($(this).hasClass('active')) {
+                $(this).text(dataHideText);
+            } else {
+                $(this).text(dataShowText);
+            }
         })
 
 

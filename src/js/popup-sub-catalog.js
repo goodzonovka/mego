@@ -71,6 +71,13 @@ function openSubCatalog(e) {
             if (brands.length) {
                 displayBrands(brands);
             }
+
+            // console.log($('.sub-catalog-menu__header').outerHeight(true));
+            // console.log($('.sub-catalog-menu-list__columns').outerHeight());
+
+            if (isDesktop()) {
+                checkScroll();
+            }
         },
         error: function (xhr, status, error) {
             console.error("Ошибка загрузки данных: " + error);
@@ -81,6 +88,21 @@ function openSubCatalog(e) {
     btnOpenSubCatalog.removeClass('active')
     $(this).addClass('active');
     subCatalogMenu.addClass('active');
+}
+
+if (isDesktop()) {
+    $(window).resize(function () {
+        checkScroll()
+    })
+}
+
+// нужен ли скролл
+function checkScroll() {
+    if ($('#sub-catalog-menu').outerHeight() < $('.sub-catalog-menu__header').outerHeight(true) + $('.sub-catalog-menu-list__columns').outerHeight()) {
+        $('#sub-catalog-menu').addClass('with-scroll');
+    } else {
+        $('#sub-catalog-menu').removeClass('with-scroll');
+    }
 }
 
 // закрыть подкаталог
@@ -291,6 +313,10 @@ function showMoreSubcategories(button) {
         showMoreBtn.find('span').text(langCollapse)
     } else {
         showMoreBtn.find('span').text(langMore)
+    }
+
+    if (isDesktop()) {
+        checkScroll();
     }
 }
 

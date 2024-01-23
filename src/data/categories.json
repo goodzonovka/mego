@@ -3,6 +3,8 @@
         "id": 1,
         "name": "Электроника",
         "brands": [
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-5.png",
             "images/components/brands/image-1.png",
             "images/components/brands/image-2.png",
             "images/components/brands/image-3.png",
@@ -260,6 +262,8 @@
         "id": 2,
         "name": "Одежда",
         "brands": [
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png",
             "images/components/brands/image-5.png",
             "images/components/brands/image-3.png",
             "images/components/brands/image-4.png",
@@ -527,6 +531,8 @@
         "id": 3,
         "name": "Обувь",
         "brands": [
+            "images/components/brands/image-2.png",
+            "images/components/brands/image-5.png",
             "images/components/brands/image-3.png",
             "images/components/brands/image-4.png",
             "images/components/brands/image-1.png",
@@ -744,6 +750,8 @@
         "id": 4,
         "name": "Дом и сад",
         "brands": [
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-5.png",
             "images/components/brands/image-1.png",
             "images/components/brands/image-2.png",
             "images/components/brands/image-3.png",
@@ -1001,6 +1009,8 @@
         "id": 5,
         "name": "Детские товары",
         "brands": [
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png",
             "images/components/brands/image-5.png",
             "images/components/brands/image-3.png",
             "images/components/brands/image-4.png",
@@ -1268,6 +1278,8 @@
         "id": 6,
         "name": "Красота и здоровье",
         "brands": [
+            "images/components/brands/image-2.png",
+            "images/components/brands/image-5.png",
             "images/components/brands/image-3.png",
             "images/components/brands/image-4.png",
             "images/components/brands/image-1.png",
@@ -1485,6 +1497,8 @@
         "id": 7,
         "name": "Бытовая техника",
         "brands": [
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-5.png",
             "images/components/brands/image-1.png",
             "images/components/brands/image-2.png",
             "images/components/brands/image-3.png",
@@ -1742,6 +1756,8 @@
         "id": 8,
         "name": "Спорт и отдых",
         "brands": [
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png",
             "images/components/brands/image-5.png",
             "images/components/brands/image-3.png",
             "images/components/brands/image-4.png",
@@ -2009,6 +2025,8 @@
         "id": 9,
         "name": "Строительство и ремонт",
         "brands": [
+            "images/components/brands/image-2.png",
+            "images/components/brands/image-5.png",
             "images/components/brands/image-3.png",
             "images/components/brands/image-4.png",
             "images/components/brands/image-1.png",
@@ -2226,6 +2244,8 @@
         "id": 10,
         "name": "Продукты питания",
         "brands": [
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-5.png",
             "images/components/brands/image-1.png",
             "images/components/brands/image-2.png",
             "images/components/brands/image-3.png",
@@ -2483,6 +2503,8 @@
         "id": 11,
         "name": "Аптека",
         "brands": [
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png",
             "images/components/brands/image-5.png",
             "images/components/brands/image-3.png",
             "images/components/brands/image-4.png",
@@ -2750,6 +2772,8 @@
         "id": 12,
         "name": "Товары для животных",
         "brands": [
+            "images/components/brands/image-2.png",
+            "images/components/brands/image-5.png",
             "images/components/brands/image-3.png",
             "images/components/brands/image-4.png",
             "images/components/brands/image-1.png",
@@ -2967,6 +2991,8 @@
         "id": 13,
         "name": "Книги",
         "brands": [
+            "images/components/brands/image-4.png",
+            "images/components/brands/image-5.png",
             "images/components/brands/image-1.png",
             "images/components/brands/image-2.png",
             "images/components/brands/image-3.png",
@@ -3224,6 +3250,8 @@
         "id": 14,
         "name": "Туризм, рыбалка, охота",
         "brands": [
+            "images/components/brands/image-1.png",
+            "images/components/brands/image-2.png",
             "images/components/brands/image-5.png",
             "images/components/brands/image-3.png",
             "images/components/brands/image-4.png",

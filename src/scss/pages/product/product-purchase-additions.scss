@@ -1,9 +1,6 @@
 .product-purchase-additions {
     margin-top: 1.5rem;
     &.active {
-        .title svg {
-            transform: rotate(180deg);
-        }
         .product-purchase-additions__item {
             display: block;
         }
@@ -17,10 +14,6 @@
         line-height: 1.5rem;
         font-weight: 500;
         user-select: none;
-        svg {
-            margin-left: .5rem;
-            transition: transform .3s;
-        }
     }
     .inner {
         padding: 0 1rem 1rem;
@@ -76,6 +69,11 @@
     .input-checkbox:checked + .input-checkbox__icon {
        background-size: 14px;
     }
+    &__show-more {
+        margin: 0 1rem 1rem;
+        font-weight: 500;
+        color: $blue-700;
+    }
     @media (min-width: $tv) {
         .input-radio, .input-checkbox {
             &__value {
@@ -90,6 +88,11 @@
             transition: color .3s;
             &:hover {
                 color: $cyan-500;
+            }
+        }
+        &__show-more {
+            &:hover {
+                color: $dark-900;
             }
         }
     }

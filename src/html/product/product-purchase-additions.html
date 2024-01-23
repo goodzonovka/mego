@@ -1,10 +1,7 @@
 <div class="product-purchase-additions">
     <div class="block-white">
-        <div class="title product-purchase-additions-title-js">
+        <div class="title">
             Дополнительные услуги
-            <svg class="arrow-icon" width="24" height="24">
-                <use href="images/icons/icons.svg#chevron-down-small"></use>
-            </svg>
         </div>
 
         <ul class="inner block-toggle">
@@ -27,10 +24,10 @@
 
                 <ul>
                     <li>
-                        <label class="input-radio__label">
-                            <input type="radio" name="delivery_terms" class="input-radio" checked value="1">
-                            <span class="input-radio__icon"></span>
-                            <span class="input-radio__value">
+                        <label class="input-checkbox__label">
+                            <input type="checkbox" name="delivery_terms" class="input-checkbox purchase-input-checkbox-js" value="1">
+                            <span class="input-checkbox__icon"></span>
+                            <span class="input-checkbox__value">
                                 <span class="text">Basic сервис для мобильных телефонов</span>
                                 <span class="price">Бесплатно</span>
                             </span>
@@ -38,10 +35,10 @@
                     </li>
 
                     <li>
-                        <label class="input-radio__label">
-                            <input type="radio" name="delivery_terms" class="input-radio" value="2">
-                            <span class="input-radio__icon"></span>
-                            <span class="input-radio__value">
+                        <label class="input-checkbox__label">
+                            <input type="checkbox" name="delivery_terms" class="input-checkbox purchase-input-checkbox-js" value="2">
+                            <span class="input-checkbox__icon"></span>
+                            <span class="input-checkbox__value">
                                 <span class="text">Premium сервис для мобильных телефонов</span>
                                 <span class="price">1 300 леев</span>
                             </span>
@@ -70,10 +67,10 @@
 
                 <ul>
                     <li>
-                        <label class="input-radio__label">
-                            <input type="radio" name="delivery_terms_2" class="input-radio" value="1">
-                            <span class="input-radio__icon"></span>
-                            <span class="input-radio__value">
+                        <label class="input-checkbox__label">
+                            <input type="checkbox" name="delivery_terms_2" class="input-checkbox purchase-input-checkbox-js" value="1">
+                            <span class="input-checkbox__icon"></span>
+                            <span class="input-checkbox__value">
                                 <span class="text">Basic сервис для мобильных телефонов</span>
                                 <span class="price">Бесплатно</span>
                             </span>
@@ -81,10 +78,10 @@
                     </li>
 
                     <li>
-                        <label class="input-radio__label">
-                            <input type="radio" name="delivery_terms_2" class="input-radio" checked value="2">
-                            <span class="input-radio__icon"></span>
-                            <span class="input-radio__value">
+                        <label class="input-checkbox__label">
+                            <input type="checkbox" name="delivery_terms_2" class="input-checkbox purchase-input-checkbox-js" value="2">
+                            <span class="input-checkbox__icon"></span>
+                            <span class="input-checkbox__value">
                                 <span class="text">Premium сервис для мобильных телефонов</span>
                                 <span class="price">1 300 леев</span>
                             </span>
@@ -94,5 +91,9 @@
 
             </li>
         </ul>
+
+        <button type="button" class="product-purchase-additions__show-more product-purchase-additions-show-more-js"
+                data-text-show="Показать ещё 2 услуги"
+                data-text-hide="Скрыть">Показать ещё 2 услуги</button>
     </div>
 </div>
