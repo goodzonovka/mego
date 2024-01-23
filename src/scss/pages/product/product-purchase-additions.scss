@@ -31,7 +31,7 @@
             svg {
                 margin-top: 1px;
                 margin-right: .5rem;
-                color: $dark-400;
+                color: $blue-700;
             }
         }
         ul {
@@ -83,13 +83,6 @@
         }
     }
     @media (min-width: $ds) {
-        .title {
-            cursor: pointer;
-            transition: color .3s;
-            &:hover {
-                color: $cyan-500;
-            }
-        }
         &__show-more {
             &:hover {
                 color: $dark-900;
