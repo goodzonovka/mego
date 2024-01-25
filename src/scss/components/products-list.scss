@@ -50,6 +50,9 @@ h2, .section-title {
     }
 
     .icons-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         position: absolute;
         z-index: 1;
         left: 4px;
@@ -57,18 +60,19 @@ h2, .section-title {
         .icon {
             position: relative;
             display: flex;
-            justify-content: center;
             align-items: center;
-            width: 26px;
+            max-width: 26px;
             height: 26px;
+            padding: 4px;
             border-radius: 8px;
+            overflow: hidden;
+            transition: all .2s ease-out;
             &:not(:last-child) {
                 margin-bottom: 4px;
             }
             @media (max-width: $device) {
-                &.active .icon-tooltip {
-                    visibility: visible;
-                    opacity: 1;
+                &.active {
+                   max-width: 100%;
                 }
             }
             &-package {
@@ -77,37 +81,38 @@ h2, .section-title {
             }
             &-tag {
                 color: $white;
-                background-color: $violet-500;
+                background-color: $error-new-700;
+
             }
             &-percent {
                 color: #030c1c;
                 background-color: #f2a143;
             }
             &-tooltip {
-                position: absolute;
-                top: 50%;
-                left: 100%;
-                transform: translateY(-50%);
+                //position: absolute;
+                //top: 50%;
+                //left: 100%;
+                //transform: translateY(-50%);
                 margin-left: 7.5px;
-                padding: 8px 12px;
-                color: $dark-900;
-                background-color: $white;
-                border-radius: 8px;
-                box-shadow: 0 24px 48px -12px #1018282E;
-                visibility: hidden;
-                opacity: 0;
+                margin-right: 3.5px;
+                //padding: 8px 12px;
+                //background-color: $white;
+                //border-radius: 8px;
+                //box-shadow: 0 24px 48px -12px #1018282E;
+                //visibility: hidden;
+                //opacity: 0;
                 transition: all .3s;
-                &:before {
-                    content: "";
-                    position: absolute;
-                    right: 100%;
-                    top: 50%;
-                    transform: translateY(-50%) rotate(45deg);
-                    width: 8px;
-                    height: 8px;
-                    margin-right: -4px;
-                    background-color: $white;
-                }
+                //&:before {
+                //    content: "";
+                //    position: absolute;
+                //    right: 100%;
+                //    top: 50%;
+                //    transform: translateY(-50%) rotate(45deg);
+                //    width: 8px;
+                //    height: 8px;
+                //    margin-right: -4px;
+                //    background-color: $white;
+                //}
             }
         }
     }
@@ -165,7 +170,7 @@ h2, .section-title {
                 width: 14px;
                 height: 14px;
                 margin-right: 4px;
-                background-color: $cyan-500;
+                background-color: $success-new-500;
                 border-radius: 3.11px;
             }
             span {
@@ -234,9 +239,8 @@ h2, .section-title {
             margin-bottom: 1rem;
         }
         .icons-list {
-            .icon:hover .icon-tooltip {
-                visibility: visible;
-                opacity: 1;
+            .icon:hover {
+                max-width: 100%;
             }
         }
         .rating, .reviews {

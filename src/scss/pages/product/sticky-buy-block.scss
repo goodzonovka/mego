@@ -77,7 +77,10 @@
         .inner {
             justify-content: space-between;
             padding: .5rem 0;
-            & > * {
+            .price-block, .amount {
+                max-width: calc(50% - 8px);
+            }
+            .btn {
                 width: calc(50% - 8px);
             }
         }

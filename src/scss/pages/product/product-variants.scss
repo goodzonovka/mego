@@ -62,13 +62,14 @@
                 &__btn {
                     display: flex;
                     align-items: center;
-                    color: $blue-700;
-                    transition: all .3s;
+                    color: #f36f21;
+                    transition: color .3s;
                     &:hover {
                         color: $dark-900;
                     }
                     svg {
                         margin-right: .25rem;
+                        transition: inherit;
                     }
                 }
             }

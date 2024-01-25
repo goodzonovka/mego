@@ -33,14 +33,18 @@ $dark-700: #344054;
 $dark-800: #1D2939;
 $dark-900: #030C1C;
 
-$blue-700: #175CD3;
+$new-blue-700: #961996;
+//$blue-700: #175CD3;
+$blue-700: $new-blue-700;
 
 $error-50: #FEF3F2;
 $error-500: #F04438;
 $error-600: #D92D20;
 $error-700: #B42318;
+$error-new-700: #ef4053;
 
 $success-500: #12B76A;
+$success-new-500: #9ac146;
 $success-700: #027A48;
 
 $warning-50: #FFFAEB;

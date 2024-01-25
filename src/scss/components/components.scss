@@ -369,7 +369,7 @@
     line-height: 16px;
     font-weight: 700;
     color: $white;
-    background-color: $error-600;
+    background-color: $error-new-700;
     border-radius: 50%;
     &:is(:empty) {
         display: none;
@@ -418,7 +418,7 @@
     .price {
         font-weight: 700;
         &.cheaper-price {
-            color: $success-500;
+            color: $success-new-500;
         }
     }
     .old-price {
@@ -434,7 +434,7 @@
         }
     }
     .new-price {
-        color: $error-700
+        color: $error-new-700
     }
     @media (min-width: $ds) {
         .discount {
@@ -674,11 +674,11 @@
 }
 
 .status-green {
-    color: $success-700;
+    color: $success-new-500;
     background-color: $cyan-50;
 }
 .status-orange {
-    color: $warning-700;
+    color: $error-new-700;
     background-color: $warning-50;
 }
 .status-red {
