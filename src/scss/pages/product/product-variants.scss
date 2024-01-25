@@ -62,7 +62,7 @@
                 &__btn {
                     display: flex;
                     align-items: center;
-                    color: #f36f21;
+                    color: $blue-700;
                     transition: color .3s;
                     &:hover {
                         color: $dark-900;
