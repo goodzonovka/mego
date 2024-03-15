@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
             });
         })
 
-        if (isDesktop() && $('#input-change-phone').length) { 
+        if (isDesktop() && $('#input-change-phone').length) {
             let inputChangePhone = document.querySelector("#input-change-phone");
 
             inputChangePhone.addEventListener("open:countrydropdown", function () {

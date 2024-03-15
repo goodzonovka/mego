@@ -50,6 +50,40 @@
             height: 44px;
             color: $cyan-500;
         }
+
+        .form-input-toggle-password {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 44px;
+            height: 44px;
+            color: $dark-600;
+
+            &.active {
+                .form-input-toggle-password__hide {
+                    display: inline;
+                }
+
+                .form-input-toggle-password__show {
+                    display: none;
+                }
+            }
+
+            /* mouse, touch pad */
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    color: $cyan-500;
+                }
+            }
+        }
+
+        .form-input-toggle-password__hide {
+            display: none;
+        }
+
         .input-checkbox__label {
             margin-bottom: 1.5rem;
             font-size: 1rem;

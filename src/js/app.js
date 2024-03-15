@@ -28,6 +28,8 @@ import './accountPage.js';
 import './accountDiscountsOffersPage.js';
 import './accountOrders.js';
 import './login.js';
+import  './showPassword.js';
+import './phoneInputCountry.js';
 
 /* проверка на поддержку webp формата */
 import BaseHelpers from './helpers/BaseHelpers.js';

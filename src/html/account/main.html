@@ -56,7 +56,7 @@
                     </div>
                     <div class="form-group">
                         <input type="text" name="additional_phone" class="form-input form-input-additional-phone-js"
-                               placeholder="Дополнительный телефон" autocomplete="off">
+                               placeholder="Дополнительный телефон" autocomplete="off" data-input_phone>
                         <span class="error-text error-phone">Некорректный номер телефона</span>
                     </div>
                     <div class="form-group">
@@ -82,12 +82,28 @@
                 <form action="" class="form-valid-js account-content__form-passwords form-valid-passwords-js">
                     <div class="form-group">
                         <input type="password" class="form-input form-input-required-js" placeholder="Старый пароль">
+                        <button type="button" class="form-input-toggle-password" aria-label="Показать пароль" data-show_password>
+                            <svg class="form-input-toggle-password__show" width="18" height="18">
+                                <use href="images/icons/icons.svg#eye"></use>
+                            </svg>
+                            <svg class="form-input-toggle-password__hide" width="18" height="18">
+                                <use href="images/icons/icons.svg#eye-off"></use>
+                            </svg>
+                        </button>
                         <span class="error-text error-empty">Это обязательное поле</span>
                     </div>
                     <div class="form-group">
                         <input type="password" id="password"
                                class="form-input form-input-required-js form-input-password-js"
                                placeholder="Новый пароль">
+                        <button type="button" class="form-input-toggle-password" aria-label="Показать пароль" data-show_password>
+                            <svg class="form-input-toggle-password__show" width="18" height="18">
+                                <use href="images/icons/icons.svg#eye"></use>
+                            </svg>
+                            <svg class="form-input-toggle-password__hide" width="18" height="18">
+                                <use href="images/icons/icons.svg#eye-off"></use>
+                            </svg>
+                        </button>
                         <span class="error-text error-empty">Это обязательное поле</span>
                         <span class="error-text error-length-password">Минимальная длина пароля 8 символов</span>
                     </div>
@@ -95,6 +111,14 @@
                         <input type="password" id="repeatPassword"
                                class="form-input form-input-required-js form-input-password-js"
                                placeholder="Повторите новый пароль">
+                        <button type="button" class="form-input-toggle-password" aria-label="Показать пароль" data-show_password>
+                            <svg class="form-input-toggle-password__show" width="18" height="18">
+                                <use href="images/icons/icons.svg#eye"></use>
+                            </svg>
+                            <svg class="form-input-toggle-password__hide" width="18" height="18">
+                                <use href="images/icons/icons.svg#eye-off"></use>
+                            </svg>
+                        </button>
                         <span class="error-text error-empty">Это обязательное поле</span>
                         <span class="error-text error-repeat-password">Пароли не совпадают</span>
                     </div>
