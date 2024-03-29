@@ -30,6 +30,10 @@ import './accountOrders.js';
 import './login.js';
 import  './showPassword.js';
 import './phoneInputCountry.js';
+import './product-compare.js';
+import './tabs.js';
+import './accordion.js';
+import './dndUpload.js';
 
 /* проверка на поддержку webp формата */
 import BaseHelpers from './helpers/BaseHelpers.js';

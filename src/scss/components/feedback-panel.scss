@@ -1,0 +1,133 @@
+.fp {
+    border-radius: 8px;
+    padding: 16px;
+    background-color: $dark-100;
+    margin-bottom: 24px;
+
+    &.completed {
+        .fp__header {
+            .accordion-trigger {
+                display: inline-flex;
+            }
+
+            .btn-green {
+                display: none;
+            }
+        }
+    }
+}
+
+.fp__header {
+    display: flex;
+    gap: 16px 24px;
+
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .accordion-trigger {
+        display: none;
+    }
+
+    .btn {
+        flex-shrink: 0;
+    }
+
+    .accordion-trigger {
+        gap: 8px;
+
+        > span {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+    }
+}
+
+.fp__header__inner {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    flex: 1;
+
+    picture {
+        flex-shrink: 0;
+    }
+}
+
+.fp__img {
+    flex-shrink: 0;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.fp__header__body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    font-size: 14px;
+    line-height: lh(14, 20);
+    color: $dark-900;
+}
+
+.fp__header__option__label {
+    color: $dark-600;
+}
+
+.fp__header__datetime {
+    color: $dark-600;
+    font-size: 12px;
+    line-height: lh(12, 18);
+}
+
+.fp__content {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: lh(14, 20);
+    color: $dark-600;
+}
+
+.fp__content__title {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: $dark-900;
+    margin-bottom: 4px;
+}
+
+.fp__content__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+    margin-bottom: 16px;
+}
+
+.fp__header__seller {
+    font-size: 20px;
+    line-height: lh(20, 24);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.fp__content__media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 16px;
+}
+
+.fp__content__media__img {
+    border-radius: 8px;
+    padding: 4px;
+    aspect-ratio: 1/1;
+
+    img {
+        border-radius: 4px;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+    }
+}

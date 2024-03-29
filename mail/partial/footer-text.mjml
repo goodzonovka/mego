@@ -1,0 +1,9 @@
+<mj-section padding="0px 24px" css-class="section-p">
+    <mj-column padding="0px 32px 48px" background-color="#fff">
+        <mj-table>
+            <tr>
+                <td style="padding: 0px 24px; font-size: 16px; line-height: 24px; font-weight: 400; color: #030C1C; border-left: 2px solid #41D7B4; ">Команда Mego.</td>
+            </tr>
+        </mj-table>
+    </mj-column>
+</mj-section>

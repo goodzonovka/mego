@@ -1,0 +1,23 @@
+<mj-section padding="0px 24px" css-class="section-p">
+    <mj-column padding="48px 32px 48px" background-color="#030C1C" border-radius="0px 0px 16px 16px" css-class="border-mob">
+        <mj-social icon-size="36px" inner-padding="24px">
+            <mj-social-element src="/img/facebook.png" href="https://example.com"></mj-social-element>
+            <mj-social-element src="/img/instagram.png" href="https://example.com"></mj-social-element>
+            <mj-social-element src="/img/youtube.png" href="https://example.com"></mj-social-element>
+        </mj-social>
+
+        <mj-text font-size="14px" line-height="20px" font-weight="400" color="#98A2B3" align="center">
+            <a class="footer-link" href="https://example.com" style="color: #98A2B3; text-decoration: none;"><span style="color: #98A2B3;">Связаться с нами</span></a> | <a class="footer-link" href="https://example.com" style="color: #98A2B3; text-decoration: none;"><span style="color: #98A2B3;">Пользовательское соглашение</span></a>
+        </mj-text>
+
+        <mj-divider border-color="rgba(255,255,255,0.15)" border-width="1px" padding="24px 0px" />
+
+        <mj-text font-size="14px" line-height="20px" font-weight="400" color="#98A2B3" align="center" padding-bottom="24px">
+        Это письмо сгенерировано автоматически. Пожалуйста, не отвечайте на него. Если вам понадобится помощь, обратитесь в службу поддержки
+        </mj-text>
+
+        <mj-text font-size="14px" line-height="20px" font-weight="400" color="#98A2B3" align="center">
+            © 2023 «mego», ул. Албишоара 123, MD-2001, г. Кишинёв, Молдова
+        </mj-text>
+    </mj-column>
+</mj-section>

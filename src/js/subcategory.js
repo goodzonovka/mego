@@ -44,7 +44,7 @@ function changeViewProducts() {
             productsList.removeClass('list');
             localStorage.setItem('productsViewList', 'false');
         }
-        new MatchHeight('.product-item .price-block');
+        new MatchHeight('.product-item [data-price_block_match_height]');
     } else {
         let view = $(this).data('view');
 

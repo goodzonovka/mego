@@ -1,0 +1,55 @@
+<mjml>
+  <mj-head>
+    <mj-include path="./partial/head.mjml" />
+  </mj-head>
+  <mj-body mj-class="body">
+    <mj-spacer height="48px" />
+
+    <mj-include path="./partial/header.mjml" />
+
+
+
+    <mj-section padding="0px 24px" css-class="section-p">
+      <mj-column padding="0px 32px 32px" background-color="#fff">
+        <mj-text font-size="32px" line-height="38px" font-weight="700" color="#030C1C" align="center" padding-bottom="24px">
+          Оставьте отзыв
+        </mj-text>
+        <mj-text font-size="16px" line-height="24px" font-weight="400" color="#475467" padding-bottom="24px">Suspendisse sagittis phasellus est sollicitudin sem malesuada facilisi. Non lacinia mauris vel odio scelerisque. Quis lectus gravida aliquet justo ut magna. Purus nec egestas ipsum pellentesque quisque. Vitae magna.
+        </mj-text>
+
+        <mj-text font-size="16px" line-height="24px" font-weight="400" color="#030C1C">
+          <strong>Товары, ожидающие вашего отзыва:</strong>
+        </mj-text>
+
+        <mj-text font-size="16px" line-height="24px" font-weight="400" color="#475467">
+          <ul>
+            <li>Смартфон последней модели</li>
+            <li>Ноутбук высокого качества</li>
+            <li>Умные часы последней модели</li>
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0px 24px" css-class="section-p">
+      <mj-column padding="0px 32px 32px" background-color="#fff">
+        <mj-button css-class="btn" href="https://example.com/" align="center" font-size="16px" line-height="24px" font-weight="500" color="#030C1C" background-color="#41D7B4" border-radius="8px" inner-padding="10px 20px">
+          Оставить отзыв
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0px 24px" css-class="section-p">
+      <mj-column padding="0px 32px 48px" background-color="#fff">
+
+        <mj-text font-size="16px" line-height="24px" font-weight="400" color="#475467">Если по какой-то причине вы не можете нажать на кнопку, то нажмите на ссылку ниже или скопируйте её в адресную строку вашего браузера.<br><br><a href="https://example.com/" style="word-break: break-all;">https://www.example.com/r?confirmation-id=sdfhsdkdvADO21DSKJFASDFadfjkakasdfkKjakdfkdsasdkfka</a></mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./partial/footer-text.mjml" />
+
+    <mj-include path="./partial/footer.mjml" />
+
+    <mj-spacer height="48px" />
+  </mj-body>
+</mjml>

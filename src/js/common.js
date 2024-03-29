@@ -4,7 +4,7 @@ import {isDesktop, isDevice} from "./functions.js";
 import Swiper from "swiper";
 import {Pagination} from "swiper/modules";
 
-new MatchHeight('.product-item .price-block');
+new MatchHeight('.product-item [data-price_block_match_height]');
 
 $('.product-item-slider-js').each(function () {
     let item = this;

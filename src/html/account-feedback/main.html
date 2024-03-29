@@ -1,0 +1,40 @@
+<div class="account">
+
+    @@include('../account/sidebar.html', {})
+
+    <div class="account-content">
+        <h1 class="page-title">Мои отзывы</h1>
+
+        <div class="account-content__inner">
+            <div data-tabs>
+                <div class="tabs">
+                    <button class="tabs__link active" data-tab_target="products">
+                        Про товары
+                    </button>
+                    <button class="tabs__link" data-tab_target="seller">
+                        Про продавца
+                    </button>
+                    <button class="tabs__link" data-tab_target="delivery">
+                        Про службу доставки
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="products" data-tab>
+                    @@include('products.html', {})
+                </div>
+
+                <div class="tab-content" id="seller" data-tab>
+                    @@include('seller.html', {})
+                </div>
+
+                <div class="tab-content" id="delivery" data-tab>
+                    @@include('delivery.html', {})
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('feedback-modal.html', {})
+@@include('feedback-seller.html', {})
+@@include('feedback-delivery.html', {})

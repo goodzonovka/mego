@@ -1,0 +1,5 @@
+<mj-section padding="0px 24px" css-class="section-p">
+    <mj-column padding="48px 32px" background-color="#fff" border-radius="16px 16px 0px 0px" css-class="border-mob">
+        <mj-image src="img/mail-logo.png" width="135px" alt="Mego" />
+    </mj-column>
+</mj-section>

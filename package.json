@@ -68,7 +68,8 @@
     "vinyl-ftp": "^0.6.1",
     "webp-converter": "*2.2.3",
     "webpack": "^5.65.0",
-    "webpack-stream": "^7.0.0"
+    "webpack-stream": "^7.0.0",
+    "mjml": "^4.15.3"
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.33",

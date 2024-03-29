@@ -1,0 +1,139 @@
+.dnd {
+    margin-bottom: 24px;
+}
+
+.dnd__form {
+    position: relative;
+    padding: 16px 24px;
+    border-radius: 8px;
+    border: 1px solid $dark-300;
+    background-color: $white;
+    text-align: center;
+
+    .icon {
+        color: $dark-400;
+        margin: 0 auto 12px;
+    }
+
+    &.highlight {
+        border-color: $cyan-500;
+    }
+}
+
+.dnd__title {
+    font-size: 14px;
+    line-height: lh(14, 20);
+    color: $dark-600;
+    margin-bottom: 4px;
+}
+
+.dnd__upload-link {
+    font-weight: 700;
+    color: $blue-700;
+    cursor: pointer;
+}
+
+.dnd__subtitle {
+    font-size: 12px;
+    line-height: lh(12, 18);
+    color: $dark-600;
+}
+
+.dnd__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+.dnd__files-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 16px;
+
+    &:empty {
+        margin-top: 0;
+    }
+}
+
+.dnd__file {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    border: 1px solid $dark-300;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: $white;
+    color: $dark-600;
+    font-size: 14px;
+    line-height: lh(14, 20);
+
+    .btn {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        color: $dark-400;
+        margin-top: 0;
+    }
+}
+
+.popup .dnd__file .btn {
+    margin-top: 0;
+}
+
+.dnd__file__body {
+    flex: 1;
+}
+
+.dnd__file__name {
+    font-weight: 500;
+    color: $dark-900;
+}
+
+.dnd__file__progress {
+    display: grid;
+    grid-template-columns: 1fr 5ch;
+    gap: 12px;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.dnd__file__bar {
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+
+    &::-webkit-progress-bar {
+        background-color: $dark-100;
+        border-radius: 4px;
+    }
+
+    &::-webkit-progress-value {
+        background-color: $cyan-500;
+        border-radius: 4px;
+    }
+}
+
+.dnd__file_success {
+    border-color: $cyan-500;
+}
+
+.dnd__file_error {
+    border-color: #fda29b;
+    background-color: #fffbfa;
+
+    .dnd__file__name {
+        color: $error-700;
+    }
+
+    .icon {
+        color: $error-700;
+    }
+
+    .dnd__file__size {
+        color: $error-600;
+    }
+}

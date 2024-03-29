@@ -1,0 +1,31 @@
+.tabs {
+    display: flex;
+    border-bottom: 1px solid $dark-300;
+    margin-bottom: 24px;
+}
+
+.tab-content {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.tabs__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $dark-600;
+    padding: 10px 16px;
+    border-bottom: 2px solid transparent;
+
+    &.active {
+        border-bottom-color: $cyan-500;
+        color: $dark-900;
+    }
+}

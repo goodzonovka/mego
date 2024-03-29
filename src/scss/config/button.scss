@@ -49,3 +49,14 @@
     background-color: #d0d5dd;
     pointer-events: none;
 }
+
+.btn_ico {
+    padding: 12px;
+    min-width: 44px;
+}
+
+.btn_transparent {
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow: none;
+}

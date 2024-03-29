@@ -1,0 +1,142 @@
+
+.pc__actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px 16px;
+    margin-bottom: 16px;
+
+    @media (min-width: 1200px) {
+        display: flex;
+    }
+}
+
+.pc__actions__list-controls {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px 16px;
+
+    @media (min-width: 768px) {
+        display: flex;
+        margin-right: auto;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.pc__actions__slider-controls {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+}
+
+
+.pc__compare {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: $white;
+    border-top: 1px solid $dark-300;
+    border-bottom: 1px solid $dark-300;
+    margin: 0 -16px;
+
+
+    @media (min-width: 768px) {
+        border: 1px solid $dark-300;
+        grid-template-columns: 30% 70%;
+        border-radius: 16px;
+        margin: 0;
+    }
+
+    @media (min-width: 1200px) {
+        grid-template-columns: 20% 80%;
+    }
+
+    .product-item {
+        width: 100%;
+        padding: 16px;
+    }
+}
+
+.pc__aside {
+    border-right: 1px solid $dark-300;
+}
+
+.pc__compare-cell {
+    padding: 8px 16px;
+    border-top: 1px solid $dark-200;
+    font-size: 12px;
+    line-height: lh(14, 20);
+
+    @media (min-width: 768px) {
+        font-size: 14px;
+    }
+
+    &:nth-child(2) {
+        border-top: 0;
+    }
+
+    &.active {
+        background-color: $dark-100;
+    }
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.pc__products {
+    .swiper {
+        padding-bottom: 12px;
+    }
+
+    .swiper-scrollbar {
+        height: 8px;
+        background-color: transparent;
+        bottom: 2px;
+    }
+
+    .swiper-scrollbar-drag {
+        background-color: $dark-300;
+    }
+}
+
+.pc__aside__filter__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 16px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.pc__aside__filter__option {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    font-size: 10px;
+    line-height: lh(14, 20);
+    font-weight: 500;
+    color: $dark-900;
+    width: 100%;
+    text-align: left;
+    border-radius: 8px;
+
+    @media (min-width: 768px) {
+        font-size: 14px;
+    }
+
+    span {
+        color: $dark-400;
+        margin-left: auto;
+    }
+
+    &.active {
+        background-color: $cyan-500;
+        span {
+            color: $dark-900;
+        }
+    }
+}

@@ -1,0 +1,267 @@
+<div class="container">
+    <a href="/" class="back">
+        <svg width="18" height="18">
+            <use href="images/icons/icons.svg#chevron-left-small"></use>
+        </svg>
+        Главная
+    </a>
+
+    <ul class="breadcrumbs">
+        <li>
+            <a href="/">
+                Главная
+            </a>
+            <svg width="18" height="18">
+                <use href="images/icons/icons.svg#chevron-right-small"></use>
+            </svg>
+        </li>
+
+        <li>
+            <span>
+                Сравнение товаров
+            </span>
+        </li>
+    </ul>
+
+    <h1 class="page-title">Одежда</h1>
+
+    <div class="pc" data-pc>
+        <div class="pc__actions">
+            <div class="pc__actions__list-controls">
+                <button class="btn btn-green" type="button">Добавить товар</button>
+                <button class="btn" type="button">Очистить текущий список</button>
+                <button class="btn" type="button">Удалить все списки</button>
+                <div class="form-group">
+                    <label class="input-checkbox__label">
+                        <input type="checkbox" class="input-checkbox" data-show_only_differencies>
+                        <span class="input-checkbox__icon"></span>
+                        <span class="input-checkbox__value">Показать только различия</span>
+                    </label>
+                </div>
+            </div>
+            <div class="pc__actions__slider-controls">
+                <button class="btn btn_ico" type="button" aria-label="Previous" data-product_carousel_prev>
+                    <svg width="18" height="18">
+                        <use href="images/icons/icons.svg#arrow-left"></use>
+                    </svg>
+                </button>
+                <button class="btn btn_ico" type="button" aria-label="Next" data-product_carousel_next>
+                    <svg width="18" height="18">
+                        <use href="images/icons/icons.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="pc__compare">
+            <div class="pc__aside">
+                <div class="pc__aside__filter" data-top_container>
+                    <ul class="pc__aside__filter__list">
+                        <li>
+                            <button class="pc__aside__filter__option" type="button">
+                                Одежда
+                                <span>(320)</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pc__aside__filter__option active" type="button">
+                                Женщинам
+                                <span>(320)</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pc__aside__filter__option" type="button">
+                                Верхняя одежда
+                                <span>(320)</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pc__aside__filter__option" type="button">
+                                Одежда
+                                <span>(320)</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pc__aside__filter__option" type="button">
+                                Женщинам
+                                <span>(320)</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pc__aside__filter__option" type="button">
+                                Верхняя одежда
+                                <span>(320)</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pc__aside__filter__option" type="button">
+                                Одежда
+                                <span>(320)</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pc__aside__filter__option" type="button">
+                                Женщинам
+                                <span>(320)</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pc__aside__filter__option" type="button">
+                                Верхняя одежда
+                                <span>(320)</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pc__aside__filter__option" type="button">
+                                Одежда
+                                <span>(320)</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pc__aside__filter__option" type="button">
+                                Женщинам
+                                <span>(320)</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pc__aside__filter__option" type="button">
+                                Верхняя одежда
+                                <span>(320)</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pc__aside__filter__option" type="button">
+                                Одежда
+                                <span>(320)</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pc__aside__filter__option" type="button">
+                                Женщинам
+                                <span>(320)</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="pc__aside__filter__option" type="button">
+                                Верхняя одежда
+                                <span>(320)</span>
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="pc__compare-cell">
+                    <div data-compare_cell="1">Модель</div>
+                </div>
+                <div class="pc__compare-cell">
+                    <div data-compare_cell="2">Операционная система</div>
+                </div>
+                <div class="pc__compare-cell">
+                    <div data-compare_cell="3">Диагональ дисплея</div>
+                </div>
+                <div class="pc__compare-cell">
+                    <div data-compare_cell="4">Тип матрицы экрана</div>
+                </div>
+            </div>
+            <div class="pc__products">
+                <div class="swiper" data-product_carousel>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            @@include('../components/product-item-compare.html', {})
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="1">Note 10 Pro</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="2">Android 10</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="3">6.67</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="4">AMOLED</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/product-item-compare.html', {})
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="1">Note 10 Pro</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="2">Android 10</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="3">6.67</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="4">AMOLED</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/product-item-compare.html', {})
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="1">Note 10 Pro Veniam exercitation fugiat fugiat in excepteur
+                                    aliquip do Lorem sint in.</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="2">Android 10</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="3">6.67</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="4">AMOLED</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/product-item-compare.html', {})
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="1">Note 10 Pro</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="2">Android 10</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="3">6.67</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="4">IPS</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/product-item-compare.html', {})
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="1">Note 10 Pro</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="2">Android 10</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="3">6.67</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="4">AMOLED</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/product-item-compare.html', {})
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="1">Note 10 Pro</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="2">Android 10</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="3">6.67</div>
+                            </div>
+                            <div class="pc__compare-cell">
+                                <div data-compare_cell="4">AMOLED</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

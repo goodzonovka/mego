@@ -156,23 +156,23 @@ window.addEventListener('load', function () {
                         </h3>
 
                         <div class="bottom">
-                            <div class="price-block">
+                            <div class="price-block" data-price_block_match_height>
                                 <div class="price">${product.price}</div>
                             </div>
-    
+
                             <div class="buttons">
                                 <button class="compare compare-js" aria-label="Добавить в сравнение">
                                     <svg width="18" height="19">
                                         <use href="images/icons/icons.svg#compare"></use>
                                     </svg>
                                 </button>
-    
+
                                 <button class="wishlist wishlist-js" aria-label="Добавить в избранное">
                                     <svg width="18" height="19">
                                         <use href="images/icons/icons.svg#heart"></use>
                                     </svg>
                                 </button>
-    
+
                                 <button class="buy buy-js" aria-label="Купить" data-buy-count="0">
                                     <svg width="18" height="19">
                                         <use href="images/icons/icons.svg#shopping-cart"></use>
