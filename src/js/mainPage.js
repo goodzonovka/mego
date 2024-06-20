@@ -132,29 +132,29 @@ window.addEventListener('load', function () {
                         <a href="#" class="img">
                             <img src=${product.imageUrl} width="163" height="163" alt="">
                         </a>
+                        <div class="product-item__contentBody">
+                            <div class="additional-information">
 
-                        <div class="additional-information">
+                                <div class="rating">
+                                    <svg width="18" height="19">
+                                        <use href="images/icons/icons.svg#star-fill"></use>
+                                    </svg>
+                                    <span class="count">5.0</span>
+                                </div>
 
-                            <div class="rating">
-                                <svg width="18" height="19">
-                                    <use href="images/icons/icons.svg#star-fill"></use>
-                                </svg>
-                                <span class="count">5.0</span>
+                                <div class="reviews">
+                                    <svg width="18" height="19">
+                                        <use href="images/icons/icons.svg#message-circle"></use>
+                                    </svg>
+                                    <span class="count">345</span>
+                                </div>
+
                             </div>
 
-                            <div class="reviews">
-                                <svg width="18" height="19">
-                                    <use href="images/icons/icons.svg#message-circle"></use>
-                                </svg>
-                                <span class="count">345</span>
-                            </div>
-
+                            <h3 class="title">
+                                <a href="#">${product.name}</a>
+                            </h3>
                         </div>
-
-                        <h3 class="title">
-                            <a href="#">${product.name}</a>
-                        </h3>
-
                         <div class="bottom">
                             <div class="price-block" data-price_block_match_height>
                                 <div class="price">${product.price}</div>

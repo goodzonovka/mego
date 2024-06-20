@@ -6,6 +6,20 @@ h2, .section-title {
 
 .product-item {
     width: 132px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .product-item__contentBody {
+        margin-bottom: auto;
+    }
+
     .img {
         position: relative;
         display: block;
@@ -122,6 +136,11 @@ h2, .section-title {
         align-items: center;
         height: 18px;
     }
+
+    .rating {
+        margin-bottom: 0;
+    }
+
     .rating, .reviews {
         display: flex;
         align-items: center;
